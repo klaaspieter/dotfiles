@@ -1,0 +1,29 @@
+[alias]
+    co = checkout
+    mg = merge
+    st = status
+    ci = commit
+    br = branch
+    df = difftool
+    dfs = difftool --staged
+    lg = log --graph --pretty=format:'%C(bold red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit --date=relative
+    lc = log ORIG_HEAD.. --no-merges --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ss = stash
+    ssu = stash -u --keep-index
+[difftool "Kaleidoscope"]
+    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false
+[diff]
+    tool = Kaleidoscope
+[user]
+    name = Klaas Pieter Annema
+    email = klaaspieter@annema.me
+[core]
+	editor = vim
+	excludesfile = /Users/klaaspieter/.gitignore
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[color]
+    ui = true
+
+    test
