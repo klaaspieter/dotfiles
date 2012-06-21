@@ -3,20 +3,21 @@
 " -----------------------------------------------------------------------------------------
 call pathogen#infect()              " Load plugins with pathogen
 
-set nocompatible 	                  " use vim defaults, no vi compatibility 
+set nocompatible                    " use vim defaults, no vi compatibility 
 set number                          " Show line numbers
 set autoread                        " Automatically reload files changed externally
 set encoding=utf-8                  " Set default encoding to UTF-8
-syntax on		                        " Enable syntax highlighting
+set term=ansi                       " Tell vim terminal supports colors
+syntax on                           " Enable syntax highlighting
 filetype plugin indent on           " Enable filetype-specific indenting and plugins
 
 " -----------------------------------------------------------------------------------------
 " Indenting
 " -----------------------------------------------------------------------------------------
-set smartindent		                  " Indent after { etc
-set tabstop=2		                    " 2 tabs
-set shiftwidth=2	                  " (auto)indent 2
-set expandtab	                      " Use spaces instead of tabs
+set smartindent                     " Indent after { etc
+set tabstop=2                       " 2 tabs
+set shiftwidth=2                    " (auto)indent 2
+set expandtab                       " Use spaces instead of tabs
 
 " -----------------------------------------------------------------------------------------
 " UI 
