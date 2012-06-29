@@ -2,6 +2,7 @@
 " General
 " -----------------------------------------------------------------------------------------
 call pathogen#infect()              " Load plugins with pathogen
+call pathogen#helptags()
 
 set nocompatible                    " use vim defaults, no vi compatibility 
 set number                          " Show line numbers
@@ -32,6 +33,8 @@ set showmatch                       " Show matching brackets
 set ls=2                            " Show current open buffer
 set ruler                           " Show location in files
 set wrap                            " Wrap long lines
+set scrolljump=5                    " Lines to scroll when cursor leaves screen
+set scrolloff=3                     " Minimum lines to keep above and below cursor
 
 if &t_Co > 2 || has("gui_running")
   syntax on
