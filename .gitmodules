@@ -4,3 +4,6 @@
 [submodule "vim/bundle/delmitmate"]
 	path = vim/bundle/delmitmate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
