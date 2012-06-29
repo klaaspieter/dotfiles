@@ -27,3 +27,5 @@
     ui = true
 
     test
+[credential]
+	helper = osxkeychain
