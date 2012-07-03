@@ -24,7 +24,7 @@ set expandtab                       " Use spaces instead of tabs
 " UI 
 " -----------------------------------------------------------------------------------------
 set t_Co=256                        " Explicitly tell vim that the terminal supports 256 colors
-set cursorline                      " Highlight the line the cursor is on
+set nocursorline                    " Don't highlight the line the cursor is (very slow)
 set wildmenu                        " Improve command-line completion
 set wildmode=list:longest,full      " Determines how completions are shown 
 set splitbelow splitright           " change split order
