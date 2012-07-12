@@ -36,6 +36,10 @@ set wrap                             " Wrap long lines
 set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
 
+" No annoying sound on errors
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
