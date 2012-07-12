@@ -64,6 +64,10 @@ nmap tk :tabprev<cr>
 map j gj
 map k gk
 
+" inserts new line without going into insert mode
+map <S-Enter> O<ESC>
+map <Enter> o<ESC>
+
 " -----------------------------------------------------------------------------------------
 " Backups 
 " -----------------------------------------------------------------------------------------
