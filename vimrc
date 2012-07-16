@@ -9,6 +9,7 @@ set number                           " Show line numbers
 set autoread                         " Automatically reload files changed externally
 set encoding=utf-8                   " Set default encoding to UTF-8
 set term=ansi                        " Tell vim terminal supports colors
+set noesckeys                        " recognize single <Esc> immediately
 syntax on                            " Enable syntax highlighting
 filetype plugin indent on            " Enable filetype-specific indenting and plugins
 
