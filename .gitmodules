@@ -16,3 +16,6 @@
 [submodule "vim/bundle/markdown"]
 	path = vim/bundle/markdown
 	url = https://github.com/hallison/vim-markdown
+[submodule "vim/bundle/handlebars"]
+	path = vim/bundle/handlebars
+	url = https://github.com/nono/vim-handlebars.git
