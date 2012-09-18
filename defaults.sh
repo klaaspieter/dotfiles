@@ -77,8 +77,10 @@ chflags nohidden ~/Library
 # Set the icon size of Dock items to 55
 defaults write com.apple.dock tilesize -int 55
 
-# Make dock size immutable
+# Make dock size, contents and location immutable
 defaults write com.apple.Dock size-immutable -bool yes
+defaults write com.apple.Dock contents-immutable -bool yes
+defaults write com.apple.Dock position-immutable -bool yes
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
