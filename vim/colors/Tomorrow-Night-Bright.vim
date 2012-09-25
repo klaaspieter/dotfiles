@@ -310,6 +310,14 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("rubyConditional", s:purple, "", "")
   call <SID>X("rubyRepeat", s:purple, "", "")
 
+  " Coffee Highlighting
+  call <SID>X("coffeeKeyword", s:aqua, "", "")
+  call <SID>X("coffeeConditional", s:purple, "", "")
+  call <SID>X("coffeeSpecialVar", s:blue, "", "")
+  call <SID>X("coffeeRepeat", s:purple, "", "")
+  call <SID>X("coffeeStatement", s:red, "", "")
+  call <SID>X("coffeeSpecialIdent", s:blue, "", "")
+
   " Python Highlighting
   call <SID>X("pythonInclude", s:purple, "", "")
   call <SID>X("pythonStatement", s:purple, "", "")
