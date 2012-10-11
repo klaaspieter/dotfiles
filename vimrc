@@ -37,6 +37,10 @@ set wrap                             " Wrap long lines
 set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
 
+" Configure indent-guides plugin
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
