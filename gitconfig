@@ -1,15 +1,18 @@
 [alias]
     co = checkout
     mg = merge
-    st = status
+    s = status
     ci = commit
     br = branch
     df = difftool
     dfs = difftool --staged
+    l = log
     lg = log --graph --pretty=format:'%C(bold red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit --date=relative
     lc = log ORIG_HEAD.. --no-merges --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    ss = stash
-    ssu = stash -u --keep-index
+    st = stash
+    stu = stash -u --keep-index
+    stl = stash list
+    stp = stash drop
 [difftool "Kaleidoscope"]
     cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
