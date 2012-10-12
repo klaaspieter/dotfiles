@@ -12,7 +12,7 @@
     st = stash
     stu = stash -u --keep-index
     stl = stash list
-    stp = stash drop
+    stp = stash pop
 [difftool "Kaleidoscope"]
     cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
 [difftool]
