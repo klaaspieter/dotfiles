@@ -114,3 +114,24 @@ function! StripWhitespace ()
   call setreg('/', old_query)
 endfunction
 noremap <leader>s :call StripWhitespace ()<CR>
+
+" --------------------------------------------------------------------------------------------------
+" Tabularize mappings
+" --------------------------------------------------------------------------------------------------
+if exists(":Tabularize")
+  nmap <Leader>a= :Tabularize /=<CR>
+  vmap <Leader>a= :Tabularize /=<CR>
+  nmap <Leader>a: :Tabularize /:\zs<CR>
+  vmap <Leader>a: :Tabularize /:\zs<CR>
+endif
+
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
