@@ -1,4 +1,6 @@
 [alias]
+    a = add
+    ap = add --patch
     co = checkout
     mg = merge
     s = status
