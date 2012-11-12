@@ -27,14 +27,14 @@
     name = Klaas Pieter Annema
     email = klaaspieter@annema.me
 [core]
-	editor = vim
-	excludesfile = /Users/klaaspieter/.gitignore
+  editor = vim
+  excludesfile = /Users/klaaspieter/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [color]
     ui = true
 
     test
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [push]
-	default = simple
+  default = simple
