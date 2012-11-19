@@ -18,11 +18,11 @@
     alias = config --get-regexp 'alias.*'
 
 [difftool "Kaleidoscope"]
-    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
-    prompt = false
+	prompt = false
 [diff]
-    tool = Kaleidoscope
+	tool = Kaleidoscope
 [user]
     name = Klaas Pieter Annema
     email = klaaspieter@annema.me
@@ -38,3 +38,9 @@
   helper = osxkeychain
 [push]
   default = simple
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
