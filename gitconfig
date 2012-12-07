@@ -1,21 +1,27 @@
 [alias]
-    a = add
-    ap = add --patch
-    co = checkout
-    mg = merge
-    s = status
-    ci = commit
-    br = branch
-    df = difftool
-    dfs = difftool --staged
-    l = log
-    lg = log --graph --pretty=format:'%C(bold red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit --date=relative
-    lc = log ORIG_HEAD.. --no-merges --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    st = stash
-    stu = stash -u --keep-index
-    stl = stash list
-    stp = stash pop
-    alias = config --get-regexp 'alias.*'
+  a = add
+  ap = add --patch
+  co = checkout
+  cp = cherry-pick
+  mg = merge
+  s = status
+  ci = commit
+  br = branch
+  df = difftool
+  dfs = difftool --staged
+  l = log
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lc = log ORIG_HEAD.. --no-merges --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  st = stash
+  sl = stash list
+  ss = stash save
+  sa = stash apply
+  sp = stash pop
+  su = stash -u --keep-index
+  stu = stash -u --keep-index
+  stl = stash list
+  stp = stash pop
+  alias = config --get-regexp 'alias.*'
 
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
@@ -44,3 +50,5 @@
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+[github]
+	user = klaaspieter@annema.me
