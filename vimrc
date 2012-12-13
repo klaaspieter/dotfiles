@@ -12,6 +12,7 @@ set term=ansi                        " Tell vim terminal supports colors
 set noesckeys                        " recognize single <Esc> immediately
 syntax on                            " Enable syntax highlighting
 filetype plugin indent on            " Enable filetype-specific indenting and plugins
+set clipboard+=unnamed               " Enable integration with system clipboard
 
 " -----------------------------------------------------------------------------------------
 " Indenting
