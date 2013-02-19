@@ -22,6 +22,7 @@
   stl = stash list
   stp = stash pop
   alias = config --get-regexp 'alias.*'
+  undo = reset --soft HEAD^
 
 [user]
     name = Klaas Pieter Annema
