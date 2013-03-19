@@ -38,6 +38,10 @@ set ruler                            " Show location in files
 set wrap                             " Wrap long lines
 set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
+set noshowmode                       " Hide the default mode (e.g. -- INSERT -- below powerline)
+
+" Use powerline
+set rtp+=~/.powerline/powerline/bindings/vim
 
 " Configure indent-guides plugin
 let g:indent_guides_guide_size = 1
