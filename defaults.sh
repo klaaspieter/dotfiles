@@ -28,6 +28,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Set crash dialog to Developer mode
 defaults write com.apple.CrashReporter -string "Developer"
 
+# Enable tap to click in login screen
+defaults write com.apple.mouse.tapBehaviour -bool true
+
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
 defaults write NSGlobalDomain AppleLocale -string "nl_NL@currency=EUR"
@@ -67,8 +70,9 @@ defaults write com.apple.finder ShowPathBar -bool true
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Show the ~/Library folder
+# Show the Library folder
 chflags nohidden ~/Library
+chflags nohidden /Library
 
 ###############################################################################
 # Dock                                                                        #
@@ -78,9 +82,9 @@ chflags nohidden ~/Library
 defaults write com.apple.dock tilesize -int 55
 
 # Make dock size, contents and location immutable
-defaults write com.apple.Dock size-immutable -bool yes
-defaults write com.apple.Dock contents-immutable -bool yes
-defaults write com.apple.Dock position-immutable -bool yes
+defaults write com.apple.dock size-immutable -bool yes
+defaults write com.apple.dock contents-immutable -bool yes
+defaults write com.apple.dock position-immutable -bool yes
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
@@ -102,6 +106,11 @@ defaults write com.apple.Safari ProxiesInBookmarksBar "()"
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 ###############################################################################
+# iPhone Simulator                                                            #
+###############################################################################
+defaults write com.apple.iphonesimulator SBFakeCarrier -string "Karma"
+
+###############################################################################
 # Other                                                                       #
 ###############################################################################
 
@@ -112,7 +121,7 @@ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer; do
+for app in Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer iPhone\ Simulator; do
   killall "$app" > /dev/null 2>&1
 done
 echo "Defaults set. Some defaults might require a restart / logout to take effect"
