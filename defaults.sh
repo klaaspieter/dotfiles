@@ -111,6 +111,13 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.iphonesimulator SBFakeCarrier -string "Karma"
 
 ###############################################################################
+# Dashboard                                                                  #
+###############################################################################
+
+# Disable the dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean YES
+
+###############################################################################
 # Other                                                                       #
 ###############################################################################
 
