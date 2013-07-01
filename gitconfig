@@ -18,9 +18,11 @@
   sa = stash apply
   sp = stash pop
   su = stash -u --keep-index
+  sd = stash drop
   stu = stash -u --keep-index
   stl = stash list
   stp = stash pop
+  std = stash drop
   alias = config --get-regexp 'alias.*'
   undo = reset --soft HEAD^
 
@@ -52,3 +54,8 @@
   prompt = false
 [merge]
   tool = Kaleidoscope
+	stat = true
+[branch]
+	autosetupmerge = true
+[rerere]
+	enabled = true
