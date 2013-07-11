@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+REF=${1:-HEAD}
+
+git rev-parse --short $REF | tr -d '\n' | pbcopy
