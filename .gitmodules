@@ -58,3 +58,6 @@
 [submodule "vim/bundle/slim"]
 	path = vim/bundle/slim
 	url = https://github.com/slim-template/vim-slim.git
+[submodule "vim/bundle/rspec"]
+	path = vim/bundle/rspec
+	url = https://github.com/thoughtbot/vim-rspec.git
