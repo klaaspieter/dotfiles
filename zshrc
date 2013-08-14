@@ -7,3 +7,4 @@ source ~/.zsh/functions.sh
 source ~/.zsh/ruby.sh
 source ~/.zsh/node.sh
 source ~/.zsh/coffee.sh
+
