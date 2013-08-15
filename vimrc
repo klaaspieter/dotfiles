@@ -47,6 +47,9 @@ set rtp+=~/.powerline/powerline/bindings/vim
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 
+" Configure rspec plugin
+let g:rspec_command = "!bundle exec rspec {spec}"
+
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
