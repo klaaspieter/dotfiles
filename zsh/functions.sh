@@ -36,3 +36,6 @@ updatechromium () {
   echo "Moving to Applications directory..."
   echo "Done, update successful"
 }
+
+pj() { python -mjson.tool }
+cj() { curl -sS $@ | pj }
