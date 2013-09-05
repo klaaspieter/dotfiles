@@ -61,3 +61,6 @@
 [submodule "vim/bundle/rspec"]
 	path = vim/bundle/rspec
 	url = https://github.com/thoughtbot/vim-rspec.git
+[submodule "vim/bundle/abolish"]
+	path = vim/bundle/abolish
+	url = https://github.com/tpope/vim-abolish.git
