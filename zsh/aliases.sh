@@ -13,3 +13,5 @@ alias up="hdiutil attach ~/Documents/Work/Karma.sparsebundle > /dev/null; cd /Vo
 alias pod-rc="~/opt/latest/bin/pod"
 
 alias ll="ls -lh"
+
+alias b="bundle install -j4"
