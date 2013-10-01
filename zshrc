@@ -4,7 +4,6 @@ source ~/.zsh/path.sh
 source ~/.zsh/prompt.sh
 source ~/.zsh/aliases.sh
 source ~/.zsh/functions.sh
-source ~/.zsh/ruby.sh
 source ~/.zsh/node.sh
 source ~/.zsh/coffee.sh
 
