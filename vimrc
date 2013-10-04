@@ -40,6 +40,8 @@ set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
 set noshowmode                       " Hide the default mode (e.g. -- INSERT -- below powerline)
 
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
 " Use powerline
 set rtp+=~/.powerline/powerline/bindings/vim
 
