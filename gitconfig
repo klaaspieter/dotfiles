@@ -1,11 +1,14 @@
 [alias]
   a = add
+  aa = add -A
   ap = add --patch
   co = checkout
   cp = cherry-pick
   mg = merge
   s = status
   ci = commit
+  ca = commit -a
+  cam = commit --amend
   br = branch
   df = difftool
   dfs = difftool --staged
