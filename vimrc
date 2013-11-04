@@ -20,7 +20,7 @@ set clipboard+=unnamed               " Enable integration with system clipboard
 " -----------------------------------------------------------------------------------------
 set smartindent                      " Indent after { etc
 set tabstop=2                        " 2 tabs
-set softtabstop                      " Backspace deletes tab
+set softtabstop=2                    " Backspace deletes tab
 set shiftwidth=2                     " (auto)indent 2
 set expandtab                        " Use spaces instead of tabs
 
