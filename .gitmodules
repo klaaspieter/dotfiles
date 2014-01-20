@@ -13,9 +13,6 @@
 [submodule "vim/bundle/zencoding"]
 	path = vim/bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
-[submodule "vim/bundle/markdown"]
-	path = vim/bundle/markdown
-	url = https://github.com/hallison/vim-markdown
 [submodule "vim/bundle/handlebars"]
 	path = vim/bundle/handlebars
 	url = https://github.com/nono/vim-handlebars.git
@@ -64,3 +61,6 @@
 [submodule "vim/bundle/abolish"]
 	path = vim/bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
+[submodule "vim/bundle/markdown"]
+	path = vim/bundle/markdown
+	url = https://github.com/plasticboy/vim-markdown.git
