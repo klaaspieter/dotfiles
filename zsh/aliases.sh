@@ -12,6 +12,7 @@ alias pod-rc="~/opt/latest/bin/pod"
 alias ll="ls -lh"
 
 alias b="bundle install -j4"
+alias c="rake console"
 
 alias link="powder link"
 alias unlink="powder unlink"
