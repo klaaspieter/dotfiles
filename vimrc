@@ -43,9 +43,6 @@ set noshowmode                       " Hide the default mode (e.g. -- INSERT -- 
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" Use powerline
-set rtp+=~/.powerline/powerline/bindings/vim
-
 " Configure indent-guides plugin
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
