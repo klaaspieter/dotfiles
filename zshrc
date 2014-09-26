@@ -7,4 +7,4 @@ source ~/.zsh/aliases.sh
 source ~/.zsh/functions.sh
 source ~/.zsh/node.sh
 source ~/.zsh/coffee.sh
-
+source ~/.zsh/android.sh
