@@ -43,13 +43,6 @@ set noshowmode                       " Hide the default mode (e.g. -- INSERT -- 
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" Configure indent-guides plugin
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-
-" Configure rspec plugin
-let g:rspec_command = "!bundle exec rspec {spec}"
-
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
@@ -85,12 +78,6 @@ map k gk
 " inserts new line without going into insert mode
 map <S-Enter> O<ESC>
 map <Enter> o<ESC>
-
-" Run rspec convenience mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " -----------------------------------------------------------------------------------------
 " Backups 
