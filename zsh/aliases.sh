@@ -16,3 +16,7 @@ alias c="rake console"
 
 alias link="powder link"
 alias unlink="powder unlink"
+
+alias p="pod install"
+
+alias hbi="hub browse -- issues"
