@@ -1,2 +1,4 @@
 export HOME=/Users/klaaspieter
 export PATH="/usr/local/bin:$PATH"
+
+source /usr/local/share/chruby/chruby.sh
