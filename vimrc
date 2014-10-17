@@ -99,3 +99,9 @@ set list listchars=tab:▸\ ,eol:¬,trail:.
 
 " Wrap lines in md files at 80 characters
 au BufRead,BufNewFile *.md setlocal textwidth=80
+
+" --------------------------------------------------------------------------------------------------
+" The Silver Searcher
+" --------------------------------------------------------------------------------------------------
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
