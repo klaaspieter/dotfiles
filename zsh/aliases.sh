@@ -7,8 +7,6 @@ alias gdf="git difftool"
 
 alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
-alias pod-rc="~/opt/latest/bin/pod"
-
 alias ll="ls -lh"
 
 alias b="bundle install -j4"
@@ -18,5 +16,5 @@ alias link="powder link"
 alias unlink="powder unlink"
 
 alias p="pod install"
-
-alias hbi="hub browse -- issues"
+alias bp="bundle exec pod install"
+alias nuke="rm -rf ~/Library/Developer/Xcode/DerivedData"
