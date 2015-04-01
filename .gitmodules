@@ -58,3 +58,6 @@
 [submodule "vim/bundle/abolish"]
 	path = vim/bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
+[submodule "vim/bundle/haskell"]
+	path = vim/bundle/haskell
+	url = https://github.com/raichoo/haskell-vim.git
