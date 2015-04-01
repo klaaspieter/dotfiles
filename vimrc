@@ -58,6 +58,7 @@ endif
 " -----------------------------------------------------------------------------------------
 set ignorecase                       " Search case insensitive
 set hlsearch                         " Highlight current search
+set incsearch                        " Highlight search while typing
 
 " -----------------------------------------------------------------------------------------
 " Mappings 
