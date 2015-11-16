@@ -101,3 +101,5 @@ set list listchars=tab:▸\ ,eol:¬,trail:.
 " Wrap lines in md files at 80 characters
 au BufRead,BufNewFile *.md setlocal textwidth=80
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.md set nofoldenable
+
