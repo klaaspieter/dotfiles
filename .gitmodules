@@ -61,3 +61,6 @@
 [submodule "vim/bundle/haskell"]
 	path = vim/bundle/haskell
 	url = https://github.com/raichoo/haskell-vim.git
+[submodule "vim/bundle/xcodebuild"]
+	path = vim/bundle/xcodebuild
+	url = git@github.com:gfontenot/vim-xcodebuild.git
