@@ -64,3 +64,6 @@
 [submodule "vim/bundle/xcodebuild"]
 	path = vim/bundle/xcodebuild
 	url = git@github.com:gfontenot/vim-xcodebuild.git
+[submodule "vim/bundle/emmet"]
+	path = vim/bundle/emmet
+	url = git@github.com:mattn/emmet-vim.git
