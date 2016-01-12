@@ -3,3 +3,5 @@ vim/tmp/swap/*
 vim/tmp/undo/*
 vim/.netrwhist
 .DS_Store
+*.pyc
+.bundle
