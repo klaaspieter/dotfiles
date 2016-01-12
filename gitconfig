@@ -32,7 +32,7 @@
 
 [user]
   name = Klaas Pieter Annema
-  email = klaaspieter@annema.me
+  email = kpa@annema.me
 [core]
   editor = vim
   excludesfile = /Users/klaaspieter/.gitignore
