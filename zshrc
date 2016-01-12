@@ -10,5 +10,6 @@ source ~/.zsh/node.sh
 source ~/.zsh/coffee.sh
 source ~/.zsh/android.sh
 source ~/.zsh/z.sh
+source ~/.zsh/python.sh
 
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
