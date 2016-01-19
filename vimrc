@@ -50,7 +50,7 @@ autocmd GUIEnter * set visualbell t_vb=
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
-  colorscheme Tomorrow-Night-Bright
+  colorscheme solarized
 endif
 
 " -----------------------------------------------------------------------------------------

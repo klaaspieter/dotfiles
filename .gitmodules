@@ -67,3 +67,6 @@
 [submodule "vim/bundle/emmet"]
 	path = vim/bundle/emmet
 	url = git@github.com:mattn/emmet-vim.git
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
