@@ -33,6 +33,7 @@
 [user]
   name = Klaas Pieter Annema
   email = kpa@annema.me
+	signingkey = Klaas Pieter Annema <kpa@annema.me>
 [core]
   editor = vim
   excludesfile = /Users/klaaspieter/.gitignore
@@ -68,3 +69,5 @@
   smudge = git-media-smudge %f
 [hub]
   protocol = https
+[commit]
+	gpgsign = true
