@@ -6,7 +6,6 @@ source ~/.zsh/prompt.sh
 source ~/.zsh/aliases.sh
 source ~/.zsh/functions.sh
 source ~/.zsh/completions.sh
-source ~/.zsh/node.sh
 source ~/.zsh/coffee.sh
 source ~/.zsh/android.sh
 source ~/.zsh/z.sh
