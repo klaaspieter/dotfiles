@@ -7,33 +7,23 @@
   mg = merge
   s = status
   ci = commit
-  ca = commit -a
   cam = commit --amend
   br = branch
   df = difftool
   dfs = difftool --staged
   l = log
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  lc = log ORIG_HEAD.. --no-merges --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   st = stash
-  sl = stash list
-  ss = stash save
-  sa = stash apply
-  sp = stash pop
-  su = stash -u --keep-index
-  sd = stash drop
   stu = stash -u --keep-index
   stl = stash list
   stp = stash pop
   std = stash drop
   alias = config --get-regexp 'alias.*'
-  undo = reset --soft HEAD^
-  pf = push --force-with-lease
 
 [user]
   name = Klaas Pieter Annema
   email = kpa@annema.me
-	signingkey = Klaas Pieter Annema <kpa@annema.me>
+  signingkey = Klaas Pieter Annema <kpa@annema.me>
 [core]
   editor = vim
   excludesfile = /Users/klaaspieter/.gitignore
