@@ -19,6 +19,7 @@
   stp = stash pop
   std = stash drop
   alias = config --get-regexp 'alias.*'
+  pushf = push --force-with-lease
 
 [user]
   name = Klaas Pieter Annema
