@@ -9,7 +9,7 @@
   mg = merge
   s = status
   ci = commit
-  cam = commit --amend
+  ca = commit --amend
   br = branch
   df = difftool
   dfs = difftool --staged
