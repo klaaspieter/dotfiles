@@ -21,8 +21,9 @@
   stp = stash pop
   std = stash drop
   alias = config --get-regexp 'alias.*'
-  rbi = rebase --interactive
   rb = rebase
+  rbi = rebase --interactive
+  rbc = rebase --continue
 
 [user]
   name = Klaas Pieter Annema
