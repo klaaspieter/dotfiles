@@ -61,6 +61,7 @@
 [submodule "vim/bundle/xcodebuild"]
 	path = vim/bundle/xcodebuild
 	url = git@github.com:gfontenot/vim-xcodebuild.git
+	ignore = untracked
 [submodule "vim/bundle/emmet"]
 	path = vim/bundle/emmet
 	url = git@github.com:mattn/emmet-vim.git
@@ -73,3 +74,4 @@
 [submodule "vim/bundle/matchit"]
 	path = vim/bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
+	ignore = untracked
