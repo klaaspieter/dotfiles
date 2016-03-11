@@ -5,8 +5,6 @@ alias git="nocorrect git"
 alias gs="git status"
 alias gdf="git difftool"
 
-alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
-
 alias ll="ls -lh"
 
 alias b="bundle install -j4"
