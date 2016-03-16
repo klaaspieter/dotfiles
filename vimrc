@@ -14,6 +14,7 @@ set noesckeys                        " recognize single <Esc> immediately
 syntax on                            " Enable syntax highlighting
 filetype plugin indent on            " Enable filetype-specific indenting and plugins
 set clipboard+=unnamed               " Enable integration with system clipboard
+set backspace=indent,eol,start
 
 " -----------------------------------------------------------------------------------------
 " Indenting
