@@ -1,0 +1,12 @@
+!/usr/bin/env sh
+set -e
+
+# Usage git med [branch name]
+#
+# [Me]rges a branch onto HEAD and deletes the branch
+
+BRANCH=${1:-HEAD}
+
+git merge --ff-only "$BRANCH"
+git branch --delete "$BRANCH"
+
