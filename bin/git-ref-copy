@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+# Usage: git ref-copy [REF]
+#
+# Copies the short version of a git ref to the pasteboard.
+
 REF=${1:-HEAD}
 
 git rev-parse --short $REF | tr -d '\n' | pbcopy
