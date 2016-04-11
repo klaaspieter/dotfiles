@@ -55,9 +55,6 @@
 [submodule "vim/bundle/abolish"]
 	path = vim/bundle/abolish
 	url = https://github.com/tpope/vim-abolish.git
-[submodule "vim/bundle/haskell"]
-	path = vim/bundle/haskell
-	url = https://github.com/raichoo/haskell-vim.git
 [submodule "vim/bundle/xcodebuild"]
 	path = vim/bundle/xcodebuild
 	url = git@github.com:gfontenot/vim-xcodebuild.git
@@ -75,3 +72,6 @@
 	path = vim/bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
 	ignore = untracked
+[submodule "vim/bundle/haskell"]
+	path = vim/bundle/haskell
+	url = https://github.com/neovimhaskell/haskell-vim.git
