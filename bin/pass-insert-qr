@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+secret=$(zbarimg --raw --quiet <(pngpaste -))
+echo "$secret" | pass insert -e "$1"

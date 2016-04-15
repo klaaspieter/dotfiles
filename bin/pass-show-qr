@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -e
+
+secret=$(pass show "$1")
+file="$(mktemp -d)/${1//\//-}.png"
+qrencode -o "$file" "$secret"
+qlmanage -p "$file" &> /dev/null
