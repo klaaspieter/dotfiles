@@ -1,7 +1,8 @@
 source ~/.zsh/env.sh
 source ~/.zsh/path.sh
 source ~/.zsh/ruby.sh
-source ~/.zsh/prompt.sh
+source ~/.zsh/color.zsh
+source ~/.zsh/prompt.zsh
 source ~/.zsh/aliases.sh
 source ~/.zsh/functions.sh
 source ~/.zsh/completions.sh
