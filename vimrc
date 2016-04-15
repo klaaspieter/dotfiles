@@ -42,8 +42,6 @@ set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
 set noshowmode                       " Hide the default mode (e.g. -- INSERT -- below powerline)
 
-autocmd Filetype gitcommit setlocal spell textwidth=72
-
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
@@ -81,8 +79,12 @@ map k gk
 map <S-Enter> O<ESC>
 map <Enter> o<ESC>
 
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
 " -----------------------------------------------------------------------------------------
-" Backups 
+" Backups
 " -----------------------------------------------------------------------------------------
 set swapfile                         " Use swapfiles
 set directory=~/.vim/tmp/swap        " Place swapfiles in ~/.vim/tmp/swap
@@ -98,9 +100,8 @@ set list listchars=tab:▸\ ,eol:¬,trail:.
 " --------------------------------------------------------------------------------------------------
 " Writing
 " --------------------------------------------------------------------------------------------------
-
 " Wrap lines in md files at 80 characters
 au BufRead,BufNewFile *.md setlocal textwidth=80
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.md set nofoldenable
+setlocal spell
 
