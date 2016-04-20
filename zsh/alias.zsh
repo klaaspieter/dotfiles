@@ -6,15 +6,6 @@ alias gdf="git difftool"
 
 alias ll="ls -lh"
 
-alias b="bundle install -j4"
-alias c="rake console"
-alias rr="mkdir -p tmp && touch tmp/restart.txt"
-alias fs="foreman start"
-
-alias link="powder link"
-alias unlink="powder unlink"
-
 alias p="pod install"
-alias bp="bundle exec pod install"
 alias nuke="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias sl="git diff --name-only master | ack \".swift\" | xargs -L1 swiftlint lint --path 2>/dev/null"

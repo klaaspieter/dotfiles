@@ -26,9 +26,23 @@ function parse_git_dirty() {
   fi
 }
 
+function status_code_prompt_info() {
+  echo "%F{red}%(?..%?)$f"
+}
+
+
+# Show the vim mode in the right PROMPT
+function zle-line-init zle-keymap-select {
+  VIM_PROMPT="[% NORMAL]% "
+  RPROMPT="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $(status_code_prompt_info) $EPS1"
+  zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
 # Shows current working directory (up to 3 levels) in blue
 # Git branch in red if dirty, otherwise green.
 PROMPT='%F{blue}%3~%f%F{red}$(git_prompt_info)%f '
 
 # Shows last return status in red if not zero
-RPROMPT="%F{red}%(?..%?)$f"
+RPROMPT="${status_code_prompt_info}"
