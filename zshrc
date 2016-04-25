@@ -6,6 +6,7 @@ source ~/.zsh/completion.zsh
 source ~/.zsh/convenience.zsh
 source ~/.zsh/env.sh
 source ~/.zsh/functions.sh
+source ~/.zsh/keybindings.zsh
 source ~/.zsh/path.sh
 source ~/.zsh/prompt.zsh
 source ~/.zsh/python.sh
