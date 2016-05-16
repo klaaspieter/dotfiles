@@ -1,7 +1,7 @@
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-chruby 2.3.0
+chruby 2.3.1
 
 alias be="bundle exec"
 alias b="bundle install -j4"
