@@ -66,3 +66,5 @@
   protocol = https
 [commit]
   gpgsign = true
+[rebase]
+  autosquash = true
