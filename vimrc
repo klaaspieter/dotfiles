@@ -4,7 +4,7 @@
 call pathogen#infect()               " Load plugins with pathogen
 call pathogen#helptags()
 
-set nocompatible                     " use vim defaults, no vi compatibility 
+set nocompatible                     " use vim defaults, no vi compatibility
 set number                           " Show line numbers
 set autoread                         " Automatically reload files changed externally
 set encoding=utf-8                   " Set default encoding to UTF-8
@@ -26,12 +26,12 @@ set shiftwidth=2                     " (auto)indent 2
 set expandtab                        " Use spaces instead of tabs
 
 " -----------------------------------------------------------------------------------------
-" UI 
+" UI
 " -----------------------------------------------------------------------------------------
 set t_Co=256                         " Explicitly tell vim that the terminal supports 256 colors
 set nocursorline                     " Don't highlight the line the cursor is (very slow)
 set wildmenu                         " Improve command-line completion
-set wildmode=list:longest,full       " Determines how completions are shown 
+set wildmode=list:longest,full       " Determines how completions are shown
 set splitbelow splitright            " change split order
 set bg=dark                          " Set dark background theme
 set showmatch                        " Show matching brackets
@@ -40,7 +40,6 @@ set ruler                            " Show location in files
 set wrap                             " Wrap long lines
 set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
-set noshowmode                       " Hide the default mode (e.g. -- INSERT -- below powerline)
 
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
@@ -53,14 +52,14 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " -----------------------------------------------------------------------------------------
-" Searching 
+" Searching
 " -----------------------------------------------------------------------------------------
 set ignorecase                       " Search case insensitive
 set hlsearch                         " Highlight current search
 set incsearch                        " Highlight search while typing
 
 " -----------------------------------------------------------------------------------------
-" Mappings 
+" Mappings
 " -----------------------------------------------------------------------------------------
 " Convenient mapping for hiding search highlighting
 nnoremap <leader><space> :noh<cr>
@@ -100,8 +99,14 @@ set list listchars=tab:▸\ ,eol:¬,trail:.
 " --------------------------------------------------------------------------------------------------
 " Writing
 " --------------------------------------------------------------------------------------------------
-" Wrap lines in md files at 80 characters
-au BufRead,BufNewFile *.md setlocal textwidth=80
-autocmd BufNewFile,BufReadPost *.md set nofoldenable
+" Disable folding in markdown files
+autocmd BufNewFile,BufReadPost *.md set nofoldenable  "Disable folding
+
+" Enable spell checking
 setlocal spell
 
+" Enable pencil for markdown
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+augroup END
