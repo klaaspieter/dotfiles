@@ -1,3 +1,10 @@
 #!/bin/sh
-XCODEUUID=`defaults read /Applications/Xcode.app/Contents/Info DVTPlugInCompatibilityUUID`
-for f in ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/*; do defaults write "$f/Contents/Info" DVTPlugInCompatibilityUUIDs -array-add $XCODEUUID; done
+
+plugins_path=~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins
+
+for plugin in "$plugins_path"/*; do
+  for xcode in /Applications/Xcode*; do
+    uuid=$(defaults read "$xcode/Contents/Info" DVTPlugInCompatibilityUUID)
+    defaults write "$plugin/Contents/Info" DVTPlugInCompatibilityUUIDs -array-add "$uuid"
+  done
+done
