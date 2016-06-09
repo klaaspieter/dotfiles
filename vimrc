@@ -109,4 +109,6 @@ setlocal spell
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd call pencil#init()
+  let g:pencil#conceallevel = 0
+  let g:airline_section_x = '%{PencilMode()}'
 augroup END
