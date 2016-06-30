@@ -6,7 +6,7 @@
   ap = add --patch
   co = checkout
   cp = cherry-pick
-  mg = merge
+  mg = merge --ff-only
   s = status
   ci = commit
   ca = commit --amend
