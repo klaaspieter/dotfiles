@@ -42,7 +42,7 @@ zle -N zle-keymap-select
 
 # Shows current working directory (up to 3 levels) in blue
 # Git branch in red if dirty, otherwise green.
-PROMPT='%F{blue}%3~%f%F{red}$(git_prompt_info)%f '
+PROMPT='%F{blue}%~%f%F{red}$(git_prompt_info)%f '
 
 # Shows last return status in red if not zero
 RPROMPT="${status_code_prompt_info}"
