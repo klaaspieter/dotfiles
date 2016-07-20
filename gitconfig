@@ -68,3 +68,5 @@
   gpgsign = true
 [rebase]
   autosquash = true
+[fetch]
+  prune = true
