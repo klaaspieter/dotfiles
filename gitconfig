@@ -38,7 +38,7 @@
 [credential]
   helper = osxkeychain
 [push]
-  default = simple
+  default = current
 [github]
   user = klaaspieter@annema.me
 [difftool "Kaleidoscope"]
