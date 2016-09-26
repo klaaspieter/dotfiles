@@ -69,9 +69,6 @@
 [submodule "vim/bundle/haskell"]
 	path = vim/bundle/haskell
 	url = https://github.com/neovimhaskell/haskell-vim.git
-[submodule "vim/bundle/pencil"]
-	path = vim/bundle/pencil
-	url = https://github.com/reedes/vim-pencil.git
 [submodule "vim/bundle/goyo"]
 	path = vim/bundle/goyo
 	url = https://github.com/junegunn/goyo.vim.git

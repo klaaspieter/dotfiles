@@ -100,15 +100,7 @@ set list listchars=tab:▸\ ,eol:¬,trail:.
 " Writing
 " --------------------------------------------------------------------------------------------------
 " Disable folding in markdown files
-autocmd BufNewFile,BufReadPost *.md set nofoldenable  "Disable folding
+autocmd BufNewFile,BufReadPost *.md set nofoldenable
 
 " Enable spell checking
 setlocal spell
-
-" Enable pencil for markdown
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-  let g:pencil#conceallevel = 0
-  let g:airline_section_x = '%{PencilMode()}'
-augroup END
