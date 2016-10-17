@@ -15,8 +15,6 @@ syntax on                            " Enable syntax highlighting
 filetype plugin indent on            " Enable filetype-specific indenting and plugins
 set clipboard+=unnamed               " Enable integration with system clipboard
 set backspace=indent,eol,start
-set secure                           " Don't let external configs do scary shit
-set exrc                             " Load local vimrc if found
 
 " -----------------------------------------------------------------------------------------
 " Indenting
