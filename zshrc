@@ -1,15 +1,3 @@
-source ~/.zsh/alias.zsh
-source ~/.zsh/android.sh
-source ~/.zsh/coffee.sh
-source ~/.zsh/color.zsh
-source ~/.zsh/completion.zsh
-source ~/.zsh/convenience.zsh
-source ~/.zsh/env.sh
-source ~/.zsh/functions.sh
-source ~/.zsh/keybindings.zsh
-source ~/.zsh/path.sh
-source ~/.zsh/prompt.zsh
-source ~/.zsh/python.sh
-source ~/.zsh/ruby.zsh
-source ~/.zsh/xcode.sh
-source ~/.zsh/z.sh
+for file in ~/.zsh/*; do
+  source "$file"
+done
