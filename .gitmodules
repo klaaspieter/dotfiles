@@ -74,6 +74,3 @@
 [submodule "vim/bundle/gyp"]
 	path = vim/bundle/gyp
 	url = https://github.com/kelan/gyp.vim.git
-[submodule "vim/bundle/xcode"]
-	path = vim/bundle/xcode
-	url = https://github.com/gfontenot/vim-xcode.git
