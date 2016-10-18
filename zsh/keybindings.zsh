@@ -6,3 +6,6 @@
 # By default START/STOP are bound to ^S and ^Q conflicting with default zsh
 # mappings.
 stty -ixon
+
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
