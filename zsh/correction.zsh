@@ -1,1 +1,1 @@
-setopt correct_all
+setopt nocorrect
