@@ -105,13 +105,17 @@ autocmd BufNewFile,BufReadPost *.md set nofoldenable
 " Enable spell checking
 setlocal spell
 
-" Append modeline after last line in buffer.
-" Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
-" files.
-function! AppendModeline()
-  let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d %set :",
-        \ &tabstop, &shiftwidth, &textwidth, &expandtab ? '' : 'no')
-  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
-  call append(line("$"), l:modeline)
+" --------------------------------------------------------------------------------------------------
+" Airline
+" --------------------------------------------------------------------------------------------------
+function! AirlineInit()
+    call airline#parts#define_empty(['obsession'])
+    let spc = g:airline_symbols.space
+    call airline#parts#define_raw('indentation', '% sw %{&sw} % ts %{&ts}')
+    if winwidth(0) > 80
+      let g:airline_section_z = airline#section#create(['windowswap', 'obsession', 'indentation', 'linenr', 'maxlinenr', spc.':%3v'])
+    else
+      let g:airline_section_z = airline#section#create(['indentation', 'linenr',  ':%3v'])
+    endif
 endfunction
-nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+autocmd User AirlineAfterInit call AirlineInit()
