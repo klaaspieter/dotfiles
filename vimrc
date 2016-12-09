@@ -1,9 +1,6 @@
 " -----------------------------------------------------------------------------------------
 " General
 " -----------------------------------------------------------------------------------------
-call pathogen#infect()               " Load plugins with pathogen
-call pathogen#helptags()
-
 set nocompatible                     " use vim defaults, no vi compatibility
 set number                           " Show line numbers
 set autoread                         " Automatically reload files changed externally
