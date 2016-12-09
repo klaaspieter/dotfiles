@@ -23,6 +23,19 @@ set shiftwidth=2                     " (auto)indent 2
 set expandtab                        " Use spaces instead of tabs
 
 " -----------------------------------------------------------------------------------------
+" Vim plug
+" -----------------------------------------------------------------------------------------
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'kelan/gyp.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'fatih/vim-go'
+Plug 'vim-syntastic/syntastic'
+
+call plug#end()
+
+" -----------------------------------------------------------------------------------------
 " UI
 " -----------------------------------------------------------------------------------------
 set t_Co=256                         " Explicitly tell vim that the terminal supports 256 colors
