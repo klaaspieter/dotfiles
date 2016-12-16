@@ -1,0 +1,10 @@
+#!/bin/sh
+output=$1
+tmp_file=$(mktemp)
+
+xcrun simctl io booted recordVideo "$tmp_file"
+
+ffmpeg -i "$tmp_file" -pix_fmt rgb24 -r 10 -f gif - \
+  | gifsicle --optimize=3 > "$output"
+
+rm -r "$tmp_file"
