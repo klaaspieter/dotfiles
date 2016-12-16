@@ -1,11 +1,12 @@
 #/bin/sh
 
-# seed-env enable|disable
+# seed-env enable|disable|internal|status
 # enable Enables the Seed environment
 # disable  Disables the Seed environment
 # internal Enables the internal Seed environment
+# status Shows the current status of the Seed environment
 
-enable_seed_env () {
+seed_env_enable () {
   access_key_id=$(pass show aws.amazon.com/seed/access-key-id)
   secret_access_key=$(pass show aws.amazon.com/seed/secret-access-key)
 
@@ -13,19 +14,38 @@ enable_seed_env () {
   eval "export AWS_SECRET_ACCESS_KEY=$secret_access_key"
 }
 
-enable_internal_seed_env () {
-  enable_seed_env
+seed_env_internal_enable () {
+  seed_env_enable
   token=$(pass show seed.co/internal-token)
   eval "export SEED_INTERNAL=$token"
 }
 
+seed_env_status () {
+  if ! [ -z "${AWS_ACCESS_KEY_ID+x}" ] &&
+    !  [ -z "${AWS_SECRET_ACCESS_KEY+x}" ] &&
+    !  [ -z "${SEED_INTERNAL+x}" ];
+  then
+    echo "internal"
+  elif ! [ -z "${AWS_ACCESS_KEY_ID+x}" ] &&
+    !    [ -z "${AWS_SECRET_ACCESS_KEY+x}" ];
+  then
+    echo "enabled"
+  else
+    echo "disabled"
+  fi
+}
+
 case $1 in
+"status")
+  seed_env_status
+  ;;
+
 "enable")
-  enable_seed_env
+  seed_env_enable
   ;;
 
 "internal")
-  enable_internal_seed_env
+  seed_env_internal_enable
   ;;
 
 "disable")
@@ -34,5 +54,5 @@ case $1 in
   unset SEED_INTERNAL
   ;;
 *)
-  echo "$(basename "$0") enable|disable|internal"
+  echo "$(basename "$0") enable|disable|internal|status"
 esac
