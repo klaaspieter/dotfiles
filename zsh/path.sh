@@ -2,7 +2,8 @@ export PATH=/usr/local/bin:/usr/local/sbin:~/.bin:$PATH
 
 # Go
 export GOPATH=$HOME/Developer/golang
-export PATH=$PATH:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 
 # Android
 export PATH=$PATH:$ANT_HOME/bin
