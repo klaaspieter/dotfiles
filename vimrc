@@ -12,6 +12,25 @@ syntax on                            " Enable syntax highlighting
 filetype plugin indent on            " Enable filetype-specific indenting and plugins
 set clipboard+=unnamed               " Enable integration with system clipboard
 set backspace=indent,eol,start
+set autowrite
+
+function! g:Include(file)
+  if filereadable(expand(a:file))
+    execute 'source' a:file
+  endif
+endfunction
+
+" Stolen wholesale from gabebw, who stole it wholesale from christoomey, whose
+" dotfiles you really should check out:
+" https://github.com/christoomey/dotfiles
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.vim/' . a:directory . '/*.vim'
+  for config_file in split(glob(directory_splat), '\n')
+    call Include(config_file)
+  endfor
+endfunction
+
+call s:SourceConfigFilesIn('config')
 
 " -----------------------------------------------------------------------------------------
 " Indenting
@@ -21,19 +40,6 @@ set tabstop=2                        " 2 tabs
 set softtabstop=2                    " Backspace deletes tab
 set shiftwidth=2                     " (auto)indent 2
 set expandtab                        " Use spaces instead of tabs
-
-" -----------------------------------------------------------------------------------------
-" Vim plug
-" -----------------------------------------------------------------------------------------
-call plug#begin('~/.vim/plugged')
-
-Plug 'vim-airline/vim-airline'
-Plug 'kelan/gyp.vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'fatih/vim-go'
-Plug 'vim-syntastic/syntastic'
-
-call plug#end()
 
 " -----------------------------------------------------------------------------------------
 " UI
