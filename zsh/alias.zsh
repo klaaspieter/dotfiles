@@ -10,3 +10,5 @@ alias p="pod install"
 alias sl="git diff --name-only master | ack \".swift\" | xargs -L1 swiftlint lint --path 2>/dev/null"
 
 alias xcnuke="rm -rf ~/Library/Developer/Xcode/DerivedData"
+
+alias seed-env=". seed-env"

@@ -1,0 +1,3 @@
+#compdef seed-internal
+
+_arguments "1: :(enable disable internal)"

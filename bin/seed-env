@@ -1,0 +1,38 @@
+#/bin/sh
+
+# seed-env enable|disable
+# enable Enables the Seed environment
+# disable  Disables the Seed environment
+# internal Enables the internal Seed environment
+
+enable_seed_env () {
+  access_key_id=$(pass show aws.amazon.com/seed/access-key-id)
+  secret_access_key=$(pass show aws.amazon.com/seed/secret-access-key)
+
+  eval "export AWS_ACCESS_KEY_ID=$access_key_id"
+  eval "export AWS_SECRET_ACCESS_KEY=$secret_access_key"
+}
+
+enable_internal_seed_env () {
+  enable_seed_env
+  token=$(pass show seed.co/internal-token)
+  eval "export SEED_INTERNAL=$token"
+}
+
+case $1 in
+"enable")
+  enable_seed_env
+  ;;
+
+"internal")
+  enable_internal_seed_env
+  ;;
+
+"disable")
+  unset AWS_ACCESS_KEY_ID
+  unset AWS_SECRET_ACCESS_KEY
+  unset SEED_INTERNAL
+  ;;
+*)
+  echo "$(basename "$0") enable|disable|internal"
+esac
