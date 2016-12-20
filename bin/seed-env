@@ -1,6 +1,6 @@
 #/bin/sh
 
-# seed-env enable|disable|internal|status
+# seed-env [status] enable|disable|internal
 # enable Enables the Seed environment
 # disable  Disables the Seed environment
 # internal Enables the internal Seed environment
@@ -36,10 +36,6 @@ seed_env_status () {
 }
 
 case $1 in
-"status")
-  seed_env_status
-  ;;
-
 "enable")
   seed_env_enable
   ;;
@@ -54,5 +50,5 @@ case $1 in
   unset SEED_INTERNAL
   ;;
 *)
-  echo "$(basename "$0") enable|disable|internal|status"
+  seed_env_status
 esac
