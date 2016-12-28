@@ -2,10 +2,8 @@
   a = add
   p = push
   pushf = push --force-with-lease
-  aa = add -A
   ap = add --patch
   co = checkout
-  cp = cherry-pick
   mg = merge --ff-only
   s = status
   ci = commit
@@ -24,6 +22,7 @@
   rb = rebase
   rbi = rebase --interactive
   rbc = rebase --continue
+  rba = rebase --abort
 
 [user]
   name = Klaas Pieter Annema
