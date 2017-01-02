@@ -20,7 +20,7 @@ function! g:Include(file)
   endif
 endfunction
 
-" Stolen wholesale from gabebw, who stole it wholesale from christoomey, whose
+" Stolen wholesale from gfontenot, gabebw, who stole it wholesale from christoomey, whose
 " dotfiles you really should check out:
 " https://github.com/christoomey/dotfiles
 function! s:SourceConfigFilesIn(directory)
