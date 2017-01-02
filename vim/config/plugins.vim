@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline'
 
 " Syntax
 Plug 'fatih/vim-go'
+Plug 'kballard/vim-swift'
 Plug 'kelan/gyp.vim'
 Plug 'vim-syntastic/syntastic'
 
