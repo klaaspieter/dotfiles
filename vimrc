@@ -74,12 +74,6 @@ set ignorecase                       " Search case insensitive
 set hlsearch                         " Highlight current search
 set incsearch                        " Highlight search while typing
 
-let g:ackprg = 'ag --vimgrep --smart-case'
-cnoreabbrev ag Ack
-cnoreabbrev aG Ack
-cnoreabbrev Ag Ack
-cnoreabbrev AG Ack
-
 " -----------------------------------------------------------------------------------------
 " Mappings
 " -----------------------------------------------------------------------------------------
