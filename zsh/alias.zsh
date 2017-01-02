@@ -10,4 +10,6 @@ alias p="pod install"
 
 alias xcnuke="rm -rf ~/Library/Developer/Xcode/DerivedData"
 
+alias cask="brew cask"
+
 alias seed-env=". seed-env"
