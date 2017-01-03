@@ -23,6 +23,7 @@
   rbi = rebase --interactive
   rbc = rebase --continue
   rba = rebase --abort
+  conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
 
 [user]
   name = Klaas Pieter Annema
