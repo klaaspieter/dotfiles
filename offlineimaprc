@@ -1,0 +1,44 @@
+[general]
+ui = ttyui
+accounts = annema.me
+fsync = False
+pythonfile = ~/.offlineimap.py
+
+[Account annema.me]
+localrepository = annema.me-local
+remoterepository = annema.me-remote
+status_backend = sqlite
+
+[Repository annema.me-local]
+type = Maildir
+localfolders = ~/.mail/annema.me
+sep = /
+
+nametrans = lambda folder: {
+                            'drafts':    '[Gmail]/Drafts',
+                            'flagged':   '[Gmail]/Starred',
+                            'important': '[Gmail]/Important',
+                            'inbox':     'INBOX',
+                            'spam':      '[Gmail]/Spam',
+                            'trash':     '[Gmail]/Trash',
+                            }.get(folder, folder)
+
+[Repository annema.me-remote]
+maxconnections = 1
+type = Gmail
+remoteuser = kpa@annema.me
+remotepasseval = get_password("kpa@annema.me")
+realdelete = no
+sslcacertfile = /usr/local/etc/openssl/cert.pem
+
+nametrans = lambda folder:      re.sub('\[Gmail\]\/All Mail', 'archive',
+                                re.sub('\[Gmail\]\/Drafts', 'drafts',
+                                re.sub('\[Gmail\]\/Important', 'important',
+                                re.sub('\[Gmail\]\/Sent Mail', 'sent',
+                                re.sub('\[Gmail\]\/Spam', 'spam',
+                                re.sub('\[Gmail\]\/Starred', 'flagged',
+                                re.sub('\[Gmail\]\/Trash', 'trash',
+                                re.sub('INBOX', 'inbox', folder))))))))
+
+folderfilter = lambda folder: folder in ['[Gmail]/Drafts',
+                                         'INBOX']

@@ -1,2 +1,2 @@
 EXCLUDES="README.md defaults.sh LICENSE"
-SYMLINK_DIRS="vim zsh bin"
+SYMLINK_DIRS="vim zsh bin mutt"

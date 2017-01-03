@@ -1,0 +1,91 @@
+# Paths ----------------------------------------------
+set alias_file       = ~/.mutt/alias         # where to store aliases
+set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+
+# Basic Options --------------------------------------
+set wait_key = no        # shut up, mutt
+set timeout = 3          # idle time before scanning
+set mail_check = 0       # minimum time between scans
+unset move               # gmail does that
+set delete               # don't ask, just do
+unset confirmappend      # don't ask, just do!
+set quit                 # don't ask, just do!!
+unset mark_old           # read/new is good enough for me
+set beep_new             # bell on new mails
+set pipe_decode          # strip headers and eval mimes when piping
+set thorough_search      # strip headers and eval mimes before searching
+set wait_key = no
+
+# Colors  -------------------------------------
+source ~/.mutt/solarized/mutt-colors-solarized-dark-16.muttrc
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+
+# Status Bar -----------------------------------------
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+# Key Bindings ---------------------------------
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager G  bottom
+
+bind index p recall-message
+bind compose p postpone-message
+
+# View attachments properly.
+bind attach <return> view-mailcap
+
+# Prefer plain text over html
+alternative_order text/plain text/html
+
+# Auto convert text/html MIME type to text/plain
+auto_view text/html
+
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+
+# Account Settings -----------------------------------
+set realname          = "Klaas Pieter Annema"
+set from              = "kpa@annema.me"
+set smtp_url          = "smtp://kpa@annema.me@smtp.gmail.com:587"
+set smtp_pass         = `pass show mail.annema.me/mutt`
+set folder            = "~/.mail/annema.me"
+set spoolfile         = "+inbox"
+set postponed         = "+drafts"
+set trash             = "+trash"
+set mbox              = "+archive"
+
+# Group messages in threads
+set sort=threads
+
+# Sort threads newest to oldest
+set sort_aux=last-date-received
+
+# Stop asking to move read messages to mbox
+set move = no
+
+# Gmail-style keyboard shortcuts
+bind editor <space> noop # Necessary for folders with spaces in their name
+bind  index,pager c  mail # Compose
+bind  generic     x  tag-entry      #Select Conversation
+bind  index       x  tag-thread     #Select Conversation
+bind  pager       x  tag-message    #Select Conversation
+macro index,pager e  "<save-message>=archive<enter><enter>" "archive conversation"
+macro index,pager +  "<save-message>=important<enter><enter>" "mark as important"
+macro index,pager !  "<save-message>=spam<enter><enter>" "report spam"
+bind  index,pager a  group-reply # Reply all
+bind  index,pager \# delete-thread # Delete
+macro index,pager I  <set-flag>O "mark as read"
+macro index,pager U  <clear-flag>O "mark as unread"
+macro index,pager ga "<change-folder>=archive<enter>"  "go to archive"
+macro index,pager gs "<change-folder>=flagged<enter>" "go to flagged"
+macro index,pager gd "<change-folder>=drafts<enter>"  "go to drafts"
+macro index,pager gi "<change-folder>=inbox<enter>" "go to inbox"
+macro index,pager gt "<change-folder>=sent<enter>" "go to sent"
+
