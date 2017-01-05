@@ -70,6 +70,9 @@ set sort_aux=last-date-received
 # Stop asking to move read messages to mbox
 set move = no
 
+# Don't ask for recipients and subject when replying
+set fast_reply = yes
+
 # Gmail-style keyboard shortcuts
 bind editor <space> noop # Necessary for folders with spaces in their name
 bind  index,pager c  mail # Compose
