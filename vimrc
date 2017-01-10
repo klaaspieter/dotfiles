@@ -98,9 +98,8 @@ map <Enter> o<ESC>
 set textwidth=80
 set colorcolumn=+1
 
-" Ctrl-P
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" Mimic ctrl-p, but use fzf
+nmap <C-p> :Files<CR>
 
 " -----------------------------------------------------------------------------------------
 " Backups
