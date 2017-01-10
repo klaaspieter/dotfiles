@@ -1,4 +1,4 @@
-function SetGolangOptions()
+function! s:SetGolangOptions()
 
   " Break at lines and indent them by 2 spaces
   set textwidth=0
@@ -32,4 +32,4 @@ function SetGolangOptions()
 
 endfunction
 
-autocmd Filetype go call SetGolangOptions()
+autocmd Filetype go call s:SetGolangOptions()
