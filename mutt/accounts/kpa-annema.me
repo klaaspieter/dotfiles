@@ -1,0 +1,21 @@
+set from = "kpa@annema.me"
+
+set my_user = "kpa@annema.me
+set my_pass = `pass show mail.annema.me/mutt`
+set my_host = "smtp.gmail.com"
+set smtp_url = "smtp://$my_user:$my_pass@$my_host:587"
+set smtp_authenticators = 'login'
+
+set spoolfile           = "+kpa-annema.me/inbox"
+set postponed           = "+kpa-annema.me/drafts"
+set trash               = "+kpa-annema.me/trash"
+set mbox                = "+kpa-annema.me/archive"
+
+macro index,pager e  "<save-message>=kpa-annema.me/archive<enter><enter>" "archive conversation"
+macro index,pager +  "<save-message>=kpa-annema.me/important<enter><enter>" "mark as important"
+macro index,pager !  "<save-message>=kpa-annema.me/spam<enter><enter>" "report spam"
+macro index,pager ga "<change-folder>=kpa-annema.me/archive<enter>"  "go to archive"
+macro index,pager gs "<change-folder>=kpa-annema.me/flagged<enter>" "go to flagged"
+macro index,pager gd "<change-folder>=kpa-annema.me/drafts<enter>"  "go to drafts"
+macro index,pager gi "<change-folder>=kpa-annema.me/inbox<enter>" "go to inbox"
+macro index,pager gt "<change-folder>=kpa-annema.me/sent<enter>" "go to sent"

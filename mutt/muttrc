@@ -1,3 +1,17 @@
+# Account Settings -----------------------------------
+set realname = "Klaas Pieter Annema"
+set ssl_force_tls = yes
+source ~/.mail/mailboxes
+set folder = "~/.mail"
+set mbox_type = "Maildir"
+
+mailboxes +kpa-annema.me/inbox +kpa-seed.co/inbox
+folder-hook kpa-annema.me/* source ~/.mutt/accounts/kpa-annema.me
+folder-hook kpa-seed.co/* source ~/.mutt/accounts/kpa-seed.co
+
+# Default to annema.me email
+set spoolfile = +kpa-annema.me/inbox
+
 # Paths ----------------------------------------------
 set alias_file       = ~/.mutt/alias         # where to store aliases
 set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
@@ -55,6 +69,8 @@ bind pager G  bottom
 bind index p recall-message
 bind compose p postpone-message
 
+macro index o "<shell-escape>offlineimap -q<enter>" "run offlineimap"
+
 # View attachments properly.
 bind attach <return> view-mailcap
 
@@ -66,20 +82,6 @@ auto_view text/html
 
 macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-
-# Account Settings -----------------------------------
-set realname            = "Klaas Pieter Annema"
-set from                = "kpa@annema.me"
-set smtp_url            = "smtps://kpa@annema.me@smtp.gmail.com:465/"
-set smtp_pass           = `pass show mail.annema.me/mutt`
-set smtp_authenticators = 'login'
-set ssl_force_tls       = yes
-set folder              = "~/.mail/annema.me"
-set spoolfile           = "+inbox"
-set postponed           = "+drafts"
-set trash               = "+trash"
-set mbox                = "+archive"
-
 
 # Stop asking to move read messages to mbox
 set move = no
@@ -93,16 +95,7 @@ bind  index,pager c  mail # Compose
 bind  generic     x  tag-entry      #Select Conversation
 bind  index       x  tag-thread     #Select Conversation
 bind  pager       x  tag-message    #Select Conversation
-macro index,pager e  "<save-message>=archive<enter><enter>" "archive conversation"
-macro index,pager +  "<save-message>=important<enter><enter>" "mark as important"
-macro index,pager !  "<save-message>=spam<enter><enter>" "report spam"
 bind  index,pager a  group-reply # Reply all
 bind  index,pager \# delete-thread # Delete
 macro index,pager I  <set-flag>O "mark as read"
 macro index,pager U  <clear-flag>O "mark as unread"
-macro index,pager ga "<change-folder>=archive<enter>"  "go to archive"
-macro index,pager gs "<change-folder>=flagged<enter>" "go to flagged"
-macro index,pager gd "<change-folder>=drafts<enter>"  "go to drafts"
-macro index,pager gi "<change-folder>=inbox<enter>" "go to inbox"
-macro index,pager gt "<change-folder>=sent<enter>" "go to sent"
-
