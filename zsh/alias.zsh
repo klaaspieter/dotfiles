@@ -13,3 +13,5 @@ alias xcnuke="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias cask="brew cask"
 
 alias seed-env=". seed-env"
+
+alias decode-qr="zbarimg --raw --quiet <(pngpaste -)"
