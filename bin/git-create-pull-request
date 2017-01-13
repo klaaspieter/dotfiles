@@ -18,4 +18,5 @@ else
 fi
 
 vim "${vim_flags[@]}" "$msg"
-hub pull-request -m "$(sed '/^#/d' "$msg")" | pbcopy
+url=$(hub pull-request -m "$(sed '/^#/d' "$msg")")
+open "$url"
