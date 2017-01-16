@@ -20,16 +20,14 @@ function! g:Include(file)
   endif
 endfunction
 
-" Stolen wholesale from gfontenot, gabebw, who stole it wholesale from christoomey, whose
-" dotfiles you really should check out:
-" https://github.com/christoomey/dotfiles
+" Stolen wholesale from gfontenot who stole it wholesale from gabebw who stole
+" it from christoomey.
 function! s:SourceConfigFilesIn(directory)
   let directory_splat = '~/.vim/' . a:directory . '/*.vim'
   for config_file in split(glob(directory_splat), '\n')
     call Include(config_file)
   endfor
 endfunction
-
 call s:SourceConfigFilesIn('config')
 
 " -----------------------------------------------------------------------------------------
@@ -114,15 +112,6 @@ set undodir=~/.vim/tmp/undo          " Place undofiles in ~/.vim/tmp/undo
 " Show tabs and trailing whitespace
 " --------------------------------------------------------------------------------------------------
 set list listchars=tab:▸\ ,eol:¬,trail:.
-
-" --------------------------------------------------------------------------------------------------
-" Writing
-" --------------------------------------------------------------------------------------------------
-" Disable folding in markdown files
-autocmd BufNewFile,BufReadPost *.md set nofoldenable
-
-" Enable spell checking
-setlocal spell
 
 " --------------------------------------------------------------------------------------------------
 " Airline

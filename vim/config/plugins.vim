@@ -10,12 +10,17 @@ Plug 'kballard/vim-swift'
 Plug 'kelan/gyp.vim'
 Plug 'vim-syntastic/syntastic'
 
+" Searching
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+
 " Convenience
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'mileszs/ack.vim'
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+
+" Writing
+Plug 'junegunn/goyo.vim'
 
 call plug#end()
