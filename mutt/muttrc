@@ -90,12 +90,12 @@ set move = no
 set fast_reply = yes
 
 # Gmail-style keyboard shortcuts
-bind editor <space> noop # Necessary for folders with spaces in their name
-bind  index,pager c  mail # Compose
-bind  generic     x  tag-entry      #Select Conversation
-bind  index       x  tag-thread     #Select Conversation
-bind  pager       x  tag-message    #Select Conversation
-bind  index,pager a  group-reply # Reply all
-bind  index,pager \# delete-thread # Delete
-macro index,pager I  <set-flag>O "mark as read"
-macro index,pager U  <clear-flag>O "mark as unread"
+bind editor <space> noop # necessary for folders with spaces in their name
+bind index,pager c mail # compose
+bind generic x tag-entry # select
+bind index x tag-thread # select
+bind pager x tag-message # select
+bind index,pager a group-reply # reply all
+bind index,pager \# delete-thread # delete
+macro index,pager I <set-flag>O "mark as read"
+macro index,pager U <clear-flag>O "mark as unread"
