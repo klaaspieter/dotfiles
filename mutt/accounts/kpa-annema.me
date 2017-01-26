@@ -12,8 +12,8 @@ set trash               = "+kpa-annema.me/trash"
 set mbox                = "+kpa-annema.me/archive"
 
 
-macro index,pager e "<tag-prefix><save-message>=archive\n<sync-mailbox>" "archive selected conversations"
-macro pager e "<save-message>=archive\n<sync-mailbox>" "archive conversation"
+macro index,pager e "<tag-prefix><save-message>=kpa-annema.me/archive\n<sync-mailbox>" "archive selected conversations"
+macro pager e "<save-message>=kpa-annema.me/archive\n<sync-mailbox>" "archive conversation"
 macro index,pager ! "<save-message>=kpa-annema.me/spam<enter><enter>" "report spam"
 macro index,pager ga "<change-folder>=kpa-annema.me/archive<enter>"  "go to archive"
 macro index,pager gs "<change-folder>=kpa-annema.me/flagged<enter>" "go to flagged"
