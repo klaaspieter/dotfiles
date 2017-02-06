@@ -65,10 +65,8 @@ bind pager k  previous-line
 bind pager j  next-line
 bind pager gg top
 bind pager G  bottom
-
 bind index p recall-message
 bind compose p postpone-message
-
 macro index o "<shell-escape>offlineimap -q<enter>" "run offlineimap"
 
 # View attachments properly.
@@ -99,3 +97,8 @@ bind index,pager a group-reply # reply all
 bind index,pager \# delete-thread # delete
 macro index,pager I <set-flag>O "mark as read"
 macro index,pager U <clear-flag>O "mark as unread"
+
+# OmniFocus
+macro index,pager \cT \
+  <pipe-message>'~/.config/mutt/plugins/email-to-omnifocus.rb'<enter> \
+  'Create OmniFocus task from message'
