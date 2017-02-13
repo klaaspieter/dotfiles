@@ -95,8 +95,8 @@ bind index x tag-thread # select
 bind pager x tag-message # select
 bind index,pager a group-reply # reply all
 bind index,pager \# delete-thread # delete
-macro index,pager I <set-flag>O "mark as read"
-macro index,pager U <clear-flag>O "mark as unread"
+macro index,pager I <tag-prefix><set-flag>O "mark as read"
+macro index,pager U <tag-prefix><clear-flag>O "mark as unread"
 
 # OmniFocus
 macro index,pager \cT \
