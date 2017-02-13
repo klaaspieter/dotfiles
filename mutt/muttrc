@@ -100,5 +100,5 @@ macro index,pager U <clear-flag>O "mark as unread"
 
 # OmniFocus
 macro index,pager \cT \
-  <pipe-message>'~/.config/mutt/plugins/email-to-omnifocus.rb'<enter> \
+  <pipe-message>'~/.mutt/email-to-omnifocus.rb'<enter> \
   'Create OmniFocus task from message'
