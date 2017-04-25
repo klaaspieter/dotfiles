@@ -15,7 +15,6 @@ footer = "\n"
 [Account annema.me]
 localrepository = annema.me-local
 remoterepository = annema.me-remote
-status_backend = sqlite
 
 [Repository annema.me-local]
 type = Maildir
@@ -54,7 +53,6 @@ folderfilter = lambda folder: folder in ['[Gmail]/Drafts',
 [Account seed.co]
 localrepository = seed.co-local
 remoterepository = seed.co-remote
-status_backend = sqlite
 
 [Repository seed.co-local]
 type = Maildir
