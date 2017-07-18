@@ -9,6 +9,7 @@ Plug 'fatih/vim-go'
 Plug 'kballard/vim-swift'
 Plug 'kelan/gyp.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'elixir-lang/vim-elixir'
 
 " Searching
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
