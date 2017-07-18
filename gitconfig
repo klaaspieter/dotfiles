@@ -35,7 +35,7 @@
   excludesfile = /Users/klaaspieter/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [color]
-  ui = true
+  ui = auto
 [credential]
   helper = osxkeychain
 [push]
