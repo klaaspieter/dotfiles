@@ -9,3 +9,7 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 export GPGKEY=62C3F535
+
+export DROPBOX="$HOME/Dropbox (Personal)"
+export JOURNAL="$DROPBOX/Journal"
+export NOTES="$DROPBOX/Notes"
