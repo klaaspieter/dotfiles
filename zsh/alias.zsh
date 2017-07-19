@@ -14,4 +14,4 @@ alias cask="brew cask"
 
 alias seed-env=". seed-env"
 
-alias decode-qr="zbarimg --raw --quiet <(pngpaste -)"
+alias journal='vim "$JOURNAL"/$(date "+%Y%m%d-%H%M%S").md'
