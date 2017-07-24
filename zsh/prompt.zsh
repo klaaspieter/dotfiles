@@ -10,7 +10,7 @@ function git_prompt_info() {
   else
     DIRTY_COLOR="%F{green}"
   fi
-  echo " $DIRTY_COLOR${ref#refs/heads/} $(git_stash_info)$f"
+  echo " $DIRTY_COLOR${ref#refs/heads/}$(git_stash_info)$f"
 }
 
 function git_stash_info() {
@@ -22,7 +22,7 @@ function git_stash_info() {
   fi
 
   if (( num_stashed > 0 )); then
-    printf "⚑$num_stashed"
+    printf " ⚑$num_stashed"
   fi
 }
 
