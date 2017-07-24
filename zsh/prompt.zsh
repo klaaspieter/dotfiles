@@ -10,7 +10,20 @@ function git_prompt_info() {
   else
     DIRTY_COLOR="%F{green}"
   fi
-  echo " $DIRTY_COLOR${ref#refs/heads/}$f"
+  echo " $DIRTY_COLOR${ref#refs/heads/} $(git_stash_info)$f"
+}
+
+function git_stash_info() {
+  stash_file="$( git rev-parse --git-dir )/logs/refs/stash"
+  if [[ -e "${stash_file}" ]]; then
+    while IFS='' read -r wcline || [[ -n "$wcline" ]]; do
+      ((num_stashed++))
+    done < ${stash_file}
+  fi
+
+  if (( num_stashed > 0 )); then
+    printf "⚑$num_stashed"
+  fi
 }
 
 function parse_git_dirty() {
