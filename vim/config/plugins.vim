@@ -23,5 +23,6 @@ Plug 'tpope/vim-surround'
 
 " Writing
 Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-pencil'
 
 call plug#end()
