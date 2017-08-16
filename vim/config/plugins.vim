@@ -25,4 +25,7 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
 
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
