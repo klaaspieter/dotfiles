@@ -27,5 +27,6 @@ Plug 'reedes/vim-pencil'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux'
 
 call plug#end()
