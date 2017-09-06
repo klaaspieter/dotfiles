@@ -9,6 +9,7 @@ alias ll="ls -lh"
 alias p="pod install"
 
 alias xcnuke="rm -rf ~/Library/Developer/Xcode/DerivedData"
+alias canuke="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
 
 alias cask="brew cask"
 
