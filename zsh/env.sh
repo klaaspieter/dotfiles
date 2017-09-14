@@ -11,6 +11,11 @@ export GPG_TTY
 
 export GPGKEY=62C3F535
 
+export PROJECTS="$HOME/Developer/Projects"
 export DROPBOX="$HOME/Dropbox (Personal)"
 export JOURNAL="$DROPBOX/Journal"
 export NOTES="$DROPBOX/Notes"
+
+setopt auto_cd
+cdpath=($HOME $PROJECTS $HOME/Developer/Seed)
+export JUMP_DIRECTORIES=$CDPATH

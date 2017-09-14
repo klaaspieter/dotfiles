@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+# List all directories in $JUMP_DIRECTORIES that have been modified in the last
+# N days and contain git repositories.
+
+modified_directories() {
+  echo "${JUMP_DIRECTORIES//:/\n}" | while read dir; do
+    find -L "$dir" \
+      -not -path '*/\.*' \
+      -type d \
+      -maxdepth 2
+  done
+}
+
+is_a_git_repo(){
+  while read dir; do
+    if [[ -d "$dir/.git" ]]; then
+      echo "$dir"
+    fi
+  done
+}
+
+modified_directories | is_a_git_repo | sort --unique
