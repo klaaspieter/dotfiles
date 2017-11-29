@@ -10,6 +10,13 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 export GPGKEY=62C3F535
+SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SSH_AUTH_SOCK
+gpgconf --launch gpg-agent
+
+# Ensure SSH using a GPG key knows where do show pinentry
+# https://www.gnupg.org/documentation/manuals/gnupg/Common-Problems.html
+echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 
 export PROJECTS="$HOME/Developer/Projects"
 export DROPBOX="$HOME/Dropbox (Personal)"
