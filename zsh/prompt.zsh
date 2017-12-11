@@ -53,9 +53,11 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-# Shows current working directory (up to 3 levels) in blue
+# Shows current working directory (up to 5 levels) in blue
 # Git branch in red if dirty, otherwise green.
-PROMPT='%F{blue}%~%f%F{red}$(git_prompt_info)%f '
+PROMPT='%F{blue}%(6~|%-1~/.../%4~|%5~)%f%F{red}$(git_prompt_info)%f '
+
+# %(5~|%-1~/…/%3~|%4~)
 
 # Shows last return status in red if not zero
 RPROMPT="${status_code_prompt_info}"
