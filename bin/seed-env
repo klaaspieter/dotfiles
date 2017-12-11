@@ -10,8 +10,14 @@ seed_env_enable () {
   access_key_id=$(pass show aws.amazon.com/seed/access-key-id)
   secret_access_key=$(pass show aws.amazon.com/seed/secret-access-key)
 
+  eval "export AWS_ACCESS_KEY=$access_key_id"
   eval "export AWS_ACCESS_KEY_ID=$access_key_id"
+
+  eval "export AWS_SECRET_KEY=$secret_access_key"
   eval "export AWS_SECRET_ACCESS_KEY=$secret_access_key"
+
+  export AWS_REGION="us-west-2"
+  export ENV="test"
 }
 
 seed_env_internal_enable () {
