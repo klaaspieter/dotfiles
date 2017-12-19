@@ -1,3 +1,4 @@
+brew "neovim"
 brew "the_silver_searcher"
 
 # tmux
