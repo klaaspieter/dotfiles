@@ -51,7 +51,6 @@ alias gdf="git difftool"
 # ======
 # Xcode
 # ======
-alias xcnuke="rm -rf ~/Library/Developer/Xcode/DerivedData"
 alias xccleanup="xcrun simctl delete unavailable"
 
 alias p="pod install"
