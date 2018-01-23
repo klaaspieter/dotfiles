@@ -1,3 +1,3 @@
 EXCLUDES="README.md defaults.sh LICENSE"
-SYMLINK_DIRS="vim zsh bin mutt"
+SYMLINK_DIRS="vim zsh mutt"
 UNDOTTED="Library"
