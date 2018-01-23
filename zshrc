@@ -49,10 +49,8 @@ alias gs="git status"
 alias gdf="git difftool"
 
 # ======
-# Xcode
+# Cocoapods
 # ======
-alias xccleanup="xcrun simctl delete unavailable"
-
 alias p="pod install"
 
 # ======
