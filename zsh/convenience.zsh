@@ -1,2 +1,0 @@
-setopt no_beep
-
