@@ -39,7 +39,7 @@ Plug 'vim-airline/vim-airline'
 
 " Syntax
 Plug 'fatih/vim-go'
-Plug 'kballard/vim-swift'
+Plug 'keith/swift.vim'
 Plug 'kelan/gyp.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'elixir-lang/vim-elixir'
@@ -164,12 +164,3 @@ function! AirlineInit()
     endif
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
-
-" -----------------------------------------------------------------------------
-" Swift
-" -----------------------------------------------------------------------------
-function! s:SetSwiftOptions()
-  setlocal noshowmatch
-endfunction
-let g:swift_suppress_showmatch_warning = 1
-autocmd Filetype swift call s:SetSwiftOptions()
