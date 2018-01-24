@@ -1,6 +1,6 @@
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " General
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 set nocompatible                     " use vim defaults, no vi compatibility
 set number                           " Show line numbers
 set autoread                         " Automatically reload files changed externally
@@ -28,18 +28,55 @@ function! s:SourceConfigFilesIn(directory)
 endfunction
 call s:SourceConfigFilesIn('config')
 
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
+" Plugins
+" -----------------------------------------------------------------------------
+call plug#begin('~/.vim/plugged')
+
+" Theme
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline'
+
+" Syntax
+Plug 'fatih/vim-go'
+Plug 'kballard/vim-swift'
+Plug 'kelan/gyp.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'elixir-lang/vim-elixir'
+Plug 'mustache/vim-mustache-handlebars'
+
+" Searching
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+
+" Convenience
+Plug 'pbrisbin/vim-mkdir'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+
+" Writing
+Plug 'junegunn/goyo.vim'
+Plug 'reedes/vim-pencil'
+
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tmux-plugins/vim-tmux'
+
+call plug#end()
+
+" -----------------------------------------------------------------------------
 " Indenting
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 set smartindent                      " Indent after { etc
 set tabstop=2                        " 2 tabs
 set softtabstop=2                    " Backspace deletes tab
 set shiftwidth=2                     " (auto)indent 2
 set expandtab                        " Use spaces instead of tabs
 
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " UI
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 set t_Co=256                         " Explicitly tell vim that the terminal supports 256 colors
 set nocursorline                     " Don't highlight the line the cursor is (very slow)
 set wildmenu                         " Improve command-line completion
@@ -63,18 +100,18 @@ if &t_Co > 2 || has("gui_running")
   colorscheme solarized
 endif
 
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " Searching
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 set ignorecase                       " Search case insensitive
 set hlsearch                         " Highlight current search
 set incsearch                        " Highlight search while typing
 
 let g:ackprg = "ag --nogroup --nocolor --colum"
 
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " Mappings
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " Convenient mapping for hiding search highlighting
 nnoremap <leader><space> :noh<cr>
 
@@ -99,23 +136,23 @@ set colorcolumn=+1
 " Mimic ctrl-p, but use fzf
 nmap <C-p> :Files<CR>
 
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " Backups
-" -----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 set swapfile                         " Use swapfiles
 set directory=~/.vim/tmp/swap        " Place swapfiles in ~/.vim/tmp/swap
 
 set undofile                         " Enable undo after closing files
 set undodir=~/.vim/tmp/undo          " Place undofiles in ~/.vim/tmp/undo
 
-" --------------------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " Show tabs and trailing whitespace
-" --------------------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 set list listchars=tab:▸\ ,eol:¬,trail:.
 
-" --------------------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " Airline
-" --------------------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 function! AirlineInit()
     call airline#parts#define_empty(['obsession'])
     let spc = g:airline_symbols.space
@@ -128,9 +165,9 @@ function! AirlineInit()
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
 
-" --------------------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 " Swift
-" --------------------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------
 function! s:SetSwiftOptions()
   setlocal noshowmatch
 endfunction
