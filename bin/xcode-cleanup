@@ -1,3 +1,0 @@
-#!/bin/sh
-
-xcrun simctl delete unavailable
