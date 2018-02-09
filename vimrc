@@ -12,22 +12,6 @@ set clipboard+=unnamed               " Enable integration with system clipboard
 set backspace=indent,eol,start
 set autowrite
 
-function! g:Include(file)
-  if filereadable(expand(a:file))
-    execute 'source' a:file
-  endif
-endfunction
-
-" Stolen wholesale from gfontenot who stole it wholesale from gabebw who stole
-" it from christoomey.
-function! s:SourceConfigFilesIn(directory)
-  let directory_splat = '~/.vim/' . a:directory . '/*.vim'
-  for config_file in split(glob(directory_splat), '\n')
-    call Include(config_file)
-  endfor
-endfunction
-call s:SourceConfigFilesIn('config')
-
 " -----------------------------------------------------------------------------
 " Plugins
 " -----------------------------------------------------------------------------
@@ -164,3 +148,83 @@ function! AirlineInit()
     endif
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
+
+
+" -----------------------------------------------------------------------------
+" fzf
+" -----------------------------------------------------------------------------
+let g:fzf_layout = { 'down': '~20%' }
+
+" -----------------------------------------------------------------------------
+" Go
+" -----------------------------------------------------------------------------
+function! s:SetGolangOptions()
+
+  " Break at lines and indent them by 2 spaces
+  set textwidth=0
+  set linebreak
+  set breakindent
+  set breakindentopt=shift:2
+
+  let g:go_list_type = "quickfix"
+  let g:go_fmt_command = "goimports"
+
+  nmap <leader>r <Plug>(go-run)
+  nmap <leader>t <Plug>(go-test)
+  nmap <Leader>c <Plug>(go-coverage-toggle)
+  nmap <Leader>i <Plug>(go-info)
+
+  " run :GoBuild or :GoTestCompile based on the go file
+  function! s:build_go_files()
+    let l:file = expand('%')
+    if l:file =~# '^\f\+_test\.go$'
+      call go#cmd#Test(0, 1)
+    elseif l:file =~# '^\f\+\.go$'
+      call go#cmd#Build(0)
+    endif
+  endfunction
+
+  nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+  command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+  command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+  command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+  command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+endfunction
+
+autocmd Filetype go call s:SetGolangOptions()
+
+
+" -----------------------------------------------------------------------------
+" gyp
+" -----------------------------------------------------------------------------
+let g:syntastic_filetype_map = { "gyp": "python" }
+
+" -----------------------------------------------------------------------------
+" Markdown
+" -----------------------------------------------------------------------------
+function! s:SetMarkdownOptions()
+  " Disable folding in markdown files
+  setlocal nofoldenable
+
+  " Prevent breaking at 80 columns
+  setlocal textwidth=0
+
+  " Break at 80 columns with inserting EOLs
+  setlocal linebreak
+
+  " Enable spell checking
+  setlocal spell
+endfunction
+autocmd Filetype markdown call s:SetMarkdownOptions()
+
+" -----------------------------------------------------------------------------
+" Writing
+" -----------------------------------------------------------------------------
+let g:pencil#wrapModeDefault = 'soft'
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text call pencil#init()
+augroup END
