@@ -175,8 +175,26 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 ###############################################################################
 # iTerm2
 ###############################################################################
+
+# Read configuration from custom directory
 defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/iterm"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+###############################################################################
+# Divvy
+###############################################################################
+
+# Set Option + Space as global shortcut
+defaults write com.mizage.direct.Divvy useGlobalHotkey -int 1
+defaults write com.mizage.direct.Divvy globalHotkey -dict keyCode 49 modifiers 2048
+
+# Hide menu item
+defaults write com.mizage.direct.Divvy showMenuIcon -bool no
+
+# Configure columns and rows
+defaults write com.mizage.direct.Divvy useDefaultGrid -bool yes
+defaults write com.mizage.direct.Divvy defaultColumnCount -int 10
+defaults write com.mizage.direct.Divvy defaultRowCount -int 10
 
 ###############################################################################
 # Kill affected applications
