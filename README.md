@@ -15,7 +15,7 @@ git clone https://github.com/klaaspieter/dotfiles.git
 Run the setup script:
 
 ```sh
-./setup
+./setup/run
 ```
 
 The setup script is idempotent and can be run multiple times.

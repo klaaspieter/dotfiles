@@ -1,3 +1,3 @@
-EXCLUDES="README.md defaults LICENSE Brewfile Gemfile Gemfile.lock"
+EXCLUDES="README.md LICENSE setup"
 UNDOTTED="Library"
 SYMLINK_DIRS="asdf"

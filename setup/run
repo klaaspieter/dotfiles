@@ -34,6 +34,9 @@ trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
 
 set -e
 
+# Change into the directory of the script so it can find Brewfile, Gemfile, etc
+cd "$(dirname "$0")"
+
 if [ ! -f "$HOME/.zshrc" ]; then
   touch "$HOME/.zshrc"
 fi
