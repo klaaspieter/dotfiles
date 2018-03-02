@@ -1,40 +1,31 @@
 dotfiles
 ========
 
-Requirements
-------------
-
-Set zsh as your login shell:
-
-    chsh -s $(which zsh)
+My dotfiles. I don't recommend running these as your own. I'm sharing them so you can steal things for your own dotfiles.
 
 Install
 -------
 
 Clone onto your laptop:
 
-    git clone https://github.com/klaaspieter/dotfiles.git
+```sh
+git clone https://github.com/klaaspieter/dotfiles.git
+```
 
-Install [rcm](https://github.com/thoughtbot/rcm):
+Run the setup script:
 
-    brew tap thoughtbot/formulae
-    brew install rcm
+```sh
+./setup
+```
 
-Install the dotfiles:
+The setup script is idempotent and can be run multiple times.
 
-    env RCRC=$HOME/dotfiles/rcrc rcup
+Attribution
+----------
+Many scripts and configurations have been inspired by [thoughtbot]'s [laptop script][thoughtbot laptop repo] and [dotfiles][thoughtbot dotfiles repo]. I've also stolen many things from [Gordon Fontenot][Gordon's dotfiles].
 
-After the initial installation, you can run `rcup` without the one-time variable
-`RCRC` being set (`rcup` will symlink the repo's `rcrc` to `~/.rcrc` for future
-runs of `rcup`).
-
-This command will create symlinks for config files in your home directory.
-Setting the `RCRC` environment variable tells `rcup` to use standard
-configuration options.
-
-You can safely run `rcup` multiple times to update:
-
-    rcup
-
-You should run `rcup` after pulling a new version of the repository to symlink
-any new files in the repository.
+[thoughtbot]: https://thoughtbot.com
+[setup script]: https://github.com/klaaspieter/dotfiles/blob/master/setup
+[thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
+[thoughtbot dotfiles repo]: https://github.com/thoughtbot/dotfiles
+[Gordon's dotfiles]: https://github.com/gfontenot/dotfiles
