@@ -1,0 +1,187 @@
+#!/bin/sh
+
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+###############################################################################
+# General UI/UX
+###############################################################################
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Set crash dialog to Developer mode
+defaults write com.apple.CrashReporter -string "Developer"
+
+###############################################################################
+# Locale
+###############################################################################
+
+# Set language and text formats
+defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
+defaults write NSGlobalDomain AppleLocale -string "nl_NL"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write NSGlobalDomain AppleTemperatureUnit -string "Celsius"
+
+###############################################################################
+# Trackpad, mouse, keyboard, Bluetooth accessories, and input
+###############################################################################
+
+# Trackpad: enable tap to click for this user and for the login screen
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Enable full keyboard access for all controls
+# (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+###############################################################################
+# Screen
+###############################################################################
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
+###############################################################################
+# Finder
+###############################################################################
+
+# Hide icons for hard drives, servers, and removable media on the desktop
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
+# Show filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Allow text selection in Quick Look
+defaults write com.apple.finder QLEnableTextSelection -bool true
+
+# Show full POSIX path in the bottom of the Finder window
+defaults write com.apple.finder ShowPathBar -bool true
+
+# Avoid creating .DS_Store files on network or USB volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Use list view in all Finder windows by default
+# Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
+# Show the /Volumes folder
+sudo chflags nohidden /Volumes
+
+###############################################################################
+# Dock
+###############################################################################
+
+# Set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 55
+
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool true
+
+# Make dock size, contents and location immutable
+defaults write com.apple.dock size-immutable -bool yes
+defaults write com.apple.dock contents-immutable -bool yes
+defaults write com.apple.dock position-immutable -bool yes
+
+# Remove all Dock items
+defaults delete com.apple.dock persistent-apps
+defaults delete com.apple.dock persistent-others
+
+# Restore ~/Downloads stack
+defaults write com.apple.dock persistent-others -array-add "<dict>
+  <key>tile-type</key>
+  <string>directory-tile</string>
+  <key>tile-data</key>
+  <dict>
+    <key>file-label</key>
+    <string>Downloads</string>
+    <key>file-data</key>
+    <dict>
+      <key>_CFURLString</key>
+      <string>file:///Users/$(whoami)/Downloads/</string>
+      <key>_CFURLStringType</key>
+      <integer>15</integer>
+    </dict>
+  </dict>
+</dict>"
+
+# Add Firefox
+defaults write com.apple.dock persistent-apps -array-add '<dict>
+  <key>tile-data</key>
+  <dict>
+    <key>file-type</key>
+    <string>directory-tile</string>
+    <key>file-label</key>
+    <string>Firefox</string>
+    <key>file-data</key>
+    <dict>
+      <key>_CFURLString</key>
+      <string>/Applications/Firefox.app</string>
+      <key>_CFURLStringType</key>
+      <integer>0</integer>
+    </dict>
+  </dict>
+</dict>'
+
+###############################################################################
+# Hot corners
+###############################################################################
+
+# Bottom left → Start screen saver
+defaults write com.apple.dock wvous-bl-corner -int 5
+defaults write com.apple.dock wvous-bl-modifier -int 0
+
+###############################################################################
+# Kill affected applications
+###############################################################################
+for app in "Activity Monitor" \
+  "Dock" \
+  "Divvy" \
+  "Finder" \
+  "SystemUIServer" \
+  "cfprefsd" \
+  "iTerm2" \
+; do
+  killall "${app}" &> /dev/null
+done
