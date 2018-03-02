@@ -173,6 +173,12 @@ defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 ###############################################################################
+# iTerm2
+###############################################################################
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/iterm"
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+###############################################################################
 # Kill affected applications
 ###############################################################################
 for app in "Activity Monitor" \
