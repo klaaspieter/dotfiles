@@ -177,7 +177,7 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 ###############################################################################
 
 # Read configuration from custom directory
-defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/iterm"
+defaults write com.googlecode.iterm2 PrefsCustomFolder -string "~/.dotfiles/preferences/iterm"
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
 ###############################################################################
