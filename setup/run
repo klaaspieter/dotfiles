@@ -146,6 +146,9 @@ vim -c "PlugInstall | exit | exit"
 fancy_echo "Installing Ruby gems ..."
 bundle install
 
+fancy_echo "Restoring system defaults ..."
+./defaults
+
 XCODE_VERSION=$(xcversion list | grep -v "beta" | tail -n1)
 if [[ ${XCODE_VERSION} != *"installed"* ]]; then
   fancy_echo "Installing latest Xcode version ($XCODE_VERSION) ..."
