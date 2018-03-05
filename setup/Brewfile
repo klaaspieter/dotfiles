@@ -25,6 +25,7 @@ brew "imagemagick"
 # Programming language prerequisites and package managers
 brew "libyaml" # should come after openssl
 brew "coreutils"
+brew "autoconf"
 
 # Mac
 brew "trash"
