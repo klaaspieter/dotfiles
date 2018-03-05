@@ -48,3 +48,13 @@ cask "1password"
 cask "firefox"
 cask "bartender"
 cask "spotify"
+cask "slack"
+cask "whatsapp"
+cask "zoomus"
+cask "sketch"
+cask "wkhtmltopdf"
+cask "expressvpn"
+cask "omnifocus"
+
+# Mac App Store
+mas 'Numbers', id: 409203825
