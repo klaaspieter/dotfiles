@@ -1,20 +1,20 @@
-tap "thoughtbot/formulae"
 tap "caskroom/cask"
 tap "klaaspieter/formula"
+tap "thoughtbot/formulae"
 
 # Unix
 brew "git"
+brew "gnupg"
+brew "neovim"
 brew "openssl"
+brew "pass"
 brew "rcm"
 brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
 brew "tmux"
-brew "neovim"
-brew "zsh"
 brew "tree"
-brew "gnupg"
-brew "pass"
 brew "xcrecord"
+brew "zsh"
 
 # GitHub
 brew "hub"
@@ -23,9 +23,9 @@ brew "hub"
 brew "imagemagick"
 
 # Programming language prerequisites and package managers
-brew "libyaml" # should come after openssl
-brew "coreutils"
 brew "autoconf"
+brew "coreutils"
+brew "libyaml" # should come after openssl
 
 # Mac
 brew "trash"
@@ -35,31 +35,31 @@ brew "postgres", restart_service: :changed
 brew "redis", restart_service: :changed
 
 # Xcode
-tap "gfontenot/formulae"
-brew "xcode-cli"
 brew "carthage"
 brew "swiftlint"
+brew "xcode-cli"
+tap "gfontenot/formulae"
 
 # Fonts
-tap "caskroom/fonts"
 cask "font-hack"
+tap "caskroom/fonts"
 
 # Apps
-cask "iterm2"
+cask "1password"
 cask "alfred"
+cask "bartender"
 cask "divvy"
 cask "dropbox"
-cask "1password"
-cask "firefox"
-cask "bartender"
-cask "spotify"
-cask "slack"
-cask "whatsapp"
-cask "zoomus"
-cask "sketch"
-cask "wkhtmltopdf"
 cask "expressvpn"
+cask "firefox"
+cask "iterm2"
 cask "omnifocus"
+cask "sketch"
+cask "slack"
+cask "spotify"
+cask "whatsapp"
+cask "wkhtmltopdf"
+cask "zoomus"
 
 # Mac App Store
 mas 'Numbers', id: 409203825
