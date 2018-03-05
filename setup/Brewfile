@@ -47,6 +47,7 @@ tap "caskroom/fonts"
 # Apps
 cask "1password"
 cask "alfred"
+cask "arq"
 cask "bartender"
 cask "divvy"
 cask "dropbox"
