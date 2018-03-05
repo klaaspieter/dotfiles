@@ -35,6 +35,7 @@ brew "redis", restart_service: :changed
 tap "gfontenot/formulae"
 brew "xcode-cli"
 brew "carthage"
+brew "swiftlint"
 
 # Fonts
 tap "caskroom/fonts"
