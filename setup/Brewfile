@@ -1,5 +1,6 @@
 tap "thoughtbot/formulae"
 tap "caskroom/cask"
+tap "klaaspieter/formula"
 
 # Unix
 brew "git"
@@ -13,6 +14,7 @@ brew "zsh"
 brew "tree"
 brew "gnupg"
 brew "pass"
+brew "xcrecord"
 
 # GitHub
 brew "hub"
