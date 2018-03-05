@@ -19,6 +19,9 @@ export TERM="xterm-256color"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
+# Reduce the delay to enter Vi normal mode
+export KEYTIMEOUT=1
+
 # ============================================================================
 # Options
 # ============================================================================
