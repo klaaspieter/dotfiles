@@ -63,4 +63,6 @@ cask "wkhtmltopdf"
 cask "zoomus"
 
 # Mac App Store
-mas 'Numbers', id: 409203825
+mas "Letters", id: 1196993429
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
