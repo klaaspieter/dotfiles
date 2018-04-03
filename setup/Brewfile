@@ -3,6 +3,7 @@ tap "klaaspieter/formula"
 tap "thoughtbot/formulae"
 
 # Unix
+brew "autojump"
 brew "git"
 brew "gnupg"
 brew "neovim"
