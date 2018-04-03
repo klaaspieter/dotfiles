@@ -25,6 +25,10 @@ defaults write com.apple.CrashReporter -string "Developer"
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
+# Use scroll gesture with the Ctrl (^) modifier key to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
 ###############################################################################
 # Locale
 ###############################################################################
@@ -238,6 +242,7 @@ for app in "Activity Monitor" \
   "SystemUIServer" \
   "cfprefsd" \
   "iTerm2" \
+  "universalaccessd" \
 ; do
   killall "${app}" &> /dev/null
 done
