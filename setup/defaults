@@ -29,6 +29,9 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
+# Play feedback when volume is changed
+defaults write .GlobalPreferences com.apple.sound.beep.feedback -bool true
+
 ###############################################################################
 # Locale
 ###############################################################################
