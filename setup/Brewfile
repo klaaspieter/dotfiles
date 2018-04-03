@@ -42,16 +42,16 @@ brew "xcode-cli"
 tap "gfontenot/formulae"
 
 # Fonts
-cask "font-hack"
 tap "caskroom/fonts"
+cask "font-hack"
 
 # Apps
-cask "1password"
 cask "alfred"
 cask "arq"
 cask "bartender"
 cask "caffeine"
 cask "dash"
+cask "delta"
 cask "divvy"
 cask "dropbox"
 cask "expressvpn"
