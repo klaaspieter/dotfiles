@@ -194,6 +194,11 @@ endfunction
 
 autocmd Filetype go call s:SetGolangOptions()
 
+" -----------------------------------------------------------------------------
+" shellcheck
+" -----------------------------------------------------------------------------
+" Allow following external source
+let g:syntastic_sh_shellcheck_args = "-x"
 
 " -----------------------------------------------------------------------------
 " gyp
