@@ -227,6 +227,11 @@ RPROMPT="${status_code_prompt_info}"
 source $HOME/.asdf/asdf.sh
 source "$HOME/.asdf/completions/asdf.bash"
 
+# ============================================================================
+# chxcode
+# ============================================================================
+source /usr/local/opt/chxcode/share/chxcode/chxcode
+source /usr/local/opt/chxcode/share/chxcode/auto
 
 # ============================================================================
 # Autojump

@@ -37,10 +37,11 @@ brew "postgres", restart_service: :changed
 brew "redis", restart_service: :changed
 
 # Xcode
+tap "gfontenot/formulae"
 brew "carthage"
+brew "chxcode"
 brew "swiftlint"
 brew "xcode-cli"
-tap "gfontenot/formulae"
 
 # Fonts
 tap "caskroom/fonts"
