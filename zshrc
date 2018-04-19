@@ -254,8 +254,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export GOPATH=$HOME/Developer/golang
 export GOBIN=$GOPATH/bin
 
-export ERL_AFLAGS="-kernel shell_history enabled"
-
 # ============================================================================
 # dotenv
 # ============================================================================
