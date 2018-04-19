@@ -119,7 +119,7 @@ bindkey '\e[B' history-search-forward
 # Navigation
 # ============================================================================
 setopt auto_cd
-cdpath=($HOME $PROJECTS $HOME/Developer/Seed)
+cdpath=($HOME $PROJECTS)
 
 # Exporting CDPATH is bad and can cause all sorts of problems so lets set
 # CDPATH to something else and export that instead
