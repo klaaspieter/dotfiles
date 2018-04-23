@@ -31,7 +31,7 @@
   email = kpa@annema.me
   signingkey = Klaas Pieter Annema <kpa@annema.me>
 [core]
-  editor = vim
+  editor = "$EDITOR"
   excludesfile = /Users/klaaspieter/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [color]
