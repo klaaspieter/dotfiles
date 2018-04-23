@@ -159,11 +159,11 @@ fi
 fancy_echo "Installing Ruby gems ..."
 bundle install
 
-fancy_echo "Restoring system defaults ..."
-./defaults
-
-XCODE_VERSION=$(xcversion list | grep -v "beta" | tail -n1)
+XCODE_VERSION=$(xcversion list 2>/dev/null | grep -v "beta" | tail -n1)
 if [[ ${XCODE_VERSION} != *"installed"* ]]; then
   fancy_echo "Installing latest Xcode version ($XCODE_VERSION) ..."
-  xcversion install "$XCODE_VERSION"
+  bundle exec xcversion install "$XCODE_VERSION"
 fi
+
+fancy_echo "Restoring system defaults ..."
+./defaults
