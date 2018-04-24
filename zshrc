@@ -36,49 +36,6 @@ setopt IGNORE_EOF
 setopt EXTENDED_GLOB
 
 # ============================================================================
-# Aliases
-# ============================================================================
-
-# ======
-# ZSH
-# ======
-alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
-
-# ======
-# Editor
-# ======
-alias e=$VISUAL
-
-# ======
-# Git
-# ======
-alias g="git"
-alias gs="git status"
-alias gdf="git difftool"
-
-# ======
-# Cocoapods
-# ======
-alias p="pod install"
-
-# ======
-# Ruby
-# ======
-alias be="bundle exec"
-alias b="bundle install -j4"
-
-# ======
-# Misc
-# ======
-
-# Kill CoreAudio. Use this when volume controls stop working
-alias canuke="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
-
-alias cask="brew cask"
-
-alias seed-env=". seed-env"
-
-# ============================================================================
 # Completion
 # ============================================================================
 fpath=(
@@ -145,6 +102,49 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 setopt no_hist_beep
+
+# ============================================================================
+# Aliases
+# ============================================================================
+
+# ======
+# ZSH
+# ======
+alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
+
+# ======
+# Editor
+# ======
+alias e=$VISUAL
+
+# ======
+# Git
+# ======
+alias g="git"
+alias gs="git status"
+alias gdf="git difftool"
+
+# ======
+# Cocoapods
+# ======
+alias p="pod install"
+
+# ======
+# Ruby
+# ======
+alias be="bundle exec"
+alias b="bundle install -j4"
+
+# ======
+# Misc
+# ======
+
+# Kill CoreAudio. Use this when volume controls stop working
+alias canuke="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
+
+alias cask="brew cask"
+
+alias seed-env=". seed-env"
 
 # ============================================================================
 # Appearance
