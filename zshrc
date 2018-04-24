@@ -116,6 +116,7 @@ alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 # Editor
 # ======
 alias e=$VISUAL
+alias vim=$EDITOR
 
 # ======
 # Git
