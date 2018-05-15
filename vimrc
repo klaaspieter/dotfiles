@@ -66,7 +66,7 @@ set nocursorline                     " Don't highlight the line the cursor is (v
 set wildmenu                         " Improve command-line completion
 set wildmode=list:longest,full       " Determines how completions are shown
 set splitbelow splitright            " change split order
-set bg=dark                          " Set dark background theme
+set bg=light                         " Set dark background theme
 set showmatch                        " Show matching brackets
 set ls=2                             " Show current open buffer
 set ruler                            " Show location in files
