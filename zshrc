@@ -19,8 +19,8 @@ export TERM="xterm-256color"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
-# Reduce the delay to enter Vi normal mode
-export KEYTIMEOUT=1
+# Use emacs mode
+bindkey -e
 
 # ============================================================================
 # Options
@@ -202,16 +202,6 @@ function parse_git_dirty() {
 function status_code_prompt_info() {
   echo "%F{red}%(?..%?)$f"
 }
-
-
-# Show the vim mode in the right PROMPT
-function zle-line-init zle-keymap-select {
-  VIM_PROMPT="[% NORMAL]% "
-  RPROMPT="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $(status_code_prompt_info) $EPS1"
-  zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
 
 # Shows current working directory (up to 5 levels) in blue
 # Git branch in red if dirty, otherwise green.
