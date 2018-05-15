@@ -25,6 +25,7 @@
   rba = rebase --abort
   conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
   pr = create-pull-request
+  fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
 
 [user]
   name = Klaas Pieter Annema
