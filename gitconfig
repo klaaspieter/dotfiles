@@ -1,32 +1,32 @@
 [alias]
   a = add
-  p = push
-  pushf = push --force-with-lease
+  alias = config --get-regexp 'alias.*'
   ap = add --patch
-  co = checkout
-  mg = merge --ff-only
-  s = status
-  ci = commit
-  ca = commit --amend
   br = branch
+  brn = rev-parse --abbrev-ref HEAD
+  ca = commit --amend
+  ci = commit
+  co = checkout
+  conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
   df = difftool
   dfs = difftool --staged
+  fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
   l = log
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  mg = merge --ff-only
+  p = push
+  pr = create-pull-request
+  pushf = push --force-with-lease
+  rb = rebase
+  rba = rebase --abort
+  rbc = rebase --continue
+  rbi = rebase --interactive
+  s = status
   st = stash
-  stu = stash -u --keep-index
+  std = stash drop
   stl = stash list
   stp = stash pop
-  std = stash drop
-  alias = config --get-regexp 'alias.*'
-  rb = rebase
-  rbi = rebase --interactive
-  rbc = rebase --continue
-  rba = rebase --abort
-  conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
-  pr = create-pull-request
-  fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
-  brn = rev-parse --abbrev-ref HEAD
+  stu = stash -u --keep-index
 
 [user]
   name = Klaas Pieter Annema
