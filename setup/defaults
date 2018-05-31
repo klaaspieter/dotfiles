@@ -254,5 +254,5 @@ for app in "Activity Monitor" \
   "iTerm2" \
   "universalaccessd" \
 ; do
-  killall "${app}" &> /dev/null
+  killall "${app}" >/dev/null 2>&1
 done
