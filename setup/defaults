@@ -67,6 +67,11 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
+defaults -currentHost write com.apple.screensaver moduleDict -dict \
+  path "/System/Library/Screen Savers/Arabesque.saver" \
+  moduleName "Arabesque" \
+  type 0
+
 ###############################################################################
 # Finder
 ###############################################################################
