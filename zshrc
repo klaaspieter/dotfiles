@@ -201,18 +201,22 @@ function parse_git_dirty() {
   fi
 }
 
+function xcode_version_prompt_info() {
+  if [ -n "${XCODE_AUTO_VERSION+x}" ]; then
+    echo "🔨 $XCODE_AUTO_VERSION"
+  fi
+}
+
 function status_code_prompt_info() {
-  echo "%F{red}%(?..%?)$f"
+  echo "%F{red}%(?..%?)$f "
 }
 
 # Shows current working directory (up to 5 levels) in blue
 # Git branch in red if dirty, otherwise green.
 PROMPT='%F{blue}%(6~|%-1~/.../%4~|%5~)%f%F{red}$(git_prompt_info)%f '
 
-# %(5~|%-1~/…/%3~|%4~)
-
 # Shows last return status in red if not zero
-RPROMPT="${status_code_prompt_info}"
+RPROMPT='$(xcode_version_prompt_info) $(status_code_prompt_info)'
 
 # ============================================================================
 # ASDF
