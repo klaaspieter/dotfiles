@@ -30,8 +30,8 @@
 
 [user]
   name = Klaas Pieter Annema
-  email = kpa@annema.me
-  signingkey = Klaas Pieter Annema <kpa@annema.me>
+  email = kp@annema.me
+  signingkey = Klaas Pieter Annema <kp@annema.me>
 [core]
   editor = "$EDITOR"
   excludesfile = /Users/klaaspieter/.gitignore
