@@ -1,0 +1,14 @@
+#!/bin/sh
+
+progress_summary_file="$(mktemp)"
+commit_message_file="$(mktemp)"
+
+nvim -c "set ft=markdown" "$progress_summary_file"
+
+echo "wip (with note)" > "$commit_message_file"
+echo "" >> "$commit_message_file"
+cat "$progress_summary_file" >> "$commit_message_file"
+
+git add .
+git commit --file="$commit_message_file"
+
