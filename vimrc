@@ -234,11 +234,6 @@ augroup pencil
   autocmd FileType text call pencil#init()
 augroup END
 
-augroup markdown
-  autocmd!
-  autocmd Filetype markdown,mkd Goyo
-augroup END
-
 function! s:goyo_enter()
   let b:quitting = 0
   let b:quitting_bang = 0
