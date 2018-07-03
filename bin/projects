@@ -5,7 +5,6 @@
 modified_directories() {
   echo "${JUMP_DIRECTORIES//:/\n}" | while read dir; do
     find -L "$dir" \
-      -not -path '*/\.*' \
       -type d \
       -maxdepth 2
   done
