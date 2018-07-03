@@ -1,7 +1,6 @@
 #!/bin/zsh
 
-# List all directories in $JUMP_DIRECTORIES that have been modified in the last
-# N days and contain git repositories.
+# List git repositories in $JUMP_DIRECTORIES
 
 modified_directories() {
   echo "${JUMP_DIRECTORIES//:/\n}" | while read dir; do
