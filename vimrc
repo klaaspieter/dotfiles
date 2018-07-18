@@ -120,6 +120,9 @@ set colorcolumn=+1
 " Mimic ctrl-p, but use fzf
 nmap <C-p> :Files<CR>
 
+" Toggle spell checking
+nmap <silent> <leader>s :set spell!<CR>
+
 " -----------------------------------------------------------------------------
 " Backups
 " -----------------------------------------------------------------------------
