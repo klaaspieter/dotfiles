@@ -229,6 +229,12 @@ autocmd Filetype markdown call s:SetMarkdownOptions()
 " -----------------------------------------------------------------------------
 " Writing
 " -----------------------------------------------------------------------------
+" Enabling spell checking for git commits
+autocmd FileType gitcommit setlocal spell
+
+com! Du set spelllang=nl
+com! En set spelllang=en_us
+
 let g:pencil#wrapModeDefault = 'soft'
 
 augroup pencil
