@@ -235,6 +235,15 @@ autocmd FileType gitcommit setlocal spell
 com! Du set spelllang=nl
 com! En set spelllang=en_us
 
+func! WordProcessorMode()
+  setlocal formatoptions=1
+  setlocal noexpandtab
+  setlocal spell spelllang=en_us
+  setlocal wrap
+  setlocal linebreak
+endfunc
+com! WP call WordProcessorMode()
+
 let g:pencil#wrapModeDefault = 'soft'
 
 augroup pencil
