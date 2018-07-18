@@ -15,7 +15,6 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   mg = merge --ff-only
   p = push
-  pr = create-pull-request
   pushf = push --force-with-lease
   rb = rebase
   rba = rebase --abort
