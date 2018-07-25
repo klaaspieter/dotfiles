@@ -28,6 +28,7 @@ Plug 'kelan/gyp.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'elixir-lang/vim-elixir'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'pangloss/vim-javascript'
 
 " Searching
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
