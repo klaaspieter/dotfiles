@@ -42,7 +42,7 @@
 [push]
   default = current
 [github]
-  user = klaaspieter@annema.me
+  user = kp@annema.me
 [branch]
   autosetupmerge = true
 [rerere]
