@@ -22,13 +22,14 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 
 " Syntax
+Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'keith/swift.vim'
 Plug 'kelan/gyp.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'elixir-lang/vim-elixir'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-bundler'
+Plug 'vim-syntastic/syntastic'
 
 " Searching
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
