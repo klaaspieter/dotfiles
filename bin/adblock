@@ -1,0 +1,46 @@
+#!/bin/sh
+
+adblock_file=~/Library/Caches/blocked_hosts.txt
+base_file=~/Library/Caches/base_hosts.txt
+
+enable_block(){
+  sudo bash -c "cat \"$base_file\" \"$adblock_file\" > /etc/hosts"
+}
+
+disable_block(){
+  sudo cp "$base_file" /etc/hosts
+}
+
+usage(){
+  echo
+  echo "Toggle adblocking on or off by manipulating /etc/hosts"
+  echo
+  echo "Usage: ./adblock <enable|disable|update>"
+  echo
+  echo "	Updating will download the latest file from https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts"
+  echo "	Requires curl"
+}
+
+update_block_file(){
+  file=$(mktemp)
+  curl "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts" -o "$file"
+  cp "$file" "$adblock_file"
+  enable_block
+}
+
+action="$1"
+
+case $action in
+  enable*)
+    enable_block
+    ;;
+  disable*)
+    disable_block
+    ;;
+  update*)
+    update_block_file
+    ;;
+  *)
+    usage
+    ;;
+esac
