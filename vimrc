@@ -29,7 +29,7 @@ Plug 'kelan/gyp.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-bundler'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 
 " Searching
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -198,17 +198,6 @@ function! s:SetGolangOptions()
 endfunction
 
 autocmd Filetype go call s:SetGolangOptions()
-
-" -----------------------------------------------------------------------------
-" shellcheck
-" -----------------------------------------------------------------------------
-" Allow following external source
-let g:syntastic_sh_shellcheck_args = "-x"
-
-" -----------------------------------------------------------------------------
-" gyp
-" -----------------------------------------------------------------------------
-let g:syntastic_filetype_map = { "gyp": "python" }
 
 " -----------------------------------------------------------------------------
 " Markdown
