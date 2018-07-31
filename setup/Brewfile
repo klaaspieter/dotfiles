@@ -61,7 +61,6 @@ cask "expressvpn"
 cask "firefox"
 cask "istat-menus"
 cask "iterm2"
-cask "omnifocus"
 cask "sketch"
 cask "slack"
 cask "spotify"
@@ -75,3 +74,4 @@ cask "zoomus"
 mas "Letters", id: 1196993429
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Things", id: 904280696
