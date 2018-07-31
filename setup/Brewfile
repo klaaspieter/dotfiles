@@ -1,6 +1,7 @@
 tap "caskroom/cask"
 tap "klaaspieter/formula"
 tap "thoughtbot/formulae"
+tap "universal-ctags/universal-ctags"
 
 # Unix
 brew "autojump"
@@ -26,7 +27,7 @@ brew "imagemagick"
 # Programming language prerequisites and package managers
 brew "autoconf"
 brew "coreutils"
-brew "ctags"
+brew "universal-ctags", args: ["HEAD"]
 brew "libyaml" # should come after openssl
 
 # Mac
