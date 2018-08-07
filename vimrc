@@ -216,8 +216,13 @@ function! s:SetMarkdownOptions()
 
   " Enable spell checking
   setlocal spell
+
+  " Use <leader>p to render in Markoff
+  nnoremap <leader>p :silent !open -a Markoff.app '%:p'<cr>
 endfunction
 autocmd Filetype markdown call s:SetMarkdownOptions()
+
+
 
 " -----------------------------------------------------------------------------
 " Writing
