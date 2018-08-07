@@ -4,7 +4,6 @@ tap "thoughtbot/formulae"
 tap "universal-ctags/universal-ctags"
 
 # Unix
-brew "autojump"
 brew "git"
 brew "gnupg"
 brew "neovim"
