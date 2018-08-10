@@ -1,7 +1,3 @@
--- Automatically reload configuration
-hs.loadSpoon("ReloadConfiguration")
-spoon.ReloadConfiguration:start()
-
 -- Disable window animations
 hs.window.animationDuration = 0
 
@@ -11,11 +7,11 @@ hs.window.animationDuration = 0
 local normal = hs.hotkey.modal.new({'alt'}, 'space')
 
 normal.entered = function()
-  -- hs.alert.show('Normal mode')
+  --hs.alert.show('Normal mode')
 end
 
 normal.exited = function()
-  -- hs.alert.show('Insert mode')
+  --hs.alert.show('Insert mode')
 end
 
 function exitModal(action)
@@ -25,6 +21,10 @@ function exitModal(action)
   end
 end
 
+-- Reload config
+normal:bind({}, "r", exitModal(function()
+  hs.reload()
+end))
 
 -- Center the focused window
 local centerWindow = exitModal(function()
@@ -42,3 +42,5 @@ local fullScreenWindow = exitModal(function()
   hs.window.focusedWindow():maximize()
 end)
 normal:bind({}, 'f', fullScreenWindow)
+
+hs.alert.show("Config reloaded")
