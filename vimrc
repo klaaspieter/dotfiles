@@ -33,6 +33,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-bundler'
 Plug 'w0rp/ale'
 
+" Testing
+Plug 'benmills/vimux'
+Plug 'janko-m/vim-test'
+
 " Searching
 Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
@@ -127,6 +131,13 @@ nmap <C-p> :Files<CR>
 " Toggle spell checking
 nmap <silent> <leader>s :set spell!<CR>
 
+" Test mappings
+nnoremap <silent> <Leader>t :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <Leader>gt :TestVisit<CR>
+
 " -----------------------------------------------------------------------------
 " Backups
 " -----------------------------------------------------------------------------
@@ -156,6 +167,10 @@ function! AirlineInit()
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
 
+" -----------------------------------------------------------------------------
+" vim test
+" -----------------------------------------------------------------------------
+let test#strategy = "vimux"
 
 " -----------------------------------------------------------------------------
 " fzf
@@ -221,8 +236,6 @@ function! s:SetMarkdownOptions()
   nnoremap <leader>p :silent !open -a Markoff.app '%:p'<cr>
 endfunction
 autocmd Filetype markdown call s:SetMarkdownOptions()
-
-
 
 " -----------------------------------------------------------------------------
 " Writing
