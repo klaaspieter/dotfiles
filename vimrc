@@ -126,7 +126,7 @@ set textwidth=80
 set colorcolumn=+1
 
 " Mimic ctrl-p, but use fzf
-nmap <C-p> :Files<CR>
+nmap <C-p> :GFiles<CR>
 
 " Toggle spell checking
 nmap <silent> <leader>s :set spell!<CR>
