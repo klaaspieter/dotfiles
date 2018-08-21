@@ -238,6 +238,17 @@ endfunction
 autocmd Filetype markdown call s:SetMarkdownOptions()
 
 " -----------------------------------------------------------------------------
+" Vimux
+" -----------------------------------------------------------------------------
+" Close Vimux runner
+map <Leader>vw :VimuxCloseRunner<CR>
+
+" Zoom Vimux runner
+map <Leader>vz :VimuxZoomRunner<CR>
+
+let g:VimuxHeight = "40"
+
+" -----------------------------------------------------------------------------
 " Writing
 " -----------------------------------------------------------------------------
 " Enabling spell checking for git commits
