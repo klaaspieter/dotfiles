@@ -50,6 +50,7 @@ Plug 'tpope/vim-surround'
 " Writing
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
+Plug 'mzlogin/vim-markdown-toc'
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
