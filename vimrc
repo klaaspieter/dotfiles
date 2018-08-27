@@ -139,6 +139,12 @@ nnoremap <silent> <Leader>l :TestLast<CR>
 nnoremap <silent> <Leader>a :TestSuite<CR>
 nnoremap <silent> <Leader>gt :TestVisit<CR>
 
+" Don't jump to first Ack result
+cnoreabbrev Ack Ack!
+
+" Start Ack with <Leader>a
+nnoremap <Leader>a :Ack!<Space>
+
 " -----------------------------------------------------------------------------
 " Backups
 " -----------------------------------------------------------------------------
@@ -172,6 +178,17 @@ autocmd User AirlineAfterInit call AirlineInit()
 " vim test
 " -----------------------------------------------------------------------------
 let test#strategy = "vimux"
+
+" -----------------------------------------------------------------------------
+" Vimux
+" -----------------------------------------------------------------------------
+" Close Vimux runner
+map <Leader>vw :VimuxCloseRunner<CR>
+
+" Zoom Vimux runner
+map <Leader>vz :VimuxZoomRunner<CR>
+
+let g:VimuxHeight = "40"
 
 " -----------------------------------------------------------------------------
 " fzf
@@ -237,17 +254,6 @@ function! s:SetMarkdownOptions()
   nnoremap <leader>p :silent !open -a Markoff.app '%:p'<cr>
 endfunction
 autocmd Filetype markdown call s:SetMarkdownOptions()
-
-" -----------------------------------------------------------------------------
-" Vimux
-" -----------------------------------------------------------------------------
-" Close Vimux runner
-map <Leader>vw :VimuxCloseRunner<CR>
-
-" Zoom Vimux runner
-map <Leader>vz :VimuxZoomRunner<CR>
-
-let g:VimuxHeight = "40"
 
 " -----------------------------------------------------------------------------
 " Writing
