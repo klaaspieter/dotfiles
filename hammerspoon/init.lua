@@ -43,4 +43,12 @@ local fullScreenWindow = exitModal(function()
 end)
 normal:bind({}, 'f', fullScreenWindow)
 
+
+-- Emit the contents of the pasteboard as key events
+hs.hotkey.bind(
+  {"cmd", "alt"},
+  "V",
+  function() hs.eventtap.keyStrokes(hs.pasteboard.getContents()) end
+)
+
 hs.alert.show("Config reloaded")
