@@ -46,6 +46,7 @@ Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 
 " Writing
 Plug 'junegunn/goyo.vim'
