@@ -1,3 +1,5 @@
+[init]
+  templatedir = ~/.git_template
 [alias]
   a = add
   alias = config --get-regexp 'alias.*'
@@ -8,6 +10,7 @@
   ci = commit
   co = checkout
   conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
+  ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
   df = difftool
   dfs = difftool --staged
   fza = "!git ls-files -m -o --exclude-standard | fzf --print0 -m | xargs -0 -t -o git add"
