@@ -44,6 +44,7 @@ Plug 'mileszs/ack.vim'
 " Convenience
 Plug 'pbrisbin/vim-mkdir'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
