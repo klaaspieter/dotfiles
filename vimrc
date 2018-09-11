@@ -147,6 +147,10 @@ cnoreabbrev Ack Ack!
 " Start Ack with <Leader>a
 nnoremap <Leader>a :Ack!<Space>
 
+" Use Enter and Backspace to navigate vim help
+nnoremap <buffer> <CR> <C-]>
+nnoremap <buffer> <BS> <C-T>
+
 " -----------------------------------------------------------------------------
 " Backups
 " -----------------------------------------------------------------------------
