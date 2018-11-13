@@ -42,7 +42,9 @@ Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 
 " Convenience
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'pbrisbin/vim-mkdir'
+Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
