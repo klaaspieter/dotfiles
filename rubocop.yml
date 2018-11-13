@@ -3,3 +3,6 @@ Style/StringLiterals:
 
 Documentation:
   Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
