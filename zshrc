@@ -284,3 +284,8 @@ export SSH_AUTH_SOCK
 # Ensure SSH using a GPG key knows where to show pinentry
 # https://www.gnupg.org/documentation/manuals/gnupg/Common-Problems.html
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
+
+# ============================================================================
+# Local
+# ============================================================================
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
