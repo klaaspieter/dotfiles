@@ -39,7 +39,6 @@ setopt EXTENDED_GLOB
 # Completion
 # ============================================================================
 fpath=(
-  ~/.config/zsh-completion-scripts
   /usr/local/share/zsh-completions
   $fpath
 )
