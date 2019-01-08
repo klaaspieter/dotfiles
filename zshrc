@@ -110,7 +110,7 @@ setopt no_hist_beep
 # ======
 # ZSH
 # ======
-alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
+alias reload="source ~/.zshenv && source ~/.zshrc; echo 'sourced ~/.zshrc'"
 
 # ======
 # Editor
