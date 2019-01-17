@@ -86,6 +86,7 @@ set ruler                            " Show location in files
 set wrap                             " Wrap long lines
 set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
+set omnifunc=syntaxcomplete#Complete " Support omnicomplete <C-X><C-O>
 
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
