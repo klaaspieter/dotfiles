@@ -89,6 +89,10 @@ set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
 set omnifunc=syntaxcomplete#Complete " Support omnicomplete <C-X><C-O>
 
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
@@ -127,10 +131,6 @@ map k gk
 " inserts new line without going into insert mode
 map <S-Enter> O<ESC>
 map <Enter> o<ESC>
-
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
 
 " Mimic ctrl-p, but use fzf
 nmap <C-p> :GFiles<CR>
