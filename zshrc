@@ -147,12 +147,6 @@ alias cask="brew cask"
 
 alias seed-env=". seed-env"
 
-# Defines transfer alias and provides easy command line file and folder sharing.
-#
-# Authors:
-#   Remco Verhoef <remco@dutchcoders.io>
-#
-
 # ============================================================================
 # Appearance
 # ============================================================================
