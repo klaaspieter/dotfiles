@@ -20,6 +20,8 @@ call plug#begin('~/.vim/plugged')
 " Theme
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'blueyed/vim-diminactive'
 
 " Syntax
 Plug 'elixir-lang/vim-elixir'
