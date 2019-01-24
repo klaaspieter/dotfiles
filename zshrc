@@ -285,6 +285,12 @@ export SSH_AUTH_SOCK
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 
 # ============================================================================
+# pass
+# ============================================================================
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
+
+# ============================================================================
 # Local
 # ============================================================================
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
