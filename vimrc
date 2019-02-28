@@ -181,11 +181,10 @@ set list listchars=tab:▸\ ,eol:¬,trail:.
 function! AirlineInit()
     call airline#parts#define_empty(['obsession'])
     let spc = g:airline_symbols.space
-    call airline#parts#define_raw('indentation', '% sw %{&sw} % ts %{&ts}')
     if winwidth(0) > 80
-      let g:airline_section_z = airline#section#create(['windowswap', 'obsession', 'indentation', 'linenr', 'maxlinenr', spc.':%3v'])
+      let g:airline_section_z = airline#section#create(['windowswap', 'obsession', 'linenr', 'maxlinenr', spc.':%3v'])
     else
-      let g:airline_section_z = airline#section#create(['indentation', 'linenr',  ':%3v'])
+      let g:airline_section_z = airline#section#create(['linenr',  ':%3v'])
     endif
 endfunction
 autocmd User AirlineAfterInit call AirlineInit()
