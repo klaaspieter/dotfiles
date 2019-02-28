@@ -241,7 +241,7 @@ source /usr/local/opt/chxcode/share/chxcode/auto
 # ============================================================================
 # Fastlane
 # ============================================================================
-export XCODE_INSTALL_USER=kpa@annema.me
+export XCODE_INSTALL_USER=kp@annema.me
 
 # ============================================================================
 # Elixir
