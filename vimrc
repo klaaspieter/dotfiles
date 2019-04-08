@@ -159,6 +159,13 @@ nnoremap <Leader>a :Ack!<Space>
 nnoremap <buffer> <CR> <C-]>
 nnoremap <buffer> <BS> <C-T>
 
+" -----------------------------------------------------------------------------
+" Ale
+" -----------------------------------------------------------------------------
+" Run Ale fixer when a file is saved
+let g:ale_fix_on_save = 1
+
+" Run ale fixer with <Leader>f
 nmap <Leader>f <Plug>(ale_fix)
 
 " -----------------------------------------------------------------------------
