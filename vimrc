@@ -142,18 +142,11 @@ nmap <C-p> :GFiles<CR>
 " Toggle spell checking
 nmap <silent> <leader>s :set spell!<CR>
 
-" Test mappings
-nnoremap <silent> <Leader>t :TestFile<CR>
-nnoremap <silent> <Leader>s :TestNearest<CR>
-nnoremap <silent> <Leader>l :TestLast<CR>
-nnoremap <silent> <Leader>a :TestSuite<CR>
-nnoremap <silent> <Leader>gt :TestVisit<CR>
-
 " Don't jump to first Ack result
 cnoreabbrev Ack Ack!
 
 " Start Ack with <Leader>a
-nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>f :Ack!<Space>
 
 " Use Enter and Backspace to navigate vim help
 nnoremap <buffer> <CR> <C-]>
@@ -165,9 +158,20 @@ nnoremap <buffer> <BS> <C-T>
 " Run Ale fixer when a file is saved
 let g:ale_fix_on_save = 1
 
-" Run ale fixer with <Leader>f
-nmap <Leader>f <Plug>(ale_fix)
+" Run ale fixer with <Leader>v
+nmap <Leader>v <Plug>(ale_fix)
 
+" -----------------------------------------------------------------------------
+" vim-test
+" -----------------------------------------------------------------------------
+" Disable jest's interactive test runner
+let test#javascript#reactscripts#options = '--no-watch'
+
+nnoremap <silent> <Leader>t :TestFile<CR>
+nnoremap <silent> <Leader>s :TestNearest<CR>
+nnoremap <silent> <Leader>l :TestLast<CR>
+nnoremap <silent> <Leader>a :TestSuite<CR>
+nnoremap <silent> <Leader>gt :TestVisit<CR>
 " -----------------------------------------------------------------------------
 " Backups
 " -----------------------------------------------------------------------------
