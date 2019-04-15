@@ -167,6 +167,12 @@ nmap <Leader>v <Plug>(ale_fix)
 " Disable jest's interactive test runner
 let test#javascript#reactscripts#options = '--no-watch'
 
+let test#strategy = "vimux"
+
+" Setting this to 0 makes vimux clear the screen and tmux scrollback
+" See https://github.com/janko/vim-test/issues/133
+let test#preserve_screen = 0
+
 nnoremap <silent> <Leader>t :TestFile<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
 nnoremap <silent> <Leader>l :TestLast<CR>
@@ -185,11 +191,6 @@ set undodir=~/.vim/tmp/undo          " Place undofiles in ~/.vim/tmp/undo
 " Show tabs and trailing whitespace
 " -----------------------------------------------------------------------------
 set list listchars=tab:▸\ ,eol:¬,trail:.
-
-" -----------------------------------------------------------------------------
-" vim test
-" -----------------------------------------------------------------------------
-let test#strategy = "vimux"
 
 " -----------------------------------------------------------------------------
 " Vimux
