@@ -187,20 +187,6 @@ set undodir=~/.vim/tmp/undo          " Place undofiles in ~/.vim/tmp/undo
 set list listchars=tab:▸\ ,eol:¬,trail:.
 
 " -----------------------------------------------------------------------------
-" Airline
-" -----------------------------------------------------------------------------
-function! AirlineInit()
-    call airline#parts#define_empty(['obsession'])
-    let spc = g:airline_symbols.space
-    if winwidth(0) > 80
-      let g:airline_section_z = airline#section#create(['windowswap', 'obsession', 'linenr', 'maxlinenr', spc.':%3v'])
-    else
-      let g:airline_section_z = airline#section#create(['linenr',  ':%3v'])
-    endif
-endfunction
-autocmd User AirlineAfterInit call AirlineInit()
-
-" -----------------------------------------------------------------------------
 " vim test
 " -----------------------------------------------------------------------------
 let test#strategy = "vimux"
