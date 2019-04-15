@@ -139,6 +139,9 @@ alias b="bundle install -j4"
 # Misc
 # ======
 
+# Clear the screen in tmux
+alias cls=clear;tmux clear-history;
+
 # Kill CoreAudio. Use this when volume controls stop working
 alias canuke="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
 
