@@ -144,8 +144,6 @@ alias canuke="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
 
 alias cask="brew cask"
 
-alias seed-env=". seed-env"
-
 # ============================================================================
 # Appearance
 # ============================================================================
