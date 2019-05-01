@@ -161,6 +161,12 @@ let g:ale_fix_on_save = 1
 " Run ale fixer with <Leader>v
 nmap <Leader>v <Plug>(ale_fix)
 
+" Leader+k/Leader+j to jump to previous/next error
+nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
+nmap <silent> <Leader>j <Plug>(ale_next_wrap)
+
+nmap gD <Plug>(ale_go_to_definition)
+
 " -----------------------------------------------------------------------------
 " vim-test
 " -----------------------------------------------------------------------------
