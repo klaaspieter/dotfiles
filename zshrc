@@ -211,7 +211,7 @@ function status_code_prompt_info() {
 
 # Shows current working directory (up to 5 levels) in blue
 # Git branch in red if dirty, otherwise green.
-PROMPT='%F{blue}%(6~|%-1~/.../%4~|%5~)%f%F{red}$(git_prompt_info)%f '
+PROMPT='%F{blue}%(6~|%-1~/.../%2~|%5~)%f%F{red}$(git_prompt_info)%f '
 
 # Shows last return status in red if not zero
 RPROMPT='$(xcode_version_prompt_info) $(status_code_prompt_info)'
