@@ -167,6 +167,11 @@ nmap <silent> <Leader>j <Plug>(ale_next_wrap)
 
 nmap gD <Plug>(ale_go_to_definition)
 
+let g:ale_fixers = {
+\  'javascript': ['prettier'],
+\  'elixir': ['mix_format']
+\}
+
 " -----------------------------------------------------------------------------
 " vim-test
 " -----------------------------------------------------------------------------
