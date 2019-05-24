@@ -171,6 +171,8 @@ nmap gD <Plug>(ale_go_to_definition)
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
 \  'typescript': ['prettier'],
+\  'scss': ['prettier'],
+\  'html': ['prettier'],
 \  'elixir': ['mix_format']
 \}
 
