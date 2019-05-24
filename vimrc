@@ -180,7 +180,7 @@ let g:ale_fixers = {
 " vim-test
 " -----------------------------------------------------------------------------
 " Disable jest's interactive test runner
-let test#javascript#reactscripts#options = '--no-watch'
+let test#javascript#reactscripts#options = '--watchAll=false'
 
 let test#strategy = "vimux"
 
