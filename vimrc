@@ -34,6 +34,7 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-bundler'
 Plug 'w0rp/ale'
+Plug 'leafgarland/typescript-vim'
 
 " Testing
 Plug 'benmills/vimux'
