@@ -106,6 +106,12 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
   colorscheme solarized
+
+  if $ITERM_PROFILE == "Dark"
+    set background="dark"
+  else
+    set background="light"
+  endif
 endif
 
 " -----------------------------------------------------------------------------
