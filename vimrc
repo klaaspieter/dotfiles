@@ -165,6 +165,9 @@ nnoremap <buffer> <BS> <C-T>
 " Run Ale fixer when a file is saved
 let g:ale_fix_on_save = 1
 
+" Leader+x to show ALEHover (easy access to types and such)
+nmap <Leader>x <Plug>(ale_hover)
+
 " Run ale fixer with <Leader>v
 nmap <Leader>v <Plug>(ale_fix)
 
