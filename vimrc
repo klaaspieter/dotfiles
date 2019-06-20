@@ -20,24 +20,13 @@ call plug#begin('~/.vim/plugged')
 " Theme
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'blueyed/vim-diminactive'
 
 " Syntax
-Plug 'elixir-lang/vim-elixir'
-Plug 'fatih/vim-go'
-Plug 'keith/swift.vim'
-Plug 'kelan/gyp.vim'
-Plug 'moll/vim-node'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-bundler'
+Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
-Plug 'leafgarland/typescript-vim'
 
 " Testing
-Plug 'benmills/vimux'
 Plug 'janko-m/vim-test'
 
 " Searching
@@ -61,8 +50,10 @@ Plug 'reedes/vim-pencil'
 Plug 'mzlogin/vim-markdown-toc'
 
 " Tmux
+Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 call plug#end()
 
