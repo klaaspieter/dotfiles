@@ -528,7 +528,7 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>1AACD933-972D-4500-8914-D3A4888E448E</string>
+	<string>6413ACF0-B1B8-461E-B82E-5EEFB88E393F</string>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -688,7 +688,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>456 335 796 486 0 0 1440 877 </string>
+	<string>456 309 918 512 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 23 1440 854 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -2768,7 +2768,7 @@
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>WordCharacters</key>
