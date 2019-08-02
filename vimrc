@@ -25,6 +25,7 @@ Plug 'blueyed/vim-diminactive'
 " Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
+Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -167,6 +168,16 @@ nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
 nmap <silent> <Leader>j <Plug>(ale_next_wrap)
 
 nmap gD <Plug>(ale_go_to_definition)
+
+if has('nvim')
+  let s:user_dir = stdpath('config')
+else
+  let s:user_dir = has('win32') ? expand('~/vimfiles') : expand('~/.vim')
+endif
+
+let g:ale_elixir_elixir_ls_release = s:user_dir . '/plugins/vim-elixirls/elixir-ls/release'
+" https://github.com/JakeBecker/elixir-ls/issues/54
+let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false } }
 
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
