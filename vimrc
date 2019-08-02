@@ -186,6 +186,15 @@ let g:ale_fixers = {
 \  'html': ['prettier'],
 \  'elixir': ['mix_format']
 \}
+let g:ale_linter_aliases = {
+\  'jsx': ['css', 'javascript'],
+\  'tsx': ['css', 'javascript']
+\}
+let g:ale_linters = {
+\  'jsx': ['stylelint', 'eslint'],
+\  'tsx': ['stylelint', 'eslint'],
+\  'elixir': ['elixir-ls']
+\}
 
 autocmd FileType javascript let g:ale_fix_on_save=1
 
