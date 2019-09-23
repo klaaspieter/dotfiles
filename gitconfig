@@ -57,6 +57,7 @@
   protocol = https
 [commit]
   gpgsign = true
+  template = ~/.gitmessage
 [rebase]
   autosquash = true
 [fetch]
