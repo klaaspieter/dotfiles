@@ -26,6 +26,7 @@ Plug 'blueyed/vim-diminactive'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -152,6 +153,26 @@ nnoremap <buffer> <CR> <C-]>
 nnoremap <buffer> <BS> <C-T>
 
 " -----------------------------------------------------------------------------
+" Coc
+" -----------------------------------------------------------------------------
+" Use K to show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" -----------------------------------------------------------------------------
 " Ale
 " -----------------------------------------------------------------------------
 " Run Ale fixer when a file is saved
@@ -162,12 +183,6 @@ nmap <Leader>x <Plug>(ale_hover)
 
 " Run ale fixer with <Leader>v
 nmap <Leader>v <Plug>(ale_fix)
-
-" Leader+k/Leader+j to jump to previous/next error
-nmap <silent> <Leader>k <Plug>(ale_previous_wrap)
-nmap <silent> <Leader>j <Plug>(ale_next_wrap)
-
-nmap gD <Plug>(ale_go_to_definition)
 
 if has('nvim')
   let s:user_dir = stdpath('config')
