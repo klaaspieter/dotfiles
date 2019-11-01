@@ -1,7 +1,6 @@
 tap "caskroom/cask"
 tap "klaaspieter/formula"
 tap "thoughtbot/formulae"
-tap "universal-ctags/universal-ctags"
 
 # Unix
 brew "git"
@@ -26,7 +25,6 @@ brew "imagemagick"
 # Programming language prerequisites and package managers
 brew "autoconf"
 brew "coreutils"
-brew "universal-ctags", args: ["HEAD"]
 brew "libyaml" # should come after openssl
 
 # Mac
@@ -60,15 +58,12 @@ cask "istat-menus"
 cask "iterm2"
 cask "sketch"
 cask "slack"
-cask "spotify"
 cask "steam"
 cask "transmission"
 cask "whatsapp"
-cask "zoomus"
 
 # Mac App Store
 mas "Letters", id: 1196993429
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Things", id: 904280696
-mas "Markoff", id: 1084713122
