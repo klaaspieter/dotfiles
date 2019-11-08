@@ -87,6 +87,7 @@ set scrolloff=3                      " Minimum lines to keep above and below cur
 set omnifunc=syntaxcomplete#Complete " Support omnicomplete <C-X><C-O>
 
 let g:diminactive_enable_focus = 1   " Make diminactive work with tmux panes
+let g:netrw_liststyle = 3            " Use tree list style in directory browser
 
 " Make it obvious where 80 characters is
 set textwidth=80
