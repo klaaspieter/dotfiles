@@ -192,6 +192,9 @@ endfunction
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
+" Show diagnostics for current project
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+
 " -----------------------------------------------------------------------------
 " Ale
 " -----------------------------------------------------------------------------
