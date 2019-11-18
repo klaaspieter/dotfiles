@@ -18,9 +18,10 @@ set autowrite
 call plug#begin('~/.vim/plugged')
 
 " Theme
-Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'blueyed/vim-diminactive'
+Plug 'teoljungberg/vim-whitescale'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
@@ -77,7 +78,6 @@ set nocursorline                     " Don't highlight the line the cursor is (v
 set wildmenu                         " Improve command-line completion
 set wildmode=list:longest,full       " Determines how completions are shown
 set splitbelow splitright            " change split order
-set bg=light                         " Set dark background theme
 set showmatch                        " Show matching brackets
 set ls=2                             " Show current open buffer
 set ruler                            " Show location in files
@@ -97,17 +97,17 @@ set colorcolumn=+1
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-  colorscheme solarized
+colorscheme whitescale
 
-  if $ITERM_PROFILE == "Dark"
-    set background=dark
-  else
-    set background=light
-  endif
-endif
+if $THEME ==# "light"
+  set background=light
+elseif $THEME ==# "dark"
+  set background=dark
+else
+  set background=light
+end
+
+let g:airline_theme='minimalist'
 
 " -----------------------------------------------------------------------------
 " Searching

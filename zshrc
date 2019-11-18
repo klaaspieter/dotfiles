@@ -150,9 +150,57 @@ alias cask="brew cask"
 # ============================================================================
 # Appearance
 # ============================================================================
+export HOMEBREW_NO_COLOR=1
 
-# Use colors for CLI commands (like ls)
-export CLICOLOR=true
+theme() {
+  usage="theme <light|dark>"
+  new_style=""
+
+  case "$1" in
+    dark)
+      new_style="dark"
+      ;;
+    light)
+      new_style="light"
+      ;;
+    --help|-h)
+      echo "$usage"
+      return 0
+      ;;
+    *)
+      echo "$usage" >&2
+      return 1
+  esac
+
+  if [ -n "$new_style" ]; then
+    ln -sf \
+      "$HOME/.config/kitty/${new_style}.conf" \
+      "$HOME/.config/kitty/theme.conf"
+    export THEME="$new_style"
+  fi
+
+  if [ -n "$TMUX" ]; then
+    kitty @ --to "$LISTEN_TO" \
+      set-colors --all --configured "$HOME/.config/kitty/theme.conf"
+    tmux set-environment THEME "$THEME"
+    tmux source-file "$HOME/.tmux.conf"
+  else
+    kitty @ \
+      set-colors --all --configured "$HOME/.config/kitty/theme.conf"
+  fi
+
+  if [ $(uname -s) = "Darwin" ]; then
+    if [ "$new_style" = "dark" ]; then
+      should_enable_darkmode="true"
+    else
+      should_enable_darkmode="false"
+    fi
+
+    osascript -e "tell application \"System Events\" \
+      to tell appearance preferences to set dark mode to \
+      $should_enable_darkmode"
+  fi
+}
 
 # ======
 # PROMPT
@@ -160,17 +208,27 @@ export CLICOLOR=true
 autoload -U colors && colors
 setopt prompt_subst
 
+git_branch_color() {
+  if [ "$THEME" = "light" ]; then
+    echo "%{$fg_bold[black]%}"
+  elif [ "$THEME" = "dark" ]; then
+    echo "%{$fg_bold[white]%}"
+  else
+    echo "%{$fg_bold[black]%}"
+  fi
+}
+
 function git_prompt_info() {
   ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
   ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
 
   local DIRTY_COLOR
   if parse_git_dirty; then
-    DIRTY_COLOR="%F{red}"
+    DIRTY_COLOR="${git_branch_color}"
   else
-    DIRTY_COLOR="%F{green}"
+    DIRTY_COLOR="%{$reset_color%}"
   fi
-  echo " $DIRTY_COLOR${ref#refs/heads/}$(git_stash_info)$f"
+  echo " $(git_branch_color)${ref#refs/heads/}$(git_stash_info)"
 }
 
 function git_stash_info() {
@@ -206,12 +264,12 @@ function xcode_version_prompt_info() {
 }
 
 function status_code_prompt_info() {
-  echo "%F{red}%(?..%?)$f "
+  echo "%(?..%?)"
 }
 
 # Shows current working directory (up to 5 levels) in blue
 # Git branch in red if dirty, otherwise green.
-PROMPT='%F{blue}%(6~|%-1~/.../%2~|%5~)%f%F{red}$(git_prompt_info)%f '
+PROMPT='%(6~|%-1~/.../%2~|%5~)$(git_prompt_info) %{$reset_color%}%'
 
 # Shows last return status in red if not zero
 RPROMPT='$(xcode_version_prompt_info) $(status_code_prompt_info)'

@@ -55,12 +55,12 @@ cask "dropbox"
 cask "expressvpn"
 cask "firefox"
 cask "istat-menus"
-cask "iterm2"
 cask "sketch"
 cask "slack"
 cask "steam"
 cask "transmission"
 cask "whatsapp"
+cask "kitty"
 
 # Mac App Store
 mas "Letters", id: 1196993429
