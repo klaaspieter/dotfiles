@@ -233,11 +233,11 @@ function git_prompt_info() {
 
   local DIRTY_COLOR
   if parse_git_dirty; then
-    DIRTY_COLOR="${git_branch_color}"
+    DIRTY_COLOR="$(git_branch_color)"
   else
     DIRTY_COLOR="%{$reset_color%}"
   fi
-  echo " $(git_branch_color)${ref#refs/heads/}$(git_stash_info)"
+  echo " ${DIRTY_COLOR}${ref#refs/heads/}$(git_stash_info)"
 }
 
 function git_stash_info() {
