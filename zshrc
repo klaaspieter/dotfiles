@@ -202,6 +202,15 @@ theme() {
   fi
 }
 
+if [ $(uname -s) = "Darwin" ]; then
+  style=$(defaults read -g AppleInterfaceStyle 2> /dev/null)
+  if [ "$style" = "Dark" ]; then
+    export THEME=dark
+  else
+    export THEME=light
+  fi
+fi
+
 # ======
 # PROMPT
 # ======
