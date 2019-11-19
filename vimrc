@@ -220,7 +220,8 @@ let g:ale_fixers = {
 \  'typescript': ['prettier'],
 \  'scss': ['prettier'],
 \  'html': ['prettier'],
-\  'elixir': ['mix_format']
+\  'elixir': ['mix_format'],
+\  'ruby': ['rubocop']
 \}
 let g:ale_linter_aliases = {
 \  'jsx': ['css', 'javascript'],
