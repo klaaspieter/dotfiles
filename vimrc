@@ -20,8 +20,8 @@ call plug#begin('~/.vim/plugged')
 " Theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'blueyed/vim-diminactive'
 Plug 'teoljungberg/vim-whitescale'
+Plug 'TaDaa/vimade'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
@@ -85,8 +85,6 @@ set wrap                             " Wrap long lines
 set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
 set omnifunc=syntaxcomplete#Complete " Support omnicomplete <C-X><C-O>
-
-let g:diminactive_enable_focus = 1   " Make diminactive work with tmux panes
 let g:netrw_liststyle = 3            " Use tree list style in directory browser
 
 " Make it obvious where 80 characters is
@@ -287,6 +285,12 @@ let g:VimuxHeight = "40"
 " fzf
 " -----------------------------------------------------------------------------
 let g:fzf_layout = { 'down': '~20%' }
+
+" -----------------------------------------------------------------------------
+" vimade
+" -----------------------------------------------------------------------------
+let g:vimade = {}
+let vimade.enablefocusfading = 1
 
 " -----------------------------------------------------------------------------
 " Go
