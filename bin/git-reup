@@ -41,9 +41,9 @@ system "git stash pop --quiet" if stashed && rebase
 if updated
   if rebase
     puts "Diffstat:"
-    system "git --no-pager diff --color --stat #{old_head}.. | sed 's/^/  /'"
+    system "git --no-pager diff --stat #{old_head}.. | sed 's/^/  /'"
   end
  
   puts "Log:"
-  system "git log --color --pretty=oneline --abbrev-commit #{old_head}.. | sed 's/^/  /'"
+  system "git log --pretty=oneline --abbrev-commit #{old_head}.. | sed 's/^/  /'"
 end
