@@ -59,6 +59,7 @@ Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'tpope/vim-obsession'
 
 call plug#end()
 
