@@ -220,6 +220,7 @@ let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false }
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
 \  'typescript': ['prettier'],
+\  'typescriptreact': ['prettier'],
 \  'scss': ['prettier'],
 \  'html': ['prettier'],
 \  'elixir': ['mix_format'],
