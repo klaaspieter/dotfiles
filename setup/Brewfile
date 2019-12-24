@@ -17,6 +17,7 @@ brew "tmux"
 brew "tree"
 brew "xcrecord"
 brew "zsh"
+brew "autojump"
 
 # GitHub
 brew "hub"
@@ -39,7 +40,6 @@ brew "redis", restart_service: :changed
 # Xcode
 brew "carthage"
 brew "chxcode"
-brew "swiftlint"
 brew "xcode-cli"
 
 # Fonts
@@ -47,10 +47,8 @@ cask "font-hack"
 
 # Apps
 cask "alfred"
-cask "arq"
 cask "bartender"
 cask "caffeine"
-cask "dash"
 cask "dropbox"
 cask "expressvpn"
 cask "firefox"
@@ -61,10 +59,10 @@ cask "steam"
 cask "transmission"
 cask "whatsapp"
 cask "kitty"
-cask "sizeup"
 
 # Mac App Store
 mas "Letters", id: 1196993429
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Things", id: 904280696
+mas "Magnet", id: 441258766
