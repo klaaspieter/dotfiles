@@ -38,7 +38,9 @@
   excludesfile = ~/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [format]
-  pretty = format:commit %C(bold)%H%nAuthor: %an <%ae>%nDate:  %ad%n%n%-B 
+  pretty = format:commit %C(bold)%H%nAuthor: %an <%ae>%nDate:  %ad%n%n%-B
+[diff "plist"]
+  textconv = plutil -convert xml1 -o -
 [color "interactive"]
   prompt = bold
 [color "branch"]
