@@ -26,8 +26,14 @@ defaults write com.apple.CrashReporter -string "Developer"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
+# sudo defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+# sudo defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.universalaccess closeViewDesiredZoomFactor -float "2.2035910649269952"
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+defaults write com.apple.universalaccess closeViewZoomedIn -bool true
+
 
 # Play feedback when volume is changed
 defaults write .GlobalPreferences com.apple.sound.beep.feedback -bool true
