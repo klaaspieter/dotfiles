@@ -249,6 +249,10 @@ let g:airline#extensions#branch#enabled = 0
 " Disable jest's interactive test runner
 let test#javascript#reactscripts#options = '--watchAll=false'
 
+" Support XCTestCase subclasses
+" See https://github.com/janko/vim-test/issues/421
+let test#swift#patterns.namespace = test#swift#patterns.namespace + ['\v^%(%(public )?%(final )?|%(final )?%(public )?)class ([-_a-zA-Z0-9]+): ([-_ a-zA-Z0-9]+)TestCase']
+
 let test#strategy = "vimux"
 
 " Setting this to 0 makes vimux clear the screen and tmux scrollback
