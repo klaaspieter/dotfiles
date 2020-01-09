@@ -15,6 +15,9 @@
       },
       "gfontenot/formulae": {
         "revision": "4c5c3486ccb82b34517fc049baaaf693e80fd334"
+      },
+      "robotsandpencils/made": {
+        "revision": "70fc37d857dc15954cabbb8104226bcb1f6647e4"
       }
     },
     "brew": {
@@ -472,6 +475,20 @@
             }
           }
         }
+      },
+      "robotsandpencils/made/xcodes": null,
+      "xcodes": {
+        "version": "0.9.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "mojave": {
+              "url": "https://github.com/RobotsAndPencils/xcodes/releases/download/0.9.0/xcodes-0.9.0.mojave.bottle.tar.gz",
+              "sha256": "10c84b927f42627d8184c213d76e7549327496a38feb4107cbe5b6580e830c4a"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -568,7 +585,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "640349c9eab266118c48a5200846430870049d09",
+        "Homebrew/homebrew-core": "fa88b4624e3ceadea3b32395cc1649afc7294faf",
         "CLT": "11.0.33.8",
         "Xcode": "11.3",
         "macOS": "10.15.2"

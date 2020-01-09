@@ -154,13 +154,10 @@ if [[ ! -d ~/.tmux/plugins/tpm ]]; then
   ~/.tmux/plugins/tpm/bin/install_plugins
 fi
 
-fancy_echo "Installing Ruby gems ..."
-bundle install
-
-XCODE_VERSION=$(xcversion list 2>/dev/null | grep -v "beta" | tail -n1)
-if [[ ${XCODE_VERSION} != *"installed"* ]]; then
+XCODE_VERSION=$(xcodes list 2>/dev/null | grep -v "Beta" | tail -n1)
+if [[ ${XCODE_VERSION} != *"Installed"* ]]; then
   fancy_echo "Installing latest Xcode version ($XCODE_VERSION) ..."
-  bundle exec xcversion install "$XCODE_VERSION"
+  xcodes install "$XCODE_VERSION"
 fi
 
 fancy_echo "Restoring system defaults ..."

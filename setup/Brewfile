@@ -3,6 +3,7 @@ tap "homebrew/cask-fonts"
 tap "klaaspieter/formula"
 tap "thoughtbot/formulae"
 tap "gfontenot/formulae"
+tap "robotsandpencils/made"
 
 # Unix
 brew "git"
@@ -41,6 +42,7 @@ brew "redis", restart_service: :changed
 brew "carthage"
 brew "chxcode"
 brew "xcode-cli"
+brew "xcodes"
 
 # Fonts
 cask "font-hack"
