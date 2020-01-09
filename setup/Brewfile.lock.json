@@ -2,10 +2,10 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "664451dc5fb8372a133fbc070a9d9e4ae88344fc"
+        "revision": "078eae7aa203a4dca1d5a02cab4a10842a0b75e2"
       },
       "homebrew/cask-fonts": {
-        "revision": "1407d48a88309eb141dd1900d81398e18ed95ee8"
+        "revision": "73a5abdcb048c7234d7c4f69bfe38abf3c693dcd"
       },
       "klaaspieter/formula": {
         "revision": "42647ee8f4af380cfa9043d0e94322cd4e76413f"
@@ -258,22 +258,22 @@
         }
       },
       "imagemagick": {
-        "version": "7.0.9-13_1",
+        "version": "7.0.9-14",
         "bottle": {
           "cellar": "/usr/local/Cellar",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-13_1.catalina.bottle.tar.gz",
-              "sha256": "60936c576ffa85c507a2f4449116b6bf7373c77143502296f568df2cf7867d48"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-14.catalina.bottle.tar.gz",
+              "sha256": "7914bafe42d346fed256748a36eb249601689c0cd1407297cfc33682f4d29a8c"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-13_1.mojave.bottle.tar.gz",
-              "sha256": "e586964158209d6cf1472d33708eec94cbfcdd9ef1b94629c0c742d45e0f76a5"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-14.mojave.bottle.tar.gz",
+              "sha256": "79fb6d07daffc64759c6456b9a47f0b279876a78312bca29eb3eac88f8df12e9"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-13_1.high_sierra.bottle.tar.gz",
-              "sha256": "8c7dd579fa4a5b24c0b574a14971811142e2b92231ce13b9e8bd05a8e5f825fb"
+              "url": "https://homebrew.bintray.com/bottles/imagemagick-7.0.9-14.high_sierra.bottle.tar.gz",
+              "sha256": "9292392034c82d3fe6382ce1670deef7bb6fdc4f730ac402f96c12660a6e122d"
             }
           }
         }
@@ -525,6 +525,12 @@
       },
       "sizeup": {
         "version": "1.7.4"
+      },
+      "macvim": {
+        "version": "8.1.2234,161"
+      },
+      "garmin-express": {
+        "version": "latest"
       }
     },
     "mas": {
@@ -542,7 +548,7 @@
       },
       "Things": {
         "id": "904280696",
-        "version": "3.11"
+        "version": "3.11.1"
       },
       "Magnet": {
         "id": "441258766",
@@ -555,7 +561,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.2",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "23405a3a7c39f1fad936afe54d259de27f748cfe",
+        "Homebrew/homebrew-core": "ff9bd877e442f32790267f114234413b9ee540a5",
         "CLT": "11.0.33.8",
         "Xcode": "11.3",
         "macOS": "10.15.2"

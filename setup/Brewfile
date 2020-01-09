@@ -59,6 +59,8 @@ cask "steam"
 cask "transmission"
 cask "whatsapp"
 cask "kitty"
+cask "macvim"
+cask "garmin-express"
 
 # Mac App Store
 mas "Letters", id: 1196993429
