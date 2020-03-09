@@ -188,28 +188,7 @@ theme() {
     kitty @ \
       set-colors --all --configured "$HOME/.config/kitty/theme.conf"
   fi
-
-  if [ $(uname -s) = "Darwin" ]; then
-    if [ "$new_style" = "dark" ]; then
-      should_enable_darkmode="true"
-    else
-      should_enable_darkmode="false"
-    fi
-
-    osascript -e "tell application \"System Events\" \
-      to tell appearance preferences to set dark mode to \
-      $should_enable_darkmode"
-  fi
 }
-
-if [ $(uname -s) = "Darwin" ]; then
-  style=$(defaults read -g AppleInterfaceStyle 2> /dev/null)
-  if [ "$style" = "Dark" ]; then
-    export THEME=dark
-  else
-    export THEME=light
-  fi
-fi
 
 # ======
 # PROMPT
