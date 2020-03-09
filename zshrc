@@ -337,6 +337,11 @@ export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
 
 # ============================================================================
+# direnv
+# ============================================================================
+eval "$(direnv hook zsh)"
+
+# ============================================================================
 # Local
 # ============================================================================
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
