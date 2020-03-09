@@ -13,6 +13,13 @@ set backspace=indent,eol,start
 set autowrite
 
 " -----------------------------------------------------------------------------
+" ALE Completion
+" -----------------------------------------------------------------------------
+" Enable ale completion when available.
+" This has to be set before ale is loaded.
+let g:ale_completion_enabled = 1
+
+" -----------------------------------------------------------------------------
 " Plugins
 " -----------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
@@ -27,7 +34,6 @@ Plug 'TaDaa/vimade'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Testing
@@ -155,64 +161,20 @@ nnoremap <buffer> <CR> <C-]>
 nnoremap <buffer> <BS> <C-T>
 
 " -----------------------------------------------------------------------------
-" Coc
-" -----------------------------------------------------------------------------
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Remap for rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Create mappings for function text object, requires document symbols feature of languageserver.
-xmap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap if <Plug>(coc-funcobj-i)
-omap af <Plug>(coc-funcobj-a)
-
-" Use tab to trigger completion with characters ahead and navigate.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" Show diagnostics for current project
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-
-" -----------------------------------------------------------------------------
 " Ale
 " -----------------------------------------------------------------------------
 " Run Ale fixer when a file is saved
 let g:ale_fix_on_save = 1
 
-" Leader+x to show ALEHover (easy access to types and such)
-nmap <Leader>x <Plug>(ale_hover)
+" Use K to show ALEHover
+nmap K <Plug>(ale_hover)
+
+set omnifunc=ale#completion#OmniFunc
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(ale_go_to_definition)
+nmap <silent> gy <Plug>(ale_go_to_type_definition)
+nmap <silent> gr <Plug>(ale_find_references)
 
 " Run ale fixer with <Leader>v
 nmap <Leader>v <Plug>(ale_fix)
@@ -227,6 +189,7 @@ let g:ale_elixir_elixir_ls_release = s:user_dir . '/plugins/vim-elixirls/elixir-
 " https://github.com/JakeBecker/elixir-ls/issues/54
 let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false } }
 
+let g:ale_sourcekit_lsp_executable = '/Users/kp/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/sourcekit-lsp'
 let g:ale_fixers = {
 \  'javascript': ['prettier'],
 \  'typescript': ['prettier'],
