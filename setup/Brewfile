@@ -31,6 +31,7 @@ brew "imagemagick"
 brew "autoconf"
 brew "coreutils"
 brew "libyaml" # should come after openssl
+brew "docker"
 
 # Mac
 brew "trash"
@@ -64,6 +65,9 @@ cask "whatsapp"
 cask "kitty"
 cask "macvim"
 cask "garmin-express"
+cask "vlc"
+cask "the-unarchiver"
+cask "docker"
 
 # Mac App Store
 mas "Letters", id: 1196993429
