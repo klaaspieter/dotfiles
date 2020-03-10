@@ -105,9 +105,9 @@ autocmd GUIEnter * set visualbell t_vb=
 
 colorscheme whitescale
 
-if $THEME ==# "light"
+if $THEME ==# 'light'
   set background=light
-elseif $THEME ==# "dark"
+elseif $THEME ==# 'dark'
   set background=dark
 else
   set background=light
@@ -122,7 +122,7 @@ set ignorecase                       " Search case insensitive
 set hlsearch                         " Highlight current search
 set incsearch                        " Highlight search while typing
 
-let g:ackprg = "ag --nogroup --nocolor --colum"
+let g:ackprg = 'ag --nogroup --nocolor --colum'
 
 " -----------------------------------------------------------------------------
 " Mappings
@@ -226,7 +226,7 @@ let test#javascript#reactscripts#options = '--watchAll=false'
 " See https://github.com/janko/vim-test/issues/421
 let test#swift#patterns.namespace = test#swift#patterns.namespace + ['\v^%(%(public )?%(final )?|%(final )?%(public )?)class ([-_a-zA-Z0-9]+): ([-_ a-zA-Z0-9]+)TestCase']
 
-let test#strategy = "vimux"
+let test#strategy = 'vimux'
 
 " Setting this to 0 makes vimux clear the screen and tmux scrollback
 " See https://github.com/janko/vim-test/issues/133
@@ -260,7 +260,7 @@ map <Leader>vw :VimuxCloseRunner<CR>
 " Zoom Vimux runner
 map <Leader>vz :VimuxZoomRunner<CR>
 
-let g:VimuxHeight = "40"
+let g:VimuxHeight = '40'
 
 " -----------------------------------------------------------------------------
 " fzf
@@ -284,8 +284,8 @@ function! s:SetGolangOptions()
   set breakindent
   set breakindentopt=shift:2
 
-  let g:go_list_type = "quickfix"
-  let g:go_fmt_command = "goimports"
+  let g:go_list_type = 'quickfix'
+  let g:go_fmt_command = 'goimports'
 
   nmap <leader>r <Plug>(go-run)
   nmap <leader>t <Plug>(go-test)
