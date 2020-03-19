@@ -30,6 +30,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'teoljungberg/vim-whitescale'
 Plug 'TaDaa/vimade'
 
+Plug 'kergoth/vim-hilinks'
+
 " Syntax
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
@@ -94,6 +96,10 @@ set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
 set omnifunc=syntaxcomplete#Complete " Support omnicomplete <C-X><C-O>
 let g:netrw_liststyle = 3            " Use tree list style in directory browser
+
+" Ale appears to have a bug where it will insert autocomplete text even
+" when autocomplete wasn't triggered
+set completeopt=menu,menuone,preview,noselect,noinsert
 
 " Make it obvious where 80 characters is
 set textwidth=80
