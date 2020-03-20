@@ -151,6 +151,7 @@ alias cask="brew cask"
 # Appearance
 # ============================================================================
 export HOMEBREW_NO_COLOR=1
+export THEME="dark"
 
 theme() {
   usage="theme <light|dark>"
