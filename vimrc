@@ -336,6 +336,8 @@ function! s:SetMarkdownOptions()
 
   " Use <leader>p to render in Markoff
   nnoremap <leader>p :silent !open -a Markoff.app '%:p'<cr>
+  
+  let g:vim_markdown_conceal = 0
 endfunction
 autocmd Filetype markdown call s:SetMarkdownOptions()
 
