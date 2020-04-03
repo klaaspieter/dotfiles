@@ -21,9 +21,6 @@ brew "zsh"
 brew "autojump"
 brew "direnv"
 
-# GitHub
-brew "hub"
-
 # Image manipulation
 brew "imagemagick"
 
