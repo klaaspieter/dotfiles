@@ -65,6 +65,7 @@ cask "garmin-express"
 cask "vlc"
 cask "the-unarchiver"
 cask "docker"
+cask "graphql-playground"
 
 # Mac App Store
 mas "Letters", id: 1196993429
