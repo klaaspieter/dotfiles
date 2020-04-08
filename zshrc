@@ -82,10 +82,12 @@ cdpath=($HOME $PROJECTS)
 export JUMP_DIRECTORIES=$CDPATH
 
 # ============================================================================
-# Editor
+# Tools
 # ============================================================================
 export VISUAL="/usr/local/bin/nvim"
 export EDITOR="$VISUAL"
+
+export BROWSER="browser"
 
 # ============================================================================
 # History
