@@ -185,13 +185,7 @@ nmap <silent> gr <Plug>(ale_find_references)
 " Run ale fixer with <Leader>v
 nmap <Leader>v <Plug>(ale_fix)
 
-if has('nvim')
-  let s:user_dir = stdpath('config')
-else
-  let s:user_dir = has('win32') ? expand('~/vimfiles') : expand('~/.vim')
-endif
-
-let g:ale_elixir_elixir_ls_release = s:user_dir . '/plugins/vim-elixirls/elixir-ls/release'
+let g:ale_elixir_elixir_ls_release = expand('~/.vim') . '/plugged/vim-elixirls/elixir-ls/release'
 " https://github.com/JakeBecker/elixir-ls/issues/54
 let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false } }
 
