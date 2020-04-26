@@ -10,7 +10,7 @@ path=(
   "$HOME/.bin"
   "$GOBIN"
 )
-
+[ -d "$HOME/.dotfiles-private/bin" ] && path+=("$HOME/.dotfiles-private/bin")
 
 # ============================================================================
 # Global
