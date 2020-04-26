@@ -5,6 +5,8 @@
 
 URL="$1"
 
+echo "browser $1" > /tmp/browser.log
+
 if [ "$URL" = "*localhost*" ]; then
   open "$URL" -a "Firefox Developer Edition"
 fi
