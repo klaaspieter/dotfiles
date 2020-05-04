@@ -206,10 +206,10 @@ let g:ale_linter_aliases = {
 let g:ale_linters = {
 \  'jsx': ['stylelint', 'eslint'],
 \  'tsx': ['stylelint', 'eslint'],
-\  'elixir': ['elixir-ls']
+\  'elixir': ['credo', 'elixir-ls']
 \}
 
-autocmd FileType javascript let g:ale_fix_on_save=1
+let g:ale_fix_on_save=1
 
 " -----------------------------------------------------------------------------
 " vim-airline
