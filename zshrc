@@ -302,6 +302,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # ============================================================================
 export GOPATH=$HOME/Developer/golang
 export GOBIN=$GOPATH/bin
+export GOPRIVATE=github.com/sketch-hq
 
 # ============================================================================
 # dotenv
