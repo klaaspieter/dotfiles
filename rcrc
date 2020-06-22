@@ -1,3 +1,4 @@
 EXCLUDES="README.md LICENSE setup preferences"
 UNDOTTED="Library"
 SYMLINK_DIRS="asdf hammerspoon"
+COPY_ALWAYS="git_template/HEAD" 
