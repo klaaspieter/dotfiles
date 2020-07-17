@@ -1,10 +1,10 @@
 " -----------------------------------------------------------------------------
 " General
 " -----------------------------------------------------------------------------
-set nocompatible                     " use vim defaults, no vi compatibility
 set number                           " Show line numbers
 set autoread                         " Automatically reload files changed externally
 set encoding=utf-8                   " Set default encoding to UTF-8
+scriptencoding utf-8
 set shortmess=atI                    " Don’t show the intro message
 syntax on                            " Enable syntax highlighting
 filetype plugin indent on            " Enable filetype-specific indenting and plugins
@@ -90,7 +90,7 @@ set wildmenu                         " Improve command-line completion
 set wildmode=list:longest,full       " Determines how completions are shown
 set splitbelow splitright            " change split order
 set showmatch                        " Show matching brackets
-set ls=2                             " Show current open buffer
+set laststatus=2                             " Show current open buffer
 set ruler                            " Show location in files
 set wrap                             " Wrap long lines
 set scrolljump=5                     " Lines to scroll when cursor leaves screen
