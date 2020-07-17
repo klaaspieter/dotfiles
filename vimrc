@@ -98,6 +98,10 @@ set scrolloff=3                      " Minimum lines to keep above and below cur
 set omnifunc=syntaxcomplete#Complete " Support omnicomplete <C-X><C-O>
 let g:netrw_liststyle = 3            " Use tree list style in directory browser
 
+augroup vimrc
+  autocmd!
+augroup END
+
 " Ale appears to have a bug where it will insert autocomplete text even
 " when autocomplete wasn't triggered
 set completeopt=menu,menuone,preview,noselect,noinsert
@@ -108,7 +112,7 @@ set colorcolumn=+1
 
 " No annoying sound on errors
 set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
+autocmd vimrc GUIEnter * set visualbell t_vb=
 
 colorscheme whitescale
 
@@ -311,7 +315,7 @@ function! s:SetGolangOptions()
 
 endfunction
 
-autocmd Filetype go call s:SetGolangOptions()
+autocmd vimrc Filetype go call s:SetGolangOptions()
 
 " -----------------------------------------------------------------------------
 " Markdown
@@ -334,13 +338,13 @@ function! s:SetMarkdownOptions()
   let g:vim_markdown_conceal = 0
   let g:vim_markdown_conceal_code_blocks = 0
 endfunction
-autocmd Filetype markdown call s:SetMarkdownOptions()
+autocmd vimrc Filetype markdown call s:SetMarkdownOptions()
 
 " -----------------------------------------------------------------------------
 " Writing
 " -----------------------------------------------------------------------------
 " Enabling spell checking for git commits
-autocmd FileType gitcommit setlocal spell
+autocmd vimrc FileType gitcommit setlocal spell
 
 com! Du set spelllang=nl
 com! En set spelllang=en_us
@@ -365,7 +369,7 @@ augroup END
 function! s:goyo_enter()
   let b:quitting = 0
   let b:quitting_bang = 0
-  autocmd QuitPre <buffer> let b:quitting = 1
+  autocmd vimrc QuitPre <buffer> let b:quitting = 1
   cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
 endfunction
 
@@ -380,5 +384,5 @@ function! s:goyo_leave()
   endif
 endfunction
 
-autocmd! User GoyoEnter call <SID>goyo_enter()
-autocmd! User GoyoLeave call <SID>goyo_leave()
+autocmd! vimrc User GoyoEnter call <SID>goyo_enter()
+autocmd! vimrc User GoyoLeave call <SID>goyo_leave()
