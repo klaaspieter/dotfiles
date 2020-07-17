@@ -61,6 +61,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/goyo.vim'
 Plug 'reedes/vim-pencil'
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 " Tmux
 Plug 'benmills/vimux'
@@ -328,10 +329,10 @@ function! s:SetMarkdownOptions()
   " Enable spell checking
   setlocal spell
 
-  " Use <leader>p to render in Markoff
-  nnoremap <leader>p :silent !open -a Markoff.app '%:p'<cr>
-  
+  nmap <leader>p <Plug>MarkdownPreviewToggle
+
   let g:vim_markdown_conceal = 0
+  let g:vim_markdown_conceal_code_blocks = 0
 endfunction
 autocmd Filetype markdown call s:SetMarkdownOptions()
 
