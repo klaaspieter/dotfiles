@@ -1,5 +1,6 @@
 [init]
   templatedir = ~/.git_template
+  defaultBranch = main
 [alias]
   a = add
   alias = config --get-regexp 'alias.*'
