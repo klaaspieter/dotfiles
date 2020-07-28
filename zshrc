@@ -40,9 +40,10 @@ setopt EXTENDED_GLOB
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
+FPATH=~/.zsh/completion:$FPATH
 
-autoload -U compinit
-compinit
+autoload -Uz compinit
+compinit -i
 
 # Matches case insensitive for lowercase
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
