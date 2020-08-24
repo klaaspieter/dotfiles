@@ -45,6 +45,7 @@ brew "xcodes"
 
 # Fonts
 cask "font-hack"
+cask "font-hack-nerd-font"
 
 # Apps
 cask "alfred"
