@@ -56,6 +56,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-unimpaired'
+Plug 'airblade/vim-gitgutter'
 
 " Writing
 Plug 'junegunn/goyo.vim'
