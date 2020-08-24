@@ -19,6 +19,7 @@ brew "the_silver_searcher"
 brew "tmux"
 brew "tree"
 brew "xcrecord"
+brew "zoxide"
 brew "zsh"
 
 # Image manipulation

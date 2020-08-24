@@ -284,9 +284,9 @@ source /usr/local/opt/chxcode/share/chxcode/chxcode
 source /usr/local/opt/chxcode/share/chxcode/auto
 
 # ============================================================================
-# Autojump
+# Zoxide
 # ============================================================================
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+eval "$(zoxide init zsh)"
 
 # ============================================================================
 # Fastlane
