@@ -27,7 +27,7 @@ call plug#begin('~/.vim/plugged')
 " Theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'teoljungberg/vim-whitescale'
+Plug 'morhetz/gruvbox'
 Plug 'TaDaa/vimade'
 
 Plug 'kergoth/vim-hilinks'
@@ -97,6 +97,7 @@ set scrolljump=5                     " Lines to scroll when cursor leaves screen
 set scrolloff=3                      " Minimum lines to keep above and below cursor
 set omnifunc=syntaxcomplete#Complete " Support omnicomplete <C-X><C-O>
 let g:netrw_liststyle = 3            " Use tree list style in directory browser
+set termguicolors                    " Use true color terminal
 
 augroup vimrc
   autocmd!
@@ -114,7 +115,9 @@ set colorcolumn=+1
 set noerrorbells visualbell t_vb=
 autocmd vimrc GUIEnter * set visualbell t_vb=
 
-colorscheme whitescale
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
 
 if $THEME ==# 'light'
   set background=light
@@ -124,7 +127,7 @@ else
   set background=light
 end
 
-let g:airline_theme='minimalist'
+let g:airline_theme='gruvbox'
 
 " -----------------------------------------------------------------------------
 " Searching
