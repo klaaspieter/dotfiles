@@ -6,6 +6,8 @@ tap "gfontenot/formulae"
 tap "robotsandpencils/made"
 
 # Unix
+brew "bat"
+brew "direnv"
 brew "git"
 brew "gnupg"
 brew "neovim"
@@ -18,8 +20,6 @@ brew "tmux"
 brew "tree"
 brew "xcrecord"
 brew "zsh"
-brew "autojump"
-brew "direnv"
 
 # Image manipulation
 brew "imagemagick"
