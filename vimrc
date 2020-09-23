@@ -61,6 +61,7 @@ Plug 'airblade/vim-gitgutter'
 " Writing
 Plug 'junegunn/goyo.vim', { 'for': ['text', 'notes', 'markdown', 'mkd'] }
 Plug 'reedes/vim-pencil', { 'for': ['text', 'notes', 'markdown', 'mkd'] }
+Plug 'reedes/vim-wordy', { 'for': ['text', 'notes', 'markdown', 'mkd'] }
 Plug 'mzlogin/vim-markdown-toc', { 'for': ['markdown'] }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': ['markdown'] }
 
@@ -353,40 +354,29 @@ autocmd vimrc FileType gitcommit setlocal spell
 com! Du set spelllang=nl
 com! En set spelllang=en_us
 
-func! WordProcessorMode()
-  setlocal formatoptions=1
-  setlocal noexpandtab
-  setlocal spell spelllang=en_us
-  setlocal wrap
-  setlocal linebreak
-endfunc
-com! WP call WordProcessorMode()
-
-let g:pencil#wrapModeDefault = 'soft'
-
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text call pencil#init()
-augroup END
-
 function! s:goyo_enter()
-  let b:quitting = 0
-  let b:quitting_bang = 0
-  autocmd vimrc QuitPre <buffer> let b:quitting = 1
-  cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  endif
+  set noshowmode
+  set noshowcmd
 endfunction
 
 function! s:goyo_leave()
-  " Quit Vim if this is the only remaining buffer
-  if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-    if b:quitting_bang
-      qa!
-    else
-      qa
-    endif
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
   endif
+  set showmode
+  set showcmd
 endfunction
 
-autocmd! vimrc User GoyoEnter call <SID>goyo_enter()
-autocmd! vimrc User GoyoLeave call <SID>goyo_leave()
+function! s:SetWritingOptions()
+  autocmd! vimrc FileType markdown,mkd,text call pencil#init()
+
+  autocmd! vimrc User GoyoEnter nested call <SID>goyo_enter()
+  autocmd! vimrc User GoyoLeave nested call <SID>goyo_leave()
+endfunction
+
+autocmd vimrc Filetype markdown,mkd,text call s:SetWritingOptions()
