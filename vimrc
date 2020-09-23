@@ -59,10 +59,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
 
 " Writing
-Plug 'junegunn/goyo.vim'
-Plug 'reedes/vim-pencil'
-Plug 'mzlogin/vim-markdown-toc'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'junegunn/goyo.vim', { 'for': ['text', 'notes', 'markdown', 'mkd'] }
+Plug 'reedes/vim-pencil', { 'for': ['text', 'notes', 'markdown', 'mkd'] }
+Plug 'mzlogin/vim-markdown-toc', { 'for': ['markdown'] }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': ['markdown'] }
 
 " Tmux
 Plug 'benmills/vimux'
