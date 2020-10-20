@@ -179,9 +179,6 @@ nnoremap <buffer> <BS> <C-T>
 " -----------------------------------------------------------------------------
 " Ale
 " -----------------------------------------------------------------------------
-" Run Ale fixer when a file is saved
-let g:ale_fix_on_save = 1
-
 " Use K to show ALEHover
 nmap K <Plug>(ale_hover)
 
@@ -219,6 +216,7 @@ let g:ale_linters = {
 \  'elixir': ['credo', 'elixir-ls']
 \}
 
+" Run Ale fixer when a file is saved
 let g:ale_fix_on_save=1
 
 " -----------------------------------------------------------------------------
