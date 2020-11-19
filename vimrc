@@ -234,7 +234,7 @@ let test#javascript#reactscripts#options = '--watchAll=false'
 " Use craco to run tests
 " This sill break when running in actual react scripts, but I hardly ever do
 " that.
-let test#javascript#reactscripts#executable = 'yarn craco test --watchAll=false'
+let test#javascript#reactscripts#executable = 'yarn test'
 
 " Support XCTestCase subclasses
 " See https://github.com/janko/vim-test/issues/421
