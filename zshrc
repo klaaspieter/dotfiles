@@ -153,7 +153,7 @@ alias cask="brew cask"
 # ============================================================================
 # Appearance
 # ============================================================================
-export THEME="dark"
+export THEME="light"
 export CLICOLOR=true
 
 theme() {
