@@ -280,6 +280,7 @@ let g:VimuxHeight = '40'
 " fzf
 " -----------------------------------------------------------------------------
 let g:fzf_layout = { 'window': 'call CreateCenteredFloatingWindow()' }
+let g:fzf_preview_window = []
 " Search on top, results below
 let $FZF_DEFAULT_OPTS="--reverse "
 
