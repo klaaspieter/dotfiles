@@ -151,7 +151,7 @@ alias canuke="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
 # ============================================================================
 # Appearance
 # ============================================================================
-export THEME="light"
+export THEME="dark"
 export CLICOLOR=true
 
 theme() {
@@ -191,15 +191,6 @@ theme() {
       set-colors --all --configured "$HOME/.config/kitty/theme.conf"
   fi
 }
-
-if [ $(uname -s) = "Darwin" ]; then
-  style=$(defaults read -g AppleInterfaceStyle 2> /dev/null)
-  if [ "$style" = "Dark" ]; then
-    export THEME=dark
-  else
-    export THEME=light
-  fi
-fi
 
 # ======
 # PROMPT
