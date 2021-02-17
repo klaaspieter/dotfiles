@@ -29,6 +29,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'TaDaa/vimade'
+Plug 'edkolev/tmuxline.vim'
 
 Plug 'kergoth/vim-hilinks'
 
@@ -226,6 +227,17 @@ let g:ale_fix_on_save=1
 " vim-airline
 " -----------------------------------------------------------------------------
 let g:airline#extensions#branch#enabled = 0
+
+" -----------------------------------------------------------------------------
+" vim-tmuxline
+" -----------------------------------------------------------------------------
+let g:tmuxline_preset = {
+      \ 'a': '#S',
+      \ 'win': '#I #W',
+      \ 'cwin': '#I #W',
+      \ 'options': {
+      \'status-justify': 'left'}
+      \}
 
 " -----------------------------------------------------------------------------
 " vim-test
