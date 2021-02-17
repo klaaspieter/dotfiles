@@ -119,8 +119,8 @@ set noerrorbells visualbell t_vb=
 autocmd vimrc GUIEnter * set visualbell t_vb=
 
 colorscheme gruvbox
-let g:gruvbox_contrast_dark='soft'
-let g:gruvbox_contrast_light='soft'
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
 
 if $THEME ==# 'light'
   set background=light
