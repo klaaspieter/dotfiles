@@ -209,12 +209,14 @@ let g:ale_fixers = {
 \}
 let g:ale_linter_aliases = {
 \  'jsx': ['css', 'javascript'],
-\  'tsx': ['css', 'javascript']
+\  'tsx': ['css', 'javascript'],
+\  'gitcommit': ['gitcommit', 'markdown']
 \}
 let g:ale_linters = {
 \  'jsx': ['stylelint', 'eslint'],
 \  'tsx': ['stylelint', 'eslint'],
-\  'elixir': ['credo', 'elixir-ls']
+\  'elixir': ['credo', 'elixir-ls'],
+\  'gitcommit': ['proselint', 'gitlint']
 \}
 
 " Run Ale fixer when a file is saved
