@@ -52,7 +52,6 @@ cask "font-hack-nerd-font"
 cask "alfred"
 cask "bartender"
 cask "caffeine"
-cask "expressvpn"
 cask "firefox"
 cask "istat-menus"
 cask "sketch"
@@ -66,7 +65,6 @@ cask "garmin-express"
 cask "vlc"
 cask "the-unarchiver"
 cask "docker"
-cask "graphql-playground"
 
 # Mac App Store
 mas "Letters", id: 1196993429
@@ -74,4 +72,3 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Things", id: 904280696
 mas "Magnet", id: 441258766
-mas "Tweetbot", id: 1384080005
