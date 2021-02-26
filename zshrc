@@ -151,7 +151,15 @@ alias canuke="sudo kill -9 `ps ax|grep 'coreaudio[a-z]' |awk '{print $1}'`"
 # ============================================================================
 # Appearance
 # ============================================================================
-export THEME="dark"
+if [ $(uname -s) = "Darwin" ]; then
+  style=$(defaults read -g AppleInterfaceStyle 2> /dev/null)
+  if [ "$style" = "Dark" ]; then
+    export THEME=dark
+  else
+    export THEME=light
+  fi
+fi
+
 export CLICOLOR=true
 
 theme() {
