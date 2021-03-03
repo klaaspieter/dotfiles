@@ -89,6 +89,7 @@ export VISUAL="/usr/local/bin/nvim"
 export EDITOR="$VISUAL"
 
 export BROWSER="browser"
+export NVIM_LISTEN_ADDRESS="/tmp/nvim"
 
 # ============================================================================
 # History
@@ -161,44 +162,6 @@ if [ $(uname -s) = "Darwin" ]; then
 fi
 
 export CLICOLOR=true
-
-theme() {
-  usage="theme <light|dark>"
-  new_style=""
-
-  case "$1" in
-    dark)
-      new_style="dark"
-      ;;
-    light)
-      new_style="light"
-      ;;
-    --help|-h)
-      echo "$usage"
-      return 0
-      ;;
-    *)
-      echo "$usage" >&2
-      return 1
-  esac
-
-  if [ -n "$new_style" ]; then
-    ln -sf \
-      "$HOME/.config/kitty/${new_style}.conf" \
-      "$HOME/.config/kitty/theme.conf"
-    export THEME="$new_style"
-  fi
-
-  if [ -n "$TMUX" ]; then
-    kitty @ --to "$LISTEN_TO" \
-      set-colors --all --configured "$HOME/.config/kitty/theme.conf"
-    tmux set-environment THEME "$THEME"
-    tmux source-file "$HOME/.tmux.conf"
-  else
-    kitty @ \
-      set-colors --all --configured "$HOME/.config/kitty/theme.conf"
-  fi
-}
 
 # ======
 # PROMPT
