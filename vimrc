@@ -206,7 +206,8 @@ let g:ale_fixers = {
 \  'scss': ['prettier'],
 \  'html': ['prettier'],
 \  'elixir': ['mix_format'],
-\  'ruby': ['rubocop']
+\  'ruby': ['rubocop'],
+\  'markdown': ['prettier']
 \}
 let g:ale_linter_aliases = {
 \  'jsx': ['css', 'javascript'],
