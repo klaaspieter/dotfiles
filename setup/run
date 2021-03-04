@@ -150,14 +150,15 @@ number_of_cores=$(sysctl -n hw.ncpu)
 asdf reshim ruby
 bundle config --global jobs $((number_of_cores - 1))
 
+fancy_echo "Configuring Python"
+pip_install_or_update "pynvim"
+asdf reshim python
+
 fancy_echo "Configuring Go"
 mkdir -p "$GOPATH"
 
 fancy_echo "Installing vim plugins ..."
 vim -c "PlugInstall | exit | exit"
-
-fancy_echo "Installing coc extensions ..."
-vim -c 'CocInstall coc-json coc-html coc-tsserver coc-css coc-sourcekit | exit'
 
 if [[ ! -d ~/.tmux/plugins/tpm ]]; then
   fancy_echo "Installing tmux plugins ..."
