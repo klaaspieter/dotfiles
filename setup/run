@@ -85,6 +85,14 @@ gem_install_or_update() {
   fi
 }
 
+pip_install_or_update() {
+  if pip show "$1" > /dev/null; then
+    pip install -U "$@"
+  else
+    pip install "$@"
+  fi
+}
+
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew ..."
     curl -fsS \
