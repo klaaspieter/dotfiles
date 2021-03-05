@@ -123,10 +123,11 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_contrast_light='medium'
 
-if $THEME ==# 'light'
-  set background=light
-elseif $THEME ==# 'dark'
+let output = system('defaults read -g AppleInterfaceStyle 2> /dev/null')
+if output ==? 'dark'
   set background=dark
+elseif output ==? 'light'
+  set background=light
 else
   set background=light
 end
