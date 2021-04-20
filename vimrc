@@ -225,6 +225,12 @@ let g:ale_linters = {
 " Run Ale fixer when a file is saved
 let g:ale_fix_on_save=1
 
+" Show details for the violation under the cursor
+let g:ale_cursor_detail = 1
+" Show details in a floating window
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
+
 " -----------------------------------------------------------------------------
 " vim-airline
 " -----------------------------------------------------------------------------
@@ -298,7 +304,7 @@ let g:VimuxHeight = '40'
 let g:fzf_layout = { 'window': 'call CreateCenteredFloatingWindow()' }
 let g:fzf_preview_window = []
 " Search on top, results below
-let $FZF_DEFAULT_OPTS="--reverse "
+let $FZF_DEFAULT_OPTS='--reverse '
 
 " floating fzf window with borders
 function! CreateCenteredFloatingWindow()
@@ -308,9 +314,9 @@ function! CreateCenteredFloatingWindow()
     let left = (&columns - width) / 2
     let opts = {'relative': 'editor', 'row': top, 'col': left, 'width': width, 'height': height, 'style': 'minimal'}
 
-    let top = "╭" . repeat("─", width - 2) . "╮"
-    let mid = "│" . repeat(" ", width - 2) . "│"
-    let bot = "╰" . repeat("─", width - 2) . "╯"
+    let top = '╭' . repeat('─', width - 2) . '╮'
+    let mid = '│' . repeat(' ', width - 2) . '│'
+    let bot = '╰' . repeat('─', width - 2) . '╯'
     let lines = [top] + repeat([mid], height - 2) + [bot]
     let s:buf = nvim_create_buf(v:false, v:true)
     call nvim_buf_set_lines(s:buf, 0, -1, v:true, lines)
@@ -321,7 +327,9 @@ function! CreateCenteredFloatingWindow()
     let opts.col += 2
     let opts.width -= 4
     call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
-    au BufWipeout <buffer> exe 'bw '.s:buf
+    augroup vimrc
+      au BufWipeout <buffer> exe 'bw '.s:buf
+    augroup END
 endfunction
 
 " -----------------------------------------------------------------------------
