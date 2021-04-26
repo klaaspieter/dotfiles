@@ -68,7 +68,7 @@ Plug 'mzlogin/vim-markdown-toc', { 'for': ['markdown'] }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': ['markdown'] }
 
 " Tmux
-Plug 'benmills/vimux'
+Plug 'christoomey/vim-tmux-runner'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -262,11 +262,9 @@ let test#javascript#reactscripts#executable = 'yarn test'
 " See https://github.com/janko/vim-test/issues/421
 let test#swift#patterns.namespace = test#swift#patterns.namespace + ['\v^%(%(public )?%(final )?|%(final )?%(public )?)class ([-_a-zA-Z0-9]+): ([-_ a-zA-Z0-9]+)TestCase']
 
-let test#strategy = 'vimux'
-
-" Setting this to 0 makes vimux clear the screen and tmux scrollback
-" See https://github.com/janko/vim-test/issues/133
-let test#preserve_screen = 0
+let test#strategy = 'vtr'
+let test#neovim#term_position = 'topright'
+let test#neovim#term_position = 'vert'
 
 nnoremap <silent> <Leader>t :TestFile<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
@@ -286,17 +284,6 @@ set undodir=~/.vim/tmp/undo          " Place undofiles in ~/.vim/tmp/undo
 " Show tabs and trailing whitespace
 " -----------------------------------------------------------------------------
 set list listchars=tab:▸\ ,eol:¬,trail:.
-
-" -----------------------------------------------------------------------------
-" Vimux
-" -----------------------------------------------------------------------------
-" Close Vimux runner
-map <Leader>vw :VimuxCloseRunner<CR>
-
-" Zoom Vimux runner
-map <Leader>vz :VimuxZoomRunner<CR>
-
-let g:VimuxHeight = '40'
 
 " -----------------------------------------------------------------------------
 " fzf
