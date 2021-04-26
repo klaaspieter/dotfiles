@@ -33,6 +33,7 @@ brew "docker"
 
 # Mac
 brew "trash"
+brew "pinentry-mac"
 
 # Databases
 brew "postgres", restart_service: :changed
