@@ -140,6 +140,7 @@ Configured servers
 Update the loop below to make key bindings work for newly configured servers
 ]]
 require'lspconfig'.gopls.setup{}
+require'lspconfig'.tsserver.setup{}
 
 --[[
 Key bindings
@@ -181,7 +182,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'gopls' }
+local servers = { 'gopls', 'tsserver' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
