@@ -13,13 +13,6 @@ set backspace=indent,eol,start
 set autowrite
 
 " -----------------------------------------------------------------------------
-" ALE Completion
-" -----------------------------------------------------------------------------
-" Enable ale completion when available.
-" This has to be set before ale is loaded.
-let g:ale_completion_enabled = 1
-
-" -----------------------------------------------------------------------------
 " Plugins
 " -----------------------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
@@ -35,7 +28,6 @@ Plug 'kergoth/vim-hilinks'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
-Plug 'w0rp/ale'
 Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 
 " Testing
@@ -106,10 +98,6 @@ augroup vimrc
   autocmd!
 augroup END
 
-" Ale appears to have a bug where it will insert autocomplete text even
-" when autocomplete wasn't triggered
-set completeopt=menu,menuone,preview,noselect,noinsert
-
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
@@ -177,58 +165,6 @@ nnoremap <Leader>f :Ack!<Space>
 " Use Enter and Backspace to navigate vim help
 nnoremap <buffer> <CR> <C-]>
 nnoremap <buffer> <BS> <C-T>
-
-" -----------------------------------------------------------------------------
-" Ale
-" -----------------------------------------------------------------------------
-" Use K to show ALEHover
-nmap K <Plug>(ale_hover)
-
-set omnifunc=ale#completion#OmniFunc
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(ale_go_to_definition)
-nmap <silent> gy <Plug>(ale_go_to_type_definition)
-nmap <silent> gr <Plug>(ale_find_references)
-
-" Run ale fixer with <Leader>v
-nmap <Leader>v <Plug>(ale_fix)
-
-let g:ale_elixir_elixir_ls_release = expand('~/.vim') . '/plugged/vim-elixirls/elixir-ls/release'
-" https://github.com/JakeBecker/elixir-ls/issues/54
-let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false } }
-
-let g:ale_sourcekit_lsp_executable = '/Users/kp/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/sourcekit-lsp'
-let g:ale_fixers = {
-\  'javascript': ['prettier'],
-\  'typescript': ['prettier'],
-\  'typescriptreact': ['prettier'],
-\  'scss': ['prettier'],
-\  'html': ['prettier'],
-\  'elixir': ['mix_format'],
-\  'ruby': ['rubocop'],
-\  'markdown': ['prettier']
-\}
-let g:ale_linter_aliases = {
-\  'jsx': ['css', 'javascript'],
-\  'tsx': ['css', 'javascript'],
-\  'gitcommit': ['gitcommit', 'markdown']
-\}
-let g:ale_linters = {
-\  'jsx': ['stylelint', 'eslint'],
-\  'tsx': ['stylelint', 'eslint'],
-\  'elixir': ['credo', 'elixir-ls'],
-\  'gitcommit': ['proselint', 'gitlint']
-\}
-
-" Run Ale fixer when a file is saved
-let g:ale_fix_on_save=1
-
-" Show details for the violation under the cursor
-let g:ale_cursor_detail = 1
-" Show details in a floating window
-let g:ale_floating_preview = 1
-let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
 " -----------------------------------------------------------------------------
 " vim-airline
