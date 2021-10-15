@@ -37,7 +37,6 @@ Plug 'kergoth/vim-hilinks'
 Plug 'sheerun/vim-polyglot'
 Plug 'w0rp/ale'
 Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Testing
 Plug 'janko-m/vim-test'
