@@ -4,6 +4,7 @@ tap "klaaspieter/formula"
 tap "thoughtbot/formulae"
 tap "gfontenot/formulae"
 tap "robotsandpencils/made"
+tap "qmk/qmk"
 
 # Unix
 brew "bat"
@@ -21,6 +22,9 @@ brew "tree"
 brew "xcrecord"
 brew "zoxide"
 brew "zsh"
+
+# Keyboard
+brew "qmk"
 
 # Image manipulation
 brew "imagemagick"
@@ -40,7 +44,6 @@ brew "postgres", restart_service: :changed
 brew "redis", restart_service: :changed
 
 # Xcode
-brew "carthage"
 brew "chxcode"
 brew "xcode-cli"
 brew "xcodes"
@@ -51,8 +54,6 @@ cask "font-hack-nerd-font"
 
 # Apps
 cask "alfred"
-cask "bartender"
-cask "caffeine"
 cask "firefox"
 cask "istat-menus"
 cask "sketch"
