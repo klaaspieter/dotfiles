@@ -314,7 +314,10 @@ export PASSWORD_STORE_EXTENSIONS_DIR=/usr/local/lib/password-store/extensions
 # ============================================================================
 # direnv
 # ============================================================================
-eval "$(direnv hook zsh)"
+eval "$(asdf exec direnv hook zsh)"
+
+# A shortcut for asdf managed direnv
+direnv() { asdf exec direnv "$@"; }
 
 # ============================================================================
 # starship
