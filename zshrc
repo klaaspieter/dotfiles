@@ -240,8 +240,9 @@ RPROMPT='$(xcode_version_prompt_info) $(status_code_prompt_info)'
 # ASDF
 # ============================================================================
 source $HOME/.asdf/asdf.sh
-source "$HOME/.asdf/completions/asdf.bash"
 
+# Append ASDF completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
 # ============================================================================
 # bat
 # ============================================================================
