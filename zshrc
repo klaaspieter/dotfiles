@@ -86,7 +86,7 @@ export JUMP_DIRECTORIES=$CDPATH
 # ============================================================================
 # Tools
 # ============================================================================
-export VISUAL="/usr/local/bin/nvim"
+export VISUAL="$HOME/.asdf/shims/nvim"
 export EDITOR="$VISUAL"
 
 export BROWSER="browser"
