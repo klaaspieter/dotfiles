@@ -27,8 +27,8 @@ Plug 'kergoth/vim-hilinks'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
-Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 Plug 'neovim/nvim-lspconfig'
+Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -141,6 +141,11 @@ Update the loop below to make key bindings work for newly configured servers
 ]]
 require'lspconfig'.gopls.setup{}
 require'lspconfig'.tsserver.setup{}
+
+
+require'lspconfig'.elixirls.setup{
+  cmd = { vim.fn.expand('~/.vim/plugged/vim-elixirls/elixir-ls/release/language_server.sh') }
+}
 
 --[[
 Key bindings
