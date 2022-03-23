@@ -29,6 +29,7 @@ Plug 'kergoth/vim-hilinks'
 Plug 'sheerun/vim-polyglot'
 Plug 'neovim/nvim-lspconfig'
 Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
+Plug 'w0rp/ale'
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -139,9 +140,6 @@ lua << EOF
 Configured servers
 Update the loop below to make key bindings work for newly configured servers
 ]]
-require'lspconfig'.gopls.setup{}
-require'lspconfig'.tsserver.setup{}
-
 
 require'lspconfig'.elixirls.setup{
   cmd = { vim.fn.expand('~/.vim/plugged/vim-elixirls/elixir-ls/release/language_server.sh') }
@@ -233,6 +231,34 @@ nnoremap <Leader>f :Ack!<Space>
 " Use Enter and Backspace to navigate vim help
 nnoremap <buffer> <CR> <C-]>
 nnoremap <buffer> <BS> <C-T>
+
+" -----------------------------------------------------------------------------
+" Ale
+" -----------------------------------------------------------------------------
+" Use K to show ALEHover
+nmap K <Plug>(ale_hover)
+
+let g:ale_linter_aliases = {
+\  'jsx': ['css', 'javascript'],
+\  'tsx': ['css', 'javascript'],
+\  'gitcommit': ['gitcommit', 'markdown']
+\}
+let g:ale_linters = {
+\  'jsx': ['stylelint', 'eslint'],
+\  'tsx': ['stylelint', 'eslint'],
+\  'elixir': ['credo', 'elixir-ls'],
+\  'gitcommit': ['proselint', 'gitlint']
+\}
+
+" Run Ale fixer when a file is saved
+let g:ale_fix_on_save=1
+
+" Show details for the violation under the cursor
+let g:ale_cursor_detail = 1
+
+" Show details in a floating window
+let g:ale_floating_preview = 1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
 " -----------------------------------------------------------------------------
 " vim-airline
