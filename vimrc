@@ -288,8 +288,8 @@ let g:tmuxline_preset = {
 let test#swift#patterns.namespace = test#swift#patterns.namespace + ['\v^%(%(public )?%(final )?|%(final )?%(public )?)class ([-_a-zA-Z0-9]+): ([-_ a-zA-Z0-9]+)TestCase']
 
 let test#strategy = 'vtr'
-let test#neovim#term_position = 'topright'
-let test#neovim#term_position = 'vert'
+let g:VtrOrientation = "h"
+let g:VtrPercentage = 45
 
 nnoremap <silent> <Leader>t :TestFile<CR>
 nnoremap <silent> <Leader>s :TestNearest<CR>
