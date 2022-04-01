@@ -250,15 +250,19 @@ let g:ale_linters = {
 \  'gitcommit': ['proselint', 'gitlint']
 \}
 
+let g:ale_fixers = {
+\  'javascript': ['prettier'],
+\  'typescript': ['prettier'],
+\  'typescriptreact': ['prettier'],
+\  'scss': ['prettier'],
+\  'html': ['prettier'],
+\  'elixir': ['mix_format'],
+\  'ruby': ['rubocop'],
+\  'markdown': ['prettier']
+\}
+
 " Run Ale fixer when a file is saved
 let g:ale_fix_on_save=1
-
-" Show details for the violation under the cursor
-let g:ale_cursor_detail = 1
-
-" Show details in a floating window
-let g:ale_floating_preview = 1
-let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
 " -----------------------------------------------------------------------------
 " vim-airline
