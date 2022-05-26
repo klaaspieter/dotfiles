@@ -247,7 +247,8 @@ let g:ale_linters = {
 \  'jsx': ['stylelint', 'eslint'],
 \  'tsx': ['stylelint', 'eslint'],
 \  'elixir': ['credo', 'elixir-ls'],
-\  'gitcommit': ['proselint', 'gitlint']
+\  'gitcommit': ['proselint', 'gitlint', 'vale'],
+\  'markdown': ['vale', 'proselint']
 \}
 
 let g:ale_fixers = {
