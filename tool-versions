@@ -6,4 +6,4 @@ elixir 1.8.1
 rust 1.37.0
 erlang 22.2.8
 direnv 2.29.0
-neovim 0.6.1
+neovim 0.7.2
