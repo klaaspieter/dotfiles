@@ -321,9 +321,9 @@ eval "$(asdf exec direnv hook zsh)"
 direnv() { asdf exec direnv "$@"; }
 
 # ============================================================================
-# starship
+# spaceship
 # ============================================================================
-eval "$(starship init zsh)"
+source "$(brew --prefix)/opt/spaceship/spaceship.zsh"
 
 # ============================================================================
 # Local
