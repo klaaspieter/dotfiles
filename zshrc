@@ -56,6 +56,10 @@ zstyle ':completion:*' insert-tab pending
 compdef _pass_complete_entries pass-show-qr
 compdef _pass_complete_entries_with_subdirs pass-insert-qr
 
+# ============================================================================
+# fzf
+# ============================================================================
+export FZF_DEFAULT_OPTS="--preview 'bat --color=always {}'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # ============================================================================
