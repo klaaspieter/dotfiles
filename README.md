@@ -12,8 +12,11 @@ Clone onto your laptop:
 git clone https://github.com/klaaspieter/dotfiles.git
 ```
 
-on macOS:
-[Install Homebrew] 
+Install and configure the following:
+
+
+- [Homebrew][Install Homebrew] (macOS only)
+- [GitHub CLI]
 
 Install dotfiles using [rcm]:
 
@@ -26,6 +29,7 @@ Attribution
 Many scripts and configurations have been inspired by [thoughtbot]'s [laptop script][thoughtbot laptop repo] and [dotfiles][thoughtbot dotfiles repo]. I've also stolen many things from [Gordon Fontenot][Gordon's dotfiles].
 
 [Install Homebrew]: https://docs.brew.sh/Installation
+[GitHub CLI]: https://cli.github.com
 
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
 [thoughtbot dotfiles repo]: https://github.com/thoughtbot/dotfiles
