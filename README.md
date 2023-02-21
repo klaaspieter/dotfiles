@@ -12,17 +12,12 @@ Clone onto your laptop:
 git clone https://github.com/klaaspieter/dotfiles.git
 ```
 
-Run the setup script:
-
-```sh
-./setup/run
-```
-
-The setup script is idempotent and can be run multiple times.
+on macOS:
+[Install Homebrew] 
 
 Install dotfiles using [rcm]:
 
-```
+```sh
 rcup
 ```
 
@@ -30,8 +25,8 @@ Attribution
 ----------
 Many scripts and configurations have been inspired by [thoughtbot]'s [laptop script][thoughtbot laptop repo] and [dotfiles][thoughtbot dotfiles repo]. I've also stolen many things from [Gordon Fontenot][Gordon's dotfiles].
 
-[thoughtbot]: https://thoughtbot.com
-[setup script]: https://github.com/klaaspieter/dotfiles/blob/master/setup
+[Install Homebrew]: https://docs.brew.sh/Installation
+
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
 [thoughtbot dotfiles repo]: https://github.com/thoughtbot/dotfiles
 [Gordon's dotfiles]: https://github.com/gfontenot/dotfiles
