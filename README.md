@@ -14,9 +14,9 @@ git clone https://github.com/klaaspieter/dotfiles.git
 
 Install and configure the following:
 
-
 - [Homebrew][Install Homebrew] (macOS only)
 - [GitHub CLI]
+- [1Password CLI]
 
 Install dotfiles using [rcm]:
 
@@ -30,6 +30,7 @@ Many scripts and configurations have been inspired by [thoughtbot]'s [laptop scr
 
 [Install Homebrew]: https://docs.brew.sh/Installation
 [GitHub CLI]: https://cli.github.com
+[1Password CLI]: https://developer.1password.com/docs/cli
 
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
 [thoughtbot dotfiles repo]: https://github.com/thoughtbot/dotfiles
