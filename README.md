@@ -26,8 +26,6 @@ Install dotfiles using [rcm]:
 rcup
 ```
 
-
-
 Attribution
 ----------
 Many scripts and configurations have been inspired by [thoughtbot]'s [laptop script][thoughtbot laptop repo] and [dotfiles][thoughtbot dotfiles repo]. I've also stolen many things from [Gordon Fontenot][Gordon's dotfiles].

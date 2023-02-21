@@ -1,8 +1,0 @@
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
-
-Documentation:
-  Enabled: false
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
