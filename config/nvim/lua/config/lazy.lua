@@ -8,6 +8,14 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
   spec = {
+    {
+      "https://github.com/morhetz/gruvbox",
+      lazy = false,
+      priority = 1000,
+      config = function()
+        vim.cmd([[colorscheme gruvbox]])
+      end,
+    }
   },
   checker = { enabled = true }, -- automatically check for plugin updates
 })

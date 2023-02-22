@@ -11,3 +11,6 @@ set.undofile = true
 
 set.list = true
 set.listchars = { tab = "▸ ", eol = "¬", trail = "." }
+
+vim.g.gruvbox_contrast_dark = "hard"
+vim.g.gruvbox_contrast_light = "medium"
