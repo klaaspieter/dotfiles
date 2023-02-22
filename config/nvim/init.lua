@@ -7,3 +7,5 @@ set.tabstop = 2
 set.shiftwidth = 0
 set.expandtab = true
 set.smartindent = true
+set.undofile = true
+
