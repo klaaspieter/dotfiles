@@ -9,11 +9,11 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     {
-      "https://github.com/morhetz/gruvbox",
+      "lifepillar/vim-gruvbox8",
       lazy = false,
       priority = 1000,
       config = function()
-        vim.cmd([[colorscheme gruvbox]])
+        vim.cmd([[colorscheme gruvbox8_hard]])
       end,
     }
   },
