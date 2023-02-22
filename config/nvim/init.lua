@@ -9,3 +9,5 @@ set.expandtab = true
 set.smartindent = true
 set.undofile = true
 
+set.list = true
+set.listchars = { tab = "▸ ", eol = "¬", trail = "." }
