@@ -14,19 +14,40 @@ git clone https://github.com/klaaspieter/dotfiles.git
 
 Install and configure the following:
 
-- [Homebrew][Install Homebrew] (macOS only)
+- [rcm]
 - [GitHub CLI]
 - [1Password CLI]
 - [Spaceship prompt] 
 
-**macOS** only: Make the 1Password SSH agent path consistent with Linux:
+### macOS
+
+[Install Homebrew][Install Homebrew].
+
+Make the 1Password SSH agent path consistent with Linux:
 
 ```sh
 mkdir -p ~/.1password
 ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
 ```
 
-Install dotfiles using [rcm]:
+### Linux
+
+Make zsh the default shell:
+
+```sh
+apt-get install zsh # if necessary
+chsh
+```
+
+Install spaceship prompt:
+
+```sh
+git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git $HOME/.local/state/zsh/spaceship
+```
+
+### Install dotfiles
+
+With all the prerequisites out of the way; install the actual dotfiles using [rcm]:
 
 ```sh
 rcup
@@ -41,6 +62,7 @@ Many scripts and configurations have been inspired by [thoughtbot]'s [laptop scr
 [1Password CLI]: https://developer.1password.com/docs/cli
 [Spaceship prompt]: https://spaceship-prompt.sh
 
+[thoughtbot]: https://thoughtbot.com
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
 [thoughtbot dotfiles repo]: https://github.com/thoughtbot/dotfiles
 [Gordon's dotfiles]: https://github.com/gfontenot/dotfiles
