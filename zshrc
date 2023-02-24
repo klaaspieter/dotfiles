@@ -4,6 +4,8 @@ else
   source "$HOME/.local/state/zsh/spaceship/spaceship.zsh"
 fi
 
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+
 alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
