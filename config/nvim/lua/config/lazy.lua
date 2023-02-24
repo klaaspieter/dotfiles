@@ -15,6 +15,18 @@ require("lazy").setup({
       end,
     },
     {
+      "nvim-lualine/lualine.nvim",
+      event = "VeryLazy",
+      opts = {
+        options = {
+          theme = "gruvbox",
+        },
+      },
+      dependencies = {
+        "kyazdani42/nvim-web-devicons"
+      }
+    },
+    {
       "knubie/vim-kitty-navigator",
       build = "cp ./*.py ~/.config/kitty/"
     },
