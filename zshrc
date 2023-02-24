@@ -9,6 +9,12 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt INC_APPEND_HISTORY_TIME
+setopt EXTENDED_HISTORY
+
 alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
