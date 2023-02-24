@@ -3,3 +3,4 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 fi
 
 alias vim=nvim
+alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
