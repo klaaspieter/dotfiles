@@ -15,6 +15,9 @@ setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY_TIME
 setopt EXTENDED_HISTORY
 
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+
 alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
