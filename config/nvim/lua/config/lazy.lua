@@ -15,6 +15,10 @@ require("lazy").setup({
       end,
     },
     {
+      "knubie/vim-kitty-navigator",
+      build = "cp ./*.py ~/.config/kitty/"
+    },
+    {
       "nvim-treesitter/nvim-treesitter",
       build = ":TSUpdate",
       event = { "BufReadPost", "BufNewFile" },
