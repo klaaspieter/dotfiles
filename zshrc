@@ -6,6 +6,9 @@ fi
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
+export VISUAL="nvim"
+export EDITOR="$VISUAL"
+
 alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
