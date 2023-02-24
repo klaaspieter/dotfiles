@@ -1,8 +1,12 @@
 if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
   source $(brew --prefix)/opt/spaceship/spaceship.zsh
 else
   source "$HOME/.local/state/zsh/spaceship/spaceship.zsh"
 fi
+
+autoload -U compinit && compinit
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
