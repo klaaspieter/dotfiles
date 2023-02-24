@@ -24,6 +24,7 @@
 
 [commit]
   gpgsign = true
+  verbose = 1
 
 [rebase]
   autosquash = true
