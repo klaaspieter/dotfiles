@@ -13,5 +13,8 @@ set.termguicolors = true
 set.list = true
 set.listchars = { tab = "▸ ", eol = "¬", trail = "." }
 
+set.splitbelow = true
+set.splitright = true
+
 vim.g.gruvbox_contrast_dark = "hard"
 vim.g.gruvbox_contrast_light = "medium"
