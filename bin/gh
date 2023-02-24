@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+GH_COMMAND=$(which gh)
+$GH_COMMAND "$@"
+
