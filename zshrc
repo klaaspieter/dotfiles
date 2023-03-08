@@ -13,6 +13,8 @@ export SSH_AUTH_SOCK=~/.1password/agent.sock
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
 
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+
 setopt AUTO_CD
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
