@@ -18,6 +18,7 @@ Install and configure the following:
 - [GitHub CLI]
 - [1Password CLI]
 - [Spaceship prompt] 
+- [kitty]
 
 ### macOS
 
@@ -69,6 +70,7 @@ Many scripts and configurations have been inspired by [thoughtbot]'s [laptop scr
 [GitHub CLI]: https://cli.github.com
 [1Password CLI]: https://developer.1password.com/docs/cli
 [Spaceship prompt]: https://spaceship-prompt.sh
+[kitty]: https://sw.kovidgoyal.net/kitty/binary/
 
 [thoughtbot]: https://thoughtbot.com
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
