@@ -4,17 +4,18 @@
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqt7Xr7Ue/lvzaJ8pB011Fk2oGUzZDWxoAu35+ZfeMd
 
 [alias]
-  s = status
   a = add
   ap = add --patch
   ci = commit
   co = checkout
+  br = branch
   l = log
   lg = log --graph --pretty=format:'%h%C(bold)%d%Creset %s <%C(bold)%an%Creset %cr>' --abbrev-commit
   pushf = push --force-with-lease
   rba = rebase --abort
   rbc = rebase --continue
   rbi = rebase --interactive
+  s = status
 
 [gpg]
   format = ssh
