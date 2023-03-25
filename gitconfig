@@ -22,6 +22,7 @@
 
 [gpg "ssh"]
   allowedSignersFile = /Users/kp/.config/git/allowed_signers
+  program = "op-ssh-sign"
 
 [commit]
   gpgsign = true

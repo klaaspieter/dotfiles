@@ -6,6 +6,8 @@ else
   source "$HOME/.local/state/zsh/spaceship/spaceship.zsh"
 fi
 
+path+=("$HOME/.bin")
+
 autoload -U compinit && compinit
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
