@@ -45,6 +45,14 @@ Install spaceship prompt:
 git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git $HOME/.local/state/zsh/spaceship
 ```
 
+Apt has a very old version of NeoVim. Install NeoVim 0.8.0 or later:
+
+```sh
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+```
+
 ### Install dotfiles
 
 With all the prerequisites out of the way; install the actual dotfiles using [rcm]:
