@@ -36,3 +36,5 @@
 [credential "https://gist.github.com"]
   helper =
   helper = !~/.bin/gh auth git-credential
+[pull]
+	rebase = true
