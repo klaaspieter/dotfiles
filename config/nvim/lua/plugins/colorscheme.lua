@@ -6,5 +6,5 @@ return {
     config = function()
       vim.cmd([[colorscheme gruvbox8_hard]])
     end,
-  }
+  },
 }
