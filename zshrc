@@ -9,6 +9,7 @@ fi
 path+=("$HOME/.bin")
 
 autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
 
