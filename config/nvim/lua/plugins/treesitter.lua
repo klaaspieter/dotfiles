@@ -8,6 +8,7 @@ return {
       indent = { enable = true },
       ensure_installed = {
         "bash",
+        "elixir",
         "html",
         "javascript",
         "json",
