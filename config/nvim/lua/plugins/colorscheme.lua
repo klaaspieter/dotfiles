@@ -1,10 +1,22 @@
 return {
   {
-    "lifepillar/vim-gruvbox8",
-    lazy = false,
+    "ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = function()
-      vim.cmd([[colorscheme gruvbox8_hard]])
+      -- require("gruvbox").setup({
+      -- })
+      -- vim.cmd([[colorscheme gruvbox]])
+    end,
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    priority = 1000,
+    config = function()
+      require("tokyonight").setup({
+        style = "moon",
+      })
+      vim.cmd[[colorscheme tokyonight]]
     end,
   },
 }

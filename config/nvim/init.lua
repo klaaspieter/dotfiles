@@ -16,7 +16,7 @@ set.listchars = { tab = "▸ ", eol = "¬", trail = "." }
 set.splitbelow = true
 set.splitright = true
 
-vim.g.gruvbox_contrast_dark = "hard"
-vim.g.gruvbox_contrast_light = "medium"
+-- vim.g.gruvbox_contrast_dark = "hard"
+-- vim.g.gruvbox_contrast_light = "medium"
 
 vim.keymap.set("n", "-", vim.cmd.Ex)
