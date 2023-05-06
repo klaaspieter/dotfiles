@@ -103,7 +103,7 @@ return {
         vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
       end
 
-      local lspconfig = require('lspconfig')
+      local lspconfig = require("lspconfig")
       require('mason-lspconfig').setup_handlers({
         function(server_name)
           lspconfig[server_name].setup({
@@ -124,6 +124,25 @@ return {
           }
         end,
       })
+
+
+      local path = vim.fs.normalize(
+        "~/Developer/clones/vscode-home-assistant/out/server/server.js"
+      )
+      if path ~= nil or path ~= "" then
+        local lspconfig_util = require("lspconfig/util")
+        local configs = require("lspconfig.configs")
+        configs.homeassistant = {
+          default_config = {
+            cmd = { 'node',  path, "--stdio" },
+            filetypes = { "yaml" },
+            root_dir = lspconfig_util.root_pattern("configuration.yaml"),
+            settings = {},
+          },
+        }
+        lspconfig.homeassistant.setup({ on_attach = lsp_attach })
+      end
+
    end
   },
 }
