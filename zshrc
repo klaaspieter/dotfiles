@@ -17,6 +17,8 @@ export VISUAL="nvim"
 export EDITOR="$VISUAL"
 
 export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export HASS_SERVER=$(passage show homeassistant/server)
+export HASS_TOKEN=$(passage show homeassistant/token)
 
 setopt AUTO_CD
 setopt HIST_IGNORE_ALL_DUPS
