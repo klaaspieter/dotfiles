@@ -8,6 +8,8 @@ fi
 
 path+=("$HOME/.bin")
 
+source $(brew --prefix asdf)/libexec/asdf.sh
+
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 

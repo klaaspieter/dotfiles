@@ -21,6 +21,7 @@ Install and configure the following:
 - [kitty]
 - [ripgrep]
 - [fd]
+- [asdf]
 
 ### macOS
 
@@ -75,6 +76,7 @@ Many scripts and configurations have been inspired by [thoughtbot]'s [laptop scr
 [kitty]: https://sw.kovidgoyal.net/kitty/binary/
 [ripgrep]: https://github.com/BurntSushi/ripgrep
 [fd]: https://github.com/sharkdp/fd
+[asdf]: https://asdf-vm.com/guide/getting-started.html#_3-install-asdf
 
 [thoughtbot]: https://thoughtbot.com
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
