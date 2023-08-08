@@ -57,6 +57,7 @@ return {
         ensure_installed = {
           "tsserver",
           "lua_ls",
+          "elixir-ls",
         }
       })
 
