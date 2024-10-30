@@ -48,3 +48,5 @@
   helper = !~/.bin/gh auth git-credential
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
+[init]
+	defaultBranch = main
