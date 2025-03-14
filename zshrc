@@ -37,4 +37,8 @@ alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
 alias gs="git status"
 
+
+# bun completions
+[ -s "/Users/kp/.bun/_bun" ] && source "/Users/kp/.bun/_bun"
+
 eval "$(zoxide init zsh)"
