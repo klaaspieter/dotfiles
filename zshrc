@@ -8,8 +8,6 @@ fi
 
 path+=("$HOME/.bin")
 
-source $(brew --prefix asdf)/libexec/asdf.sh
-
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
@@ -42,3 +40,4 @@ alias gs="git status"
 [ -s "/Users/kp/.bun/_bun" ] && source "/Users/kp/.bun/_bun"
 
 eval "$(zoxide init zsh)"
+eval "$(mise activate zsh)"
