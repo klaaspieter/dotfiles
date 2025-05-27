@@ -41,4 +41,6 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
 [ -s "/Users/kp/.bun/_bun" ] && source "/Users/kp/.bun/_bun"
 
 eval "$(zoxide init zsh)"
+
+MISE_ENV_FILE=".env"
 eval "$(mise activate zsh)"
