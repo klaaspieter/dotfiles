@@ -6,8 +6,6 @@ else
   source "$HOME/.local/state/zsh/spaceship/spaceship.zsh"
 fi
 
-path+=("$HOME/.bin")
-
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
@@ -35,6 +33,9 @@ alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
 alias gs="git status"
 
+# Android
+path+=("$HOME/.bin" "/Applications/Android Studio.app/Contents/MacOS")
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
 
 # bun completions
 [ -s "/Users/kp/.bun/_bun" ] && source "/Users/kp/.bun/_bun"
