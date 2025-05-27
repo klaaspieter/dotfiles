@@ -1,4 +1,7 @@
 env_file = ".env"
+
 [tools]
+bun = "latest"
 node = "22"
+python = "latest"
 ruby = "latest"
