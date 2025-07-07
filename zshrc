@@ -28,6 +28,7 @@ alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
 alias gs="git status"
+alias claude="/Users/kp/.claude/local/claude"
 
 # Android
 path+=("$HOME/.bin" "/Applications/Android Studio.app/Contents/MacOS")
@@ -38,15 +39,11 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
 
 eval "$(zoxide init zsh)"
 
-MISE_ENV_FILE=".env"
-eval "$(mise activate zsh)"
-
-
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/kp/Developer/clones/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kp/Developer/clones/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/kp/Developer/clones/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kp/Developer/clones/google-cloud-sdk/completion.zsh.inc'; fi
 
-alias claude="/Users/kp/.claude/local/claude"
+MISE_ENV_FILE=".env"
+eval "$(/Users/kp/.local/bin/mise activate zsh)"
