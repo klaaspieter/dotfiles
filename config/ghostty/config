@@ -2,4 +2,4 @@ font-family = Iosevka
 font-size = 16
 
 theme = dark:tokyonight_night,light:tokyonight-day
-
+keybind = shift+enter=text:\x1b\r
