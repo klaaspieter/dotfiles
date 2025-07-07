@@ -17,6 +17,7 @@ Install and configure the following:
 - [rcm]
 - [GitHub CLI]
 - [1Password CLI]
+- [neovim]
 - [Spaceship prompt]
 - [ghostty]
 - [zoxide]
@@ -75,6 +76,7 @@ Many scripts and configurations have been inspired by [thoughtbot]'s [laptop scr
 [ghostty]: https://ghostty.org/docs/install/binary#macos
 [mise]: https://mise.jdx.dev/installing-mise.html
 [zoxide]: https://crates.io/crates/zoxide#installation
+[neovim]: https://github.com/neovim/neovim/blob/master/INSTALL.md#homebrew-on-macos-or-linux
 
 [thoughtbot]: https://thoughtbot.com
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
