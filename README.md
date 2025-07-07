@@ -18,9 +18,8 @@ Install and configure the following:
 - [GitHub CLI]
 - [1Password CLI]
 - [Spaceship prompt]
-- [kitty]
-- [ripgrep]
-- [fd]
+- [ghostty]
+- [zoxide]
 - [mise]
 
 ### macOS
@@ -73,10 +72,9 @@ Many scripts and configurations have been inspired by [thoughtbot]'s [laptop scr
 [GitHub CLI]: https://cli.github.com
 [1Password CLI]: https://developer.1password.com/docs/cli
 [Spaceship prompt]: https://spaceship-prompt.sh
-[kitty]: https://sw.kovidgoyal.net/kitty/binary/
-[ripgrep]: https://github.com/BurntSushi/ripgrep
-[fd]: https://github.com/sharkdp/fd
+[ghostty]: https://ghostty.org/docs/install/binary#macos
 [mise]: https://mise.jdx.dev/installing-mise.html
+[zoxide]: https://crates.io/crates/zoxide#installation
 
 [thoughtbot]: https://thoughtbot.com
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
