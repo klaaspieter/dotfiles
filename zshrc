@@ -28,7 +28,6 @@ alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
 alias gs="git status"
-alias claude="/Users/kp/.claude/local/claude"
 
 # Android
 path+=("$HOME/.bin" "/Applications/Android Studio.app/Contents/MacOS")
