@@ -34,7 +34,7 @@
 
 [gpg "ssh"]
   allowedSignersFile = /Users/kp/.config/git/allowed_signers
-  program = "op-ssh-sign"
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 
 [commit]
   gpgsign = true
