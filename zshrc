@@ -38,11 +38,18 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
 
 eval "$(zoxide init zsh)"
 
-# The next line updates PATH for the Google Cloud SDK.
+# Add Google cloud SDK to PATH
 if [ -f '/Users/kp/Developer/clones/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kp/Developer/clones/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
+# Enable completions for Google cloud SDK
 if [ -f '/Users/kp/Developer/clones/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kp/Developer/clones/google-cloud-sdk/completion.zsh.inc'; fi
 
 MISE_ENV_FILE=".env"
 eval "$(/Users/kp/.local/bin/mise activate zsh)"
+
+# zsh shell integration
+if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
+fi
+
+source <(fzf --zsh)
