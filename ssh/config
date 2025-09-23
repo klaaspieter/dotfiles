@@ -1,5 +1,6 @@
 Host *
   IdentityAgent "~/.1password/agent.sock"
+  SetEnv TERM=xterm-256color
 
 Match exec "[[ $(uname) == 'Darwin' ]]"
   Include ~/.orbstack/ssh/config
