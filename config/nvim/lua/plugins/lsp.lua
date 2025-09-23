@@ -1,10 +1,11 @@
-local lspconfig = require("lspconfig")
-
 return {
   "neovim/nvim-lspconfig",
   opts = {
-    bashls = {
-      filetypes = { "sh", "zsh" },
+    servers = {
+      html = {},
+      bashls = {
+        filetypes = { "sh", "zsh" },
+      },
     },
   },
 }
