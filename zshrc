@@ -29,6 +29,9 @@ alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
 alias gs="git status"
 
+# direnv
+eval "$(direnv hook zsh)"
+
 # Android
 path+=("$HOME/.bin" "/Applications/Android Studio.app/Contents/MacOS")
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
