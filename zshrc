@@ -56,3 +56,4 @@ if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
 fi
 
 source <(fzf --zsh)
+source ~/.fzf-git.sh
