@@ -5,3 +5,6 @@ Host *
 Match exec "[[ $(uname) == 'Darwin' ]]"
   Include ~/.orbstack/ssh/config
 
+Host homeassistant.local
+  User root
+  ForwardAgent yes
