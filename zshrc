@@ -28,6 +28,8 @@ alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
 alias gs="git status"
+alias clp="CLAUDE_CONFIG_DIR=~/.config/claude/personal claude"
+alias clw="CLAUDE_CONFIG_DIR=~/.config/claude/ipinfo claude"
 
 # direnv
 eval "$(direnv hook zsh)"
