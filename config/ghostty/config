@@ -1,4 +1,8 @@
-font-family = Iosevka
+font-family = IosevkaTerm NFM
+font-family-bold = IosevkaTerm NFM Bold
+font-family-italic = IosevkaTerm NFM Oblique
+font-style-bold-italic = IosevkaTerm NFM Bold Oblique
+font-synthetic-style = false
 font-size = 16
 
 theme = dark:Tokyonight Night,light:Tokyonight Day
