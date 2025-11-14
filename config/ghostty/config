@@ -6,4 +6,5 @@ font-synthetic-style = false
 font-size = 16
 
 theme = dark:Tokyonight Night,light:Tokyonight Day
+theme = Alabaster
 keybind = shift+enter=text:\x1b\r
