@@ -1,0 +1,23 @@
+#!/bin/sh
+
+print_header() {
+  echo "\033[7m$1\033[0m"       # Swaps fg/bg colors
+}
+
+print_header "Typography"
+echo "\033[1mThis is bold\033[0m"
+echo "\033[3mThis is italic\033[0m"
+echo "\033[1;3mThis is bold italic\033[0m"
+
+print_header "\n16 colors"
+for i in $(seq 0 15); do
+printf "\033[48;5;${i}m  \033[0m"
+[ $((($i + 1) % 8)) -eq 0 ] && echo
+done
+
+print_header "\n256 colors"
+for i in $(seq 0 255); do
+printf "\033[48;5;${i}m  \033[0m"
+[ $((($i + 1) % 16)) -eq 0 ] && echo
+done
+echo
