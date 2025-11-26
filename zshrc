@@ -1,10 +1,8 @@
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  source $(brew --prefix)/opt/spaceship/spaceship.zsh
-else
-  source "$HOME/.local/state/zsh/spaceship/spaceship.zsh"
 fi
+
+eval "$(starship init zsh)"
 
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'

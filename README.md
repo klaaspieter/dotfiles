@@ -1,10 +1,10 @@
-dotfiles
-========
+# dotfiles
 
 My dotfiles. I don't recommend running these as your own. I'm sharing them so you can steal things for your own dotfiles.
 
-Install
--------
+![screenshot](./screenshot.png)
+
+## Install
 
 Clone onto your laptop:
 
@@ -18,7 +18,7 @@ Install and configure the following:
 - [GitHub CLI]
 - [1Password CLI]
 - [neovim]
-- [Spaceship prompt]
+- [starship prompt]
 - [ghostty]
 - [zoxide]
 - [mise]
@@ -65,19 +65,18 @@ With all the prerequisites out of the way; install the actual dotfiles using [rc
 rcup
 ```
 
-Attribution
-----------
+## Attribution
+
 Many scripts and configurations have been inspired by [thoughtbot]'s [laptop script][thoughtbot laptop repo] and [dotfiles][thoughtbot dotfiles repo]. I've also stolen many things from [Gordon Fontenot][Gordon's dotfiles].
 
 [Install Homebrew]: https://docs.brew.sh/Installation
 [GitHub CLI]: https://cli.github.com
 [1Password CLI]: https://developer.1password.com/docs/cli
-[Spaceship prompt]: https://spaceship-prompt.sh
+[starship prompt]: https://starship.rs/guide/#%F0%9F%9A%80-installation
 [ghostty]: https://ghostty.org/docs/install/binary#macos
 [mise]: https://mise.jdx.dev/installing-mise.html
 [zoxide]: https://crates.io/crates/zoxide#installation
 [neovim]: https://github.com/neovim/neovim/blob/master/INSTALL.md#homebrew-on-macos-or-linux
-
 [thoughtbot]: https://thoughtbot.com
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
 [thoughtbot dotfiles repo]: https://github.com/thoughtbot/dotfiles

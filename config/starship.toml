@@ -1,0 +1,54 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$username\
+$hostname\
+$directory\
+$custom\
+$cmd_duration\
+$line_break\
+$python\
+$character"""
+
+[directory]
+style = "black"
+
+[character]
+success_symbol = "[❯](black)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](black)"
+
+[git_branch]
+format = "[$branch]($style)"
+style = "black"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "black"
+
+[custom.dirty]
+command = "echo $(git symbolic-ref --short HEAD)"
+when = "git-change"
+style = "italic fg:black"
+shell = "zsh"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
+detect_extensions = []
+detect_files = []
