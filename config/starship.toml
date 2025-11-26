@@ -4,6 +4,7 @@ format = """
 $username\
 $hostname\
 $directory\
+$clean\
 $custom\
 $cmd_duration\
 $line_break\
@@ -17,6 +18,12 @@ style = "black"
 success_symbol = "[❯](black)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](black)"
+
+[custom.clean]
+command = "git symbolic-ref --short HEAD"
+when = "! git-change"
+style = "fg:black"
+shell = "zsh"
 
 [custom.dirty]
 command = "git symbolic-ref --short HEAD"
