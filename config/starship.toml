@@ -19,7 +19,7 @@ error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](black)"
 
 [custom.dirty]
-command = "echo $(git symbolic-ref --short HEAD)"
+command = "git symbolic-ref --short HEAD"
 when = "git-change"
 style = "italic fg:black"
 shell = "zsh"
