@@ -18,25 +18,6 @@ success_symbol = "[❯](black)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](black)"
 
-[git_branch]
-format = "[$branch]($style)"
-style = "black"
-
-[git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
-style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
-
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "black"
-
 [custom.dirty]
 command = "echo $(git symbolic-ref --short HEAD)"
 when = "git-change"
