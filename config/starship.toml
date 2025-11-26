@@ -12,7 +12,7 @@ $python\
 $character"""
 
 [directory]
-style = "black"
+style = "dimmed"
 
 [character]
 success_symbol = "[❯](black)"
