@@ -4,3 +4,6 @@ config:
 
   # Inline HTML
   MD033: false
+
+  # Duplicate headings
+  MD024: false
