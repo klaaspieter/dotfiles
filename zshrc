@@ -17,6 +17,8 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt INC_APPEND_HISTORY_TIME
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_SPACE
 setopt EXTENDED_HISTORY
 
 bindkey '\e[A' history-search-backward
@@ -26,8 +28,6 @@ alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
 alias gs="git status"
-alias clp="CLAUDE_CONFIG_DIR=~/.config/claude/personal claude"
-alias clw="CLAUDE_CONFIG_DIR=~/.config/claude/ipinfo claude"
 
 # direnv
 eval "$(direnv hook zsh)"
