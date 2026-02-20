@@ -21,6 +21,10 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_SPACE
 setopt EXTENDED_HISTORY
 
+HISTSIZE=50000
+# shellcheck disable=SC2034
+SAVEHIST="${HISTSIZE}"
+
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 
