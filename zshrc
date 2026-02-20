@@ -67,3 +67,6 @@ source <(fzf --zsh)
 
 # shellcheck source=/dev/null
 source ~/.fzf-git.sh
+
+# shellcheck source=/dev/null
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
