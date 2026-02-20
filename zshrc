@@ -38,15 +38,16 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
 path+=("$HOME/.bin" "/Applications/Android Studio.app/Contents/MacOS" "$ANDROID_HOME/platform-tools")
 
 # bun completions
-[ -s "/Users/kp/.bun/_bun" ] && source "/Users/kp/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 eval "$(zoxide init zsh)"
 
 # Add Google cloud SDK to PATH
-if [ -f '/Users/kp/Developer/clones/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/kp/Developer/clones/google-cloud-sdk/path.zsh.inc'; fi
+GOOGLE_CLOUD_SDK_PATH="$HOME/Developer/clones/google-cloud-sdk"
+if [ -f "$GOOGLE_CLOUD_SDK_PATH/path.zsh.inc" ]; then . "$GOOGLE_CLOUD_SDK_PATH/path.zsh.inc"; fi
 
 # Enable completions for Google cloud SDK
-if [ -f '/Users/kp/Developer/clones/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kp/Developer/clones/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$GOOGLE_CLOUD_SDK_PATH/completion.zsh.inc" ]; then . "$GOOGLE_CLOUD_SDK_PATH/completion.zsh.inc"; fi
 
 MISE_ENV_FILE=".env"
 eval "$(mise activate zsh)"
