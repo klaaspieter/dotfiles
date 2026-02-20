@@ -4,7 +4,6 @@ format = """
 $username\
 $hostname\
 $directory\
-$clean\
 $custom\
 $cmd_duration\
 $line_break\
