@@ -1,0 +1,12 @@
+brew "direnv"
+brew "fzf"
+brew "gh"
+brew "mise"
+brew "neovim"
+brew "rcm"
+brew "starship"
+brew "zoxide"
+
+cask "1password"
+cask "1password-cli"
+cask "ghostty"

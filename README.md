@@ -12,20 +12,13 @@ Clone onto your laptop:
 git clone https://github.com/klaaspieter/dotfiles.git
 ```
 
-Install and configure the following:
-
-- [rcm]
-- [GitHub CLI]
-- [1Password CLI]
-- [neovim]
-- [starship prompt]
-- [ghostty]
-- [zoxide]
-- [mise]
-
 ### macOS
 
-[Install Homebrew][Install Homebrew].
+[Install Homebrew][Install Homebrew], then install all required tools:
+
+```sh
+brew bundle install
+```
 
 Make the 1Password SSH agent path consistent with Linux:
 
@@ -49,6 +42,9 @@ Install spaceship prompt:
 git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git $HOME/.local/state/zsh/spaceship
 ```
 
+Install the tools listed in the [Brewfile](./Brewfile) via your package manager. All are
+widely available in major distributions.
+
 Apt has a very old version of NeoVim. Install NeoVim 0.8.0 or later:
 
 ```sh
@@ -70,13 +66,6 @@ rcup
 Many scripts and configurations have been inspired by [thoughtbot]'s [laptop script][thoughtbot laptop repo] and [dotfiles][thoughtbot dotfiles repo]. I've also stolen many things from [Gordon Fontenot][Gordon's dotfiles].
 
 [Install Homebrew]: https://docs.brew.sh/Installation
-[GitHub CLI]: https://cli.github.com
-[1Password CLI]: https://developer.1password.com/docs/cli
-[starship prompt]: https://starship.rs/guide/#%F0%9F%9A%80-installation
-[ghostty]: https://ghostty.org/docs/install/binary#macos
-[mise]: https://mise.jdx.dev/installing-mise.html
-[zoxide]: https://crates.io/crates/zoxide#installation
-[neovim]: https://github.com/neovim/neovim/blob/master/INSTALL.md#homebrew-on-macos-or-linux
 [thoughtbot]: https://thoughtbot.com
 [thoughtbot laptop repo]: https://github.com/thoughtbot/laptop
 [thoughtbot dotfiles repo]: https://github.com/thoughtbot/dotfiles
