@@ -36,12 +36,6 @@ apt-get install zsh # if necessary
 chsh
 ```
 
-Install spaceship prompt:
-
-```sh
-git clone --depth=1 https://github.com/spaceship-prompt/spaceship-prompt.git $HOME/.local/state/zsh/spaceship
-```
-
 Install the tools listed in the [Brewfile](./Brewfile) via your package manager. All are
 widely available in major distributions.
 
