@@ -6,6 +6,7 @@ brew "neovim"
 brew "rcm"
 brew "starship"
 brew "zoxide"
+brew "zsh-autosuggestions"
 
 cask "1password"
 cask "1password-cli"
