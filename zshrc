@@ -33,8 +33,9 @@ alias gs="git status"
 eval "$(direnv hook zsh)"
 
 # Android
-path+=("$HOME/.bin" "/Applications/Android Studio.app/Contents/MacOS")
+export ANDROID_HOME="$HOME/Library/Android/sdk"
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
+path+=("$HOME/.bin" "/Applications/Android Studio.app/Contents/MacOS" "$ANDROID_HOME/platform-tools")
 
 # bun completions
 [ -s "/Users/kp/.bun/_bun" ] && source "/Users/kp/.bun/_bun"
