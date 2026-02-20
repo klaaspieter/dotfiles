@@ -34,6 +34,10 @@ alias vim=nvim
 alias reload="source ~/.zshrc; echo 'sourced ~/.zshrc'"
 alias g="git"
 alias gs="git status"
+export EZA_COLORS="di=1;34:bu=36:do=36"
+alias ls="eza"
+alias ll="eza --long --git"
+alias la="eza --long --git --all"
 
 # direnv
 eval "$(direnv hook zsh)"

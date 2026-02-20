@@ -1,4 +1,5 @@
 brew "direnv"
+brew "eza"
 brew "fzf"
 brew "gh"
 brew "git-delta"
