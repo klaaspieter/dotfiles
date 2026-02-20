@@ -4,7 +4,8 @@
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqt7Xr7Ue/lvzaJ8pB011Fk2oGUzZDWxoAu35+ZfeMd
 
 [core]
-	excludesFile = /Users/kp/.gitignore
+  excludesFile = ~/.gitignore
+  pager = delta
 
 [alias]
   a = add
@@ -50,6 +51,14 @@
 	ignoreRevsFile = .git-blame-ignore-revs
 [init]
 	defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  light = true
+  syntax-theme = Alabaster
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

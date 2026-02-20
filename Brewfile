@@ -1,6 +1,7 @@
 brew "direnv"
 brew "fzf"
 brew "gh"
+brew "git-delta"
 brew "mise"
 brew "neovim"
 brew "rcm"
