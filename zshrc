@@ -52,10 +52,5 @@ if [ -f "$GOOGLE_CLOUD_SDK_PATH/completion.zsh.inc" ]; then . "$GOOGLE_CLOUD_SDK
 MISE_ENV_FILE=".env"
 eval "$(mise activate zsh)"
 
-# zsh shell integration
-if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
-fi
-
 source <(fzf --zsh)
 source ~/.fzf-git.sh
