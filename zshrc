@@ -49,7 +49,7 @@ if [ -f '/Users/kp/Developer/clones/google-cloud-sdk/path.zsh.inc' ]; then . '/U
 if [ -f '/Users/kp/Developer/clones/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kp/Developer/clones/google-cloud-sdk/completion.zsh.inc'; fi
 
 MISE_ENV_FILE=".env"
-eval "$(/Users/kp/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 
 # zsh shell integration
 if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
