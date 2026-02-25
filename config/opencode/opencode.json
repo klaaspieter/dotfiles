@@ -10,6 +10,11 @@
       "type": "local",
       "command": ["npx", "-y", "ios-simulator-mcp"],
       "enabled": true
+    },
+    "xcode": {
+      "type": "local",
+      "command": ["xcrun", "mcpbridge"],
+      "enabled": true
     }
   }
 }
