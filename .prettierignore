@@ -1,0 +1,11 @@
+# Exclude markdown from Prettier due to GitHub alerts incompatibility
+# See: https://github.com/prettier/prettier/issues/15479
+# 
+# Prettier has known bugs with GitHub alerts (> [!NOTE], > [!WARNING], etc.)
+# that cause them to be collapsed into single lines, breaking the alert rendering.
+# 
+# We use markdownlint-cli2 for markdown formatting instead, which properly
+# supports GitHub Flavored Markdown extensions.
+
+*.md
+**/*.md

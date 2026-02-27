@@ -1,9 +1,24 @@
 config:
-  # Line length
+  # Line length - disabled for flexibility with long URLs and tables
   MD013: false
 
-  # Inline HTML
-  MD033: false
+  # Inline HTML - allow specific HTML elements commonly used in GFM
+  MD033:
+    allowed_elements: ["br", "sub", "sup", "details", "summary", "img"]
 
-  # Duplicate headings
-  MD024: false
+  # Duplicate headings - only check within same parent section
+  # This allows same heading text in different sections (e.g., multiple "Overview" headings)
+  MD024:
+    siblings_only: true
+
+  # Blank lines inside blockquote - Disabled to support GitHub style callouts
+  # See: https://github.com/DavidAnson/markdownlint/issues/1419
+  MD028: false
+
+  # Bare URLs - GFM automatically converts these to links
+  # Disabled because GitHub renders bare URLs as clickable links
+  MD034: false
+
+  # First line in file should be a top-level heading
+  # Disabled to allow badges, images, or other content before headings
+  MD041: false
