@@ -38,6 +38,7 @@ export EZA_COLORS="di=1;34:bu=36:do=36"
 alias ls="eza"
 alias ll="eza --long --git"
 alias la="eza --long --git --all"
+alias be="bundle exec"
 
 # direnv
 eval "$(direnv hook zsh)"
