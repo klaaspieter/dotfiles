@@ -5,6 +5,7 @@ font-size = 14
 theme = light:Alabaster,dark:Alabaster Dark
 keybind = shift+enter=text:\x1b\r
 
+copy-on-select=clipboard
 macos-option-as-alt = false
 
 shell-integration-features = cursor,sudo,title,ssh-env,ssh-terminfo
