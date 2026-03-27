@@ -13,3 +13,11 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.wo.conceallevel = 0
   end,
 })
+
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "gitcommit", "jjdescription" },
+  callback = function()
+    vim.opt_local.textwidth = 72
+    vim.opt_local.formatexpr = ""
+  end,
+})

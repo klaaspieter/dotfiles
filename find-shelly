@@ -1,0 +1,28 @@
+#!/bin/sh
+
+RESULTS=$(mktemp)
+HOSTS=$(mktemp)
+trap 'rm -f $RESULTS $HOSTS' EXIT
+
+# Start dns-sd in background
+dns-sd -B _http._tcp local. >"$RESULTS" 2>&1 &
+DNS_PID=$!
+
+# Ensure dns-sd is killed on exit
+trap 'kill $DNS_PID 2>/dev/null; rm -f $RESULTS $HOSTS' EXIT INT TERM
+
+sleep 1
+
+kill "$DNS_PID" 2>/dev/null
+
+# Extract unique shelly hostnames
+grep shelly "$RESULTS" | awk '{print $7}' >"$HOSTS"
+
+cat "$HOSTS"
+
+## Resolve each hostname to IP address
+#while read -r hostname; do
+#  # Use dns-sd -G to resolve hostname to IPv4 address
+#  # The output line with the IP looks like: "2024-03-05 ... 192.168.2.50"
+#  dns-sd -G v4 "$hostname" 2>&1 | grep -m1 "^[0-9]" | awk '{print $NF}'
+#done <"$HOSTS"
