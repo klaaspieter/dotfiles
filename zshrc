@@ -47,6 +47,9 @@ alias be="bundle exec"
 # direnv
 eval "$(direnv hook zsh)"
 
+# jj
+source <(COMPLETE=zsh jj)
+
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
