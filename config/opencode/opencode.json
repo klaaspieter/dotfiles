@@ -2,6 +2,11 @@
   "$schema": "https://opencode.ai/config.json",
   "default_agent": "plan",
   "plugin": ["opencode-claude-auth"],
+  "agent": {
+    "build": {
+      "enable1mContext": true
+    }
+  },
   "mcp": {
     "ios-simulator": {
       "type": "local",
