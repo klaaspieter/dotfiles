@@ -7,8 +7,9 @@ email = "kp@annema.me"
 [signing]
 behavior = "drop"
 backend = "ssh"
-backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqt7Xr7Ue/lvzaJ8pB011Fk2oGUzZDWxoAu35+ZfeMd"
+backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+backends.ssh.allowed-signers = "~/.config/git/allowed_signers"
 
 [ui]
 show-cryptographic-signatures = true
