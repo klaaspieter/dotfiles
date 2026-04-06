@@ -49,7 +49,7 @@
   helper =
   helper = !~/.bin/gh auth git-credential
 [blame]
-	ignoreRevsFile = .git-blame-ignore-revs
+  ignoreRevsFile = :(optional).git-blame-ignore-revs
 [init]
 	defaultBranch = main
 [interactive]
