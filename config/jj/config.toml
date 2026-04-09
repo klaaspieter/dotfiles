@@ -4,6 +4,10 @@
 name = "Klaas Pieter Annema"
 email = "kp@annema.me"
 
+[ui]
+default-command = "log"
+show-cryptographic-signatures = true
+
 [signing]
 behavior = "drop"
 backend = "ssh"
@@ -11,8 +15,14 @@ key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFqt7Xr7Ue/lvzaJ8pB011Fk2oGUzZDWxoAu3
 backends.ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 backends.ssh.allowed-signers = "~/.config/git/allowed_signers"
 
-[ui]
-show-cryptographic-signatures = true
-
 [git]
 sign-on-push = true
+
+[templates]
+draft_commit_description = '''
+concat(
+  description,
+  "\nJJ: This commit contains the following changes:\n",
+  diff.git(),
+)
+'''
