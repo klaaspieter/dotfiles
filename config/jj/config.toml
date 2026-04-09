@@ -21,8 +21,8 @@ sign-on-push = true
 [templates]
 draft_commit_description = '''
 concat(
-  description,
-  "\nJJ: This commit contains the following changes:\n",
+  builtin_draft_commit_description,
+  "\nJJ: ignore-rest\n",
   diff.git(),
 )
 '''
