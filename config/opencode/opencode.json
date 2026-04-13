@@ -22,6 +22,11 @@
       "type": "local",
       "command": ["xcrun", "mcpbridge"],
       "enabled": true
+    },
+    "firebase": {
+      "type": "local",
+      "command": ["npx", "-y", "firebase-tools", "mcp", "--dir", "."],
+      "enabled": true
     }
   }
 }
