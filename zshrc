@@ -7,6 +7,9 @@ eval "$(starship init zsh)"
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+export DO_NOT_TRACK=true
+export GH_TELEMETRY=false
+
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export SSH_AUTH_SOCK=~/.1password/agent.sock
