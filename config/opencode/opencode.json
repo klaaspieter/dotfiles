@@ -34,6 +34,11 @@
       "type": "local",
       "command": ["npx", "-y", "firebase-tools", "mcp", "--dir", "."],
       "enabled": true
+    },
+    "retool": {
+      "type": "remote",
+      "url": "https://ipinfo.retool.com/mcp",
+      "enabled": true
     }
   }
 }
