@@ -56,7 +56,7 @@ source <(COMPLETE=zsh jj)
 # Android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home/"
-path+=("$HOME/.bin" "/Applications/Android Studio.app/Contents/MacOS" "$ANDROID_HOME/platform-tools")
+path+=("$HOME/.bin" "$HOME/.local/bin" "/Applications/Android Studio.app/Contents/MacOS" "$ANDROID_HOME/platform-tools")
 
 # bun completions
 # shellcheck source=/dev/null
