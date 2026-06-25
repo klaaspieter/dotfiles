@@ -39,6 +39,15 @@
       "type": "remote",
       "url": "https://ipinfo.retool.com/mcp",
       "enabled": true
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "chrome-devtools-mcp@latest",
+        "--executablePath",
+        "/Applications/Chromium.app/Contents/MacOS/Chromium"
+      ]
     }
   }
 }
