@@ -1,1 +1,2 @@
+DOTFILES_DIRS="~/.dotfiles ~/.dotfiles-private"
 EXCLUDES="README.md LICENSE config.toml.example"
