@@ -1,0 +1,25 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "xhigh"
+service_tier = "default"
+approvals_reviewer = "auto_review"
+
+[desktop]
+followUpQueueMode = "queue"
+dock-icon-preference = "codex-system"
+realtimeVoiceScreenContextEnabled = true
+keepRemoteControlAwakeWhilePluggedIn = true
+git-always-force-push = true
+preventSleepWhileRunning = true
+show-context-window-usage = true
+conversationDetailMode = "STEPS_PROSE"
+
+[features]
+js_repl = false
+
+# Example MCP server entry, no credentials required
+[mcp_servers.linear]
+url = "https://mcp.linear.app/mcp"
+
+# Real config.toml is gitignored: Codex and the ChatGPT desktop app write
+# per-project trust entries, marketplace/plugin state, and MCP server
+# credentials into it directly, none of which belongs in a public repo.

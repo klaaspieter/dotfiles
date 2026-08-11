@@ -1,1 +1,1 @@
-EXCLUDES="README.md LICENSE"
+EXCLUDES="README.md LICENSE config.toml.example"
