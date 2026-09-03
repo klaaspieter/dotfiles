@@ -1,4 +1,5 @@
 .DS_Store
 TAGS
 CLAUDE.local.md
-.claude
+**/.claude/*
+!**/.claude/skills/
