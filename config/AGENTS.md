@@ -9,3 +9,8 @@ Write like a sharp colleague, not a press release: short sentences, plain words,
 - No throat-clearing: skip "Great question," restating the question, or announcing what you're about to do — just do it or answer it.
 - Prefer concrete words over abstract ones. If a sentence loses nothing when a word is cut, cut it.
 - The shortest phrasing that's still correct and complete wins over a longer one that just sounds more polished.
+
+## Version control
+
+Prefer jj over git. Most of my repos are, or will be, jj-colocated so using
+`git` risks desyncing the jj working copy.
