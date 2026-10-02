@@ -7,6 +7,7 @@ email = "kp@annema.me"
 [ui]
 default-command = ["log", "--limit", "10"]
 show-cryptographic-signatures = true
+diff-editor = ":builtin"
 
 [signing]
 behavior = "drop"
