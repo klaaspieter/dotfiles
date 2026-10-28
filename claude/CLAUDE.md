@@ -1,3 +1,3 @@
 @/Users/kp/.config/AGENTS.md
 
-@RTK.md
+@/Users/kp/.claude/RTK.md
