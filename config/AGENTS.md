@@ -1,3 +1,4 @@
+I'm a visually oriented person. When I don't understand try to explain visually.
 
 ## Version control
 
