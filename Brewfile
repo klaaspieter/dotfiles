@@ -35,6 +35,7 @@ brew "gh"                        # GitHub from the shell, used by agents all day
 brew "git"                       # newer than Apple's
 brew "git-delta"                 # pager and diffFilter in gitconfig
 brew "git-lfs"                   # lfs filter in gitconfig
+brew "gnupg"                     # gpg, so jj log can verify the merge commits GitHub signs (key: see README)
 brew "jj"                        # main VCS, colocated with git
 brew "rcm"                       # links this repo into ~ (rcup)
 brew "shellcheck"                # lint shell scripts; actionlint uses it for run: steps

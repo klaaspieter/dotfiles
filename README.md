@@ -27,6 +27,12 @@ mkdir -p ~/.1password
 ln -s ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ~/.1password/agent.sock
 ```
 
+Import GitHub's key, so `jj log` can verify the merge commits GitHub signs instead of showing a signing error:
+
+```sh
+curl -fsSL https://github.com/web-flow.gpg | gpg --import
+```
+
 ### Linux
 
 Make zsh the default shell:
